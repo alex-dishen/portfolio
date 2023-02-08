@@ -1,9 +1,15 @@
-import './styles/normalize.scss';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from 'components/Navbar';
+import Home from 'pages/Home';
+import 'styles/normalize.scss';
 
 function App() {
-  // eslint-disable-next-line prettier/prettier
   return (
     <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
