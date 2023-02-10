@@ -13,7 +13,7 @@ export const StyledNavbar = styled.nav`
   border-radius: 15px;
   transform: translateX(-50%);
 
-  @media (min-width: 840px) {
+  @media (min-width: 850px) {
     flex-direction: column;
     top: 50%;
     left: 12px;
@@ -22,9 +22,22 @@ export const StyledNavbar = styled.nav`
 `;
 
 export const ImageHolder = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 40px;
   background-color: rgb(13, 13, 13);
   border-radius: 10px;
   cursor: pointer;
+
+  svg {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    svg {
+      fill: white;
+    }
+  }
 `;
