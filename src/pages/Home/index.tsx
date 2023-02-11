@@ -7,7 +7,7 @@ import {
   Option,
   Text,
   Underline,
-} from 'sections/Home/styles';
+} from 'pages/Home/styles';
 
 function Home() {
   return (
@@ -20,12 +20,14 @@ function Home() {
       </Greeting>
       <NavigationSection>
         <Option>
-          {/* <span>A</span> I heard you are designing great apps & websites! */}
+          <span>A</span> I heard you are designing great apps & websites!
         </Option>
         <Option>
-          {/* <span>B</span> I like reading about design & technology! */}
+          <span>B</span> I like reading about design & technology!
         </Option>
-        <Option>{/* <span>C</span> Oleksandr, who?! */}</Option>
+        <Option>
+          <span>C</span> Oleksandr, who?!
+        </Option>
       </NavigationSection>
       <Text>
         Never Mind -

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export const StyledNavbar = styled.nav`
   position: fixed;
@@ -9,7 +9,7 @@ export const StyledNavbar = styled.nav`
   display: flex;
   gap: 12px;
   padding: 12px;
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(25, 25, 25);
   border-radius: 15px;
   transform: translateX(-50%);
 
@@ -27,7 +27,7 @@ export const ImageHolder = styled(Link)`
   align-items: center;
   height: 40px;
   width: 40px;
-  background-color: rgb(13, 13, 13);
+  background-color: rgb(9, 9, 9);
   border-radius: 10px;
   cursor: pointer;
 

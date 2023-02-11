@@ -15,15 +15,11 @@ function Navbar() {
   useEffect(() => {}, [location]);
   return (
     <StyledNavbar>
-      <ImageHolder smooth to="#">
-        {location.pathname === '/' && location.hash === '' ? (
-          <FHome />
-        ) : (
-          <Home />
-        )}
+      <ImageHolder to="/">
+        {location.pathname === '/' ? <FHome /> : <Home />}
       </ImageHolder>
-      <ImageHolder smooth to="/#projects">
-        {location.hash === '#projects' ? <FBolt /> : <Bolt />}
+      <ImageHolder to="/projects">
+        {location.pathname === '/projects' ? <FBolt /> : <Bolt />}
       </ImageHolder>
       <ImageHolder to="/about">
         {location.pathname === '/about' ? <FPerson /> : <Person />}
