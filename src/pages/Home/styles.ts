@@ -9,7 +9,17 @@ export const StyledHome = styled.section`
   gap: 40px;
   color: rgb(194, 194, 194);
 
+  &::after,
   &::before {
+    content: '';
+    position: absolute;
+    filter: blur(35px);
+  }
+
+  &::before {
+    width: 480px;
+    height: 360px;
+    margin-left: -400px;
     background: linear-gradient(
       to bottom right,
       rgba(1, 65, 255, 0),
@@ -17,24 +27,14 @@ export const StyledHome = styled.section`
       rgba(1, 65, 255, 0.3)
     );
     border-radius: 50%;
-    width: 480px;
-    height: 360px;
-    margin-left: -400px;
   }
 
   &::after {
+    height: 200px;
+    width: 260px;
     bottom: 50%;
     left: 50%;
     background: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    width: 260px;
-    height: 200px;
-  }
-
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    filter: blur(35px);
   }
 `;
 
@@ -47,9 +47,9 @@ export const Greeting = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 10px;
     font-size: 50px;
     font-weight: 300;
-    margin: 10px;
   }
 `;
 
@@ -67,6 +67,10 @@ export const NavigationSection = styled.div`
 `;
 
 export const Option = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   padding: 20px 24px;
   font-size: 14px;
   border: 2px solid rgb(28, 28, 28);
@@ -75,13 +79,27 @@ export const Option = styled.div`
   transition: 0.3s;
 
   &:hover {
-    color: rgb(97, 97, 97);
-    border-color: rgb(37, 37, 37);
+    color: white;
+    border-color: rgb(50, 50, 50);
+
+    svg {
+      fill: white;
+    }
+  }
+
+  p {
+    margin: 0;
   }
 
   span {
     color: rgb(97, 97, 97);
     margin-right: 15px;
+  }
+
+  svg {
+    height: 22px;
+    width: 22px;
+    transition: 0.3s;
   }
 `;
 

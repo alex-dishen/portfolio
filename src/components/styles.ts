@@ -1,16 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { IImageHolder } from './interfaces';
+
+const rotate = keyframes`
+    from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+`;
 
 export const StyledNavbar = styled.nav`
   position: fixed;
   bottom: 12px;
   left: 50%;
-  height: fit-content;
   display: flex;
   gap: 12px;
-  padding: 12px;
-  background-color: rgb(25, 25, 25);
-  border-radius: 15px;
+  height: fit-content;
   transform: translateX(-50%);
 
   @media (min-width: 850px) {
@@ -21,23 +28,46 @@ export const StyledNavbar = styled.nav`
   }
 `;
 
-export const ImageHolder = styled(Link)`
+export const ImageHolder = styled(Link)<IImageHolder>`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
-  background-color: rgb(9, 9, 9);
-  border-radius: 10px;
-  cursor: pointer;
+  width: 47px;
+  height: 47px;
+  transform: translateZ(0);
+  border-radius: 12px;
+  overflow: hidden;
 
   svg {
-    transition: 0.3s;
+    height: 26px;
+    transition: 0.4s;
   }
 
   &:hover {
     svg {
       fill: white;
     }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::before {
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(${({ glowingColor }) => glowingColor});
+    animation: 6s ${rotate} linear infinite;
+  }
+
+  &::after {
+    inset: 0;
+    padding: 1.3px;
+    background: black;
+    border-radius: 12px;
+    background-clip: content-box;
   }
 `;
