@@ -7,6 +7,7 @@ import {
   ContactsWrapper,
   Option,
 } from 'pages/Contact/styles';
+import me from 'assets/IMG_5332.JPG';
 
 function Contact() {
   return (
@@ -20,7 +21,9 @@ function Contact() {
         <p>Need a supportive hand? I have two!</p>
       </Intro>
       <Card>
-        <ImageHolder />
+        <ImageHolder>
+          <img src={me} alt="" />
+        </ImageHolder>
         <Name>
           <p>Oleksandr Didyshen</p>
           <p>Font-End Developer </p>

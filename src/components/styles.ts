@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { IImageHolder } from './interfaces';
+import { IImageHolder } from 'components/interfaces';
 
 const rotate = keyframes`
     from {
