@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ReactComponent as RightArrow } from 'assets/arrow-right.svg';
+import { ReactComponent as RightArrow } from 'assets/ui/arrow-right.svg';
 import {
   StyledHome,
   Greeting,

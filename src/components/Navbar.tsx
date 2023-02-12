@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { StyledNavbar, ImageHolder } from 'components/styles';
 import { glowingColors } from 'styles/palette';
-import { ReactComponent as Bolt } from 'assets/bolt.svg';
-import { ReactComponent as FBolt } from 'assets/bolt-filled.svg';
-import { ReactComponent as Explore } from 'assets/explore.svg';
-import { ReactComponent as FExplore } from 'assets/explore-filled.svg';
-import { ReactComponent as Person } from 'assets/person.svg';
-import { ReactComponent as FPerson } from 'assets/person-filled.svg';
-import { ReactComponent as Mail } from 'assets/mail.svg';
-import { ReactComponent as FMail } from 'assets/mail-filled.svg';
+import { ReactComponent as Bolt } from 'assets/ui/bolt.svg';
+import { ReactComponent as FBolt } from 'assets/ui/bolt-filled.svg';
+import { ReactComponent as Explore } from 'assets/ui/explore.svg';
+import { ReactComponent as FExplore } from 'assets/ui/explore-filled.svg';
+import { ReactComponent as Person } from 'assets/ui/person.svg';
+import { ReactComponent as FPerson } from 'assets/ui/person-filled.svg';
+import { ReactComponent as Mail } from 'assets/ui/mail.svg';
+import { ReactComponent as FMail } from 'assets/ui/mail-filled.svg';
 
 function Navbar() {
   const [glowingColor, setGlowingColor] = useState('');
@@ -17,6 +17,9 @@ function Navbar() {
 
   const getGlowingColor = () => {
     if (location.pathname === '/') return setGlowingColor(glowingColors.blue);
+
+    if (location.pathname === '/about')
+      return setGlowingColor(glowingColors.red);
 
     if (location.pathname === '/contact')
       return setGlowingColor(glowingColors.purple);

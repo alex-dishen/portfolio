@@ -13,7 +13,7 @@ const rotate = keyframes`
 
 export const StyledNavbar = styled.nav`
   position: fixed;
-  bottom: 12px;
+  bottom: 20px;
   left: 50%;
   display: flex;
   gap: 12px;
@@ -23,7 +23,7 @@ export const StyledNavbar = styled.nav`
   @media (min-width: 850px) {
     flex-direction: column;
     top: 50%;
-    left: 12px;
+    left: 20px;
     transform: translateY(-50%);
   }
 `;
