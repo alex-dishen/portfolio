@@ -18,6 +18,9 @@ function Navbar() {
   const getGlowingColor = () => {
     if (location.pathname === '/') return setGlowingColor(glowingColors.blue);
 
+    if (location.pathname === '/projects')
+      return setGlowingColor(glowingColors.orange);
+
     if (location.pathname === '/about')
       return setGlowingColor(glowingColors.red);
 
