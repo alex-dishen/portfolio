@@ -13,6 +13,7 @@ const rotate = keyframes`
 
 export const StyledNavbar = styled.nav`
   position: fixed;
+  z-index: 2;
   bottom: 20px;
   left: 50%;
   display: flex;

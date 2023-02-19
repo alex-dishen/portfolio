@@ -129,6 +129,7 @@ export const ContactsWrapper = styled.div`
 `;
 
 export const Option = styled.div`
+  z-index: 2;
   padding: 14px 18px;
   font-size: 14px;
   border: 2px solid rgb(28, 28, 28);

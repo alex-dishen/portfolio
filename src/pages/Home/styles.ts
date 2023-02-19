@@ -67,6 +67,7 @@ export const NavigationSection = styled.div`
 `;
 
 export const Option = styled.div`
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
