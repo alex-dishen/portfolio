@@ -81,7 +81,7 @@ export const Option = styled.div`
 
   &:hover {
     color: white;
-    border-color: rgb(50, 50, 50);
+    border-color: rgb(60, 60, 60);
 
     svg {
       fill: white;

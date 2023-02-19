@@ -72,3 +72,12 @@ export const ImageHolder = styled(Link)<IImageHolder>`
     background-clip: content-box;
   }
 `;
+
+export const Overflow = styled.div`
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  height: 90px;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, transparent, black);
+`;

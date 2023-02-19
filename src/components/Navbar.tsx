@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { StyledNavbar, ImageHolder } from 'components/styles';
+import { StyledNavbar, ImageHolder, Overflow } from 'components/styles';
 import { glowingColors } from 'styles/palette';
 import { ReactComponent as Bolt } from 'assets/ui/bolt.svg';
 import { ReactComponent as FBolt } from 'assets/ui/bolt-filled.svg';
@@ -19,7 +19,7 @@ function Navbar() {
     if (location.pathname === '/') return setGlowingColor(glowingColors.blue);
 
     if (location.pathname === '/projects')
-      return setGlowingColor(glowingColors.orange);
+      return setGlowingColor(glowingColors.green);
 
     if (location.pathname === '/about')
       return setGlowingColor(glowingColors.red);
@@ -33,20 +33,23 @@ function Navbar() {
   }, [location.pathname]);
 
   return (
-    <StyledNavbar>
-      <ImageHolder to="/" glowingColor={glowingColor}>
-        {location.pathname === '/' ? <FExplore /> : <Explore />}
-      </ImageHolder>
-      <ImageHolder glowingColor={glowingColor} to="/projects">
-        {location.pathname === '/projects' ? <FBolt /> : <Bolt />}
-      </ImageHolder>
-      <ImageHolder glowingColor={glowingColor} to="/about">
-        {location.pathname === '/about' ? <FPerson /> : <Person />}
-      </ImageHolder>
-      <ImageHolder to="/contact" glowingColor={glowingColor}>
-        {location.pathname === '/contact' ? <FMail /> : <Mail />}
-      </ImageHolder>
-    </StyledNavbar>
+    <>
+      <StyledNavbar>
+        <ImageHolder to="/" glowingColor={glowingColor}>
+          {location.pathname === '/' ? <FExplore /> : <Explore />}
+        </ImageHolder>
+        <ImageHolder glowingColor={glowingColor} to="/projects">
+          {location.pathname === '/projects' ? <FBolt /> : <Bolt />}
+        </ImageHolder>
+        <ImageHolder glowingColor={glowingColor} to="/about">
+          {location.pathname === '/about' ? <FPerson /> : <Person />}
+        </ImageHolder>
+        <ImageHolder to="/contact" glowingColor={glowingColor}>
+          {location.pathname === '/contact' ? <FMail /> : <Mail />}
+        </ImageHolder>
+      </StyledNavbar>
+      <Overflow />
+    </>
   );
 }
 

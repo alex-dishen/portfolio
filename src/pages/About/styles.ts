@@ -4,7 +4,7 @@ export const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  margin: 40px 0;
+  margin: 40px 0 100px 0;
   color: rgb(194, 194, 194);
 
   * {

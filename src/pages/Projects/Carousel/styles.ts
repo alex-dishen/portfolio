@@ -80,7 +80,7 @@ export const ActiveDot = styled(motion.div)`
   left: 16px;
   height: 11px;
   width: 11px;
-  background-color: rgba(255, 145, 1, 1);
+  background-color: rgba(1, 255, 1, 1);
   border-radius: 50%;
   cursor: pointer;
 `;
