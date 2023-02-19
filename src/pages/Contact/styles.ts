@@ -31,7 +31,7 @@ export const StyledContact = styled.div`
   align-items: center;
   justify-content: center;
   gap: 40px;
-  color: white;
+  color: rgb(194, 194, 194);
 
   p {
     margin: 0;
