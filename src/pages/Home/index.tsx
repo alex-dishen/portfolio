@@ -9,13 +9,18 @@ import {
   Text,
   Underline,
 } from 'pages/Home/styles';
+import meInBlueShirt from 'assets/black-shirt.JPG';
 
 function Home() {
   return (
     <StyledHome>
       <Greeting>
         <h1>
-          Hey, I'm <ImageHolder /> Oleksandr.
+          Hey, I'm
+          <ImageHolder>
+            <img src={meInBlueShirt} alt="" />
+          </ImageHolder>
+          Oleksandr.
         </h1>
         <h1>A Front-End Developer</h1>
       </Greeting>

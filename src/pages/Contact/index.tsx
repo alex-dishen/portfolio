@@ -7,7 +7,7 @@ import {
   ContactsWrapper,
   Option,
 } from 'pages/Contact/styles';
-import meInRedShirt from 'assets/red-shirt.JPG';
+import meInRedShirt from 'assets/black-shirt.JPG';
 
 function Contact() {
   return (

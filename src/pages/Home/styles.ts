@@ -55,10 +55,22 @@ export const Greeting = styled.div`
 `;
 
 export const ImageHolder = styled.div`
-  height: 65px;
-  width: 65px;
-  background-color: white;
+  position: relative;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 55px;
+    left: -9px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(2.4);
+    filter: brightness(1.15);
+  }
 `;
 
 export const NavigationSection = styled.div`

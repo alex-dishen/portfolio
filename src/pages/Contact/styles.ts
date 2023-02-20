@@ -95,20 +95,20 @@ export const Card = styled.div`
 
 export const ImageHolder = styled.div`
   position: relative;
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 140px;
   border-radius: 50%;
   overflow: hidden;
 
   img {
     position: absolute;
-    top: 7%;
-    left: 9px;
+    top: 70px;
+    left: -12px;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transform: scale(2);
-    filter: brightness(1.5);
+    transform: scale(2.4);
+    filter: brightness(1.15);
   }
 `;
 
