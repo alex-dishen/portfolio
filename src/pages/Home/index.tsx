@@ -20,19 +20,19 @@ function Home() {
         <h1>A Front-End Developer</h1>
       </Greeting>
       <NavigationSection>
-        <Option>
+        <Option to="/projects">
           <p>
             <span>A</span> I heard you are creating great websites!
           </p>
           <RightArrow />
         </Option>
-        <Option>
+        {/* <Option to="">
           <p>
             <span>B</span> I like reading about technologies!
           </p>
           <RightArrow />
-        </Option>
-        <Option>
+        </Option> */}
+        <Option to="/about">
           <p>
             <span>C</span> Oleksandr, who?!
           </p>

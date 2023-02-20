@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const StyledHome = styled.section`
   flex: 1;
@@ -66,22 +67,24 @@ export const NavigationSection = styled.div`
   gap: 10px;
 `;
 
-export const Option = styled.div`
+export const Option = styled(Link)`
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   padding: 20px 24px;
+  color: rgb(194, 194, 194);
   font-size: 14px;
-  border: 2px solid rgb(28, 28, 28);
+  border: 2px solid rgb(40, 40, 40);
   border-radius: 12px;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
 
   &:hover {
     color: white;
-    border-color: rgb(60, 60, 60);
+    border-color: rgb(70, 70, 70);
 
     svg {
       fill: white;
