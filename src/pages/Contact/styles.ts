@@ -126,19 +126,24 @@ export const Name = styled.div`
 export const ContactsWrapper = styled.div`
   display: flex;
   gap: 15px;
+
+  a {
+    z-index: 2;
+  }
 `;
 
-export const Option = styled.div`
-  z-index: 2;
+export const Option = styled.button`
   padding: 14px 18px;
   font-size: 14px;
-  border: 2px solid rgb(28, 28, 28);
+  border: 2px solid rgb(42, 42, 42);
   border-radius: 17px;
+  background-color: inherit;
+  color: rgb(150, 150, 150);
   cursor: pointer;
   transition: 0.3s;
 
   &:hover {
-    color: rgb(97, 97, 97);
-    border-color: rgb(37, 37, 37);
+    color: white;
+    border-color: rgb(70, 70, 70);
   }
 `;

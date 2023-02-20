@@ -29,9 +29,15 @@ function Contact() {
           <p>Font-End Developer </p>
         </Name>
         <ContactsWrapper>
-          <Option>Drop an E-Main</Option>
-          <Option>Visit my GitHub</Option>
-          <Option>See Linkedin</Option>
+          <a href="">
+            <Option>Drop an E-Main</Option>
+          </a>
+          <a href="">
+            <Option>Visit my GitHub</Option>
+          </a>
+          <a href="">
+            <Option>See Linkedin</Option>
+          </a>
         </ContactsWrapper>
       </Card>
     </StyledContact>

@@ -91,7 +91,7 @@ export const Skills = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    font-size: 20px;
+    font-size: 17px;
   }
 
   svg {
