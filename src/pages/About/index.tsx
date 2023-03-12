@@ -22,7 +22,7 @@ function About() {
       <h3>Greetings and welcome to my personal website!</h3>
       <p>
         My name is Oleksandr Didyshen, and I am a dynamic and motivated
-        individual who is passionate about Front-End Development.
+        individual who is passionate about Software Engineering.
       </p>
       <p>
         I am a firm believer in the power of hard work and dedication, and I

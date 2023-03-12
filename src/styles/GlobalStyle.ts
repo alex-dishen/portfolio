@@ -2,7 +2,7 @@ import * as styled from 'styled-components';
 
 const GlobalStyle = styled.createGlobalStyle`
   #root {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -36,6 +36,7 @@ export const StyledAbout = styled.div`
     margin: 10px 0;
     text-align: justify;
     font-size: 18px;
+    line-height: 29px;
   }
 `;
 
