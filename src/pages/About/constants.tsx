@@ -13,6 +13,7 @@ import { ReactComponent as StyledComponents } from 'assets/languages/styled-comp
 import { ReactComponent as TypeScript } from 'assets/languages/typescript.svg';
 import { ReactComponent as Vite } from 'assets/languages/vite.svg';
 import { ReactComponent as Vitest } from 'assets/languages/vitest.svg';
+import { ReactComponent as Figma } from 'assets/languages/figma.svg';
 
 export const languages = [
   { name: 'HTML', picture: <HTML /> },
@@ -20,6 +21,7 @@ export const languages = [
   { name: 'JavaScript', picture: <JavaScript /> },
   { name: 'TypeScript', picture: <TypeScript /> },
   { name: 'React', picture: <React /> },
+  { name: 'React Native', picture: <React /> },
   { name: 'Redux', picture: <Redux /> },
   { name: 'SASS', picture: <SASS /> },
   { name: 'Styled-Components', picture: <StyledComponents /> },
@@ -33,4 +35,5 @@ export const tools = [
   { name: 'NPM', picture: <NPM /> },
   { name: 'Vite', picture: <Vite /> },
   { name: 'Vitest', picture: <Vitest /> },
+  { name: 'Figma', picture: <Figma /> },
 ];
