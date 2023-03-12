@@ -4,8 +4,8 @@ import Home from 'pages/Home';
 import Projects from 'pages/Projects';
 import About from 'pages/About';
 import Contact from 'pages/Contact';
-import 'styles/normalize.scss';
-import 'fonts/font.scss';
+import 'styles/normalize.css';
+import 'fonts/font.css';
 
 function App() {
   return (
