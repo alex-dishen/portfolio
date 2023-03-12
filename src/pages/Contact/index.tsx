@@ -26,17 +26,17 @@ function Contact() {
         </ImageHolder>
         <Name>
           <p>Oleksandr Didyshen</p>
-          <p>Font-End Developer </p>
+          <p>Software engineer </p>
         </Name>
         <ContactsWrapper>
-          <a href="">
-            <Option>Drop an E-Main</Option>
+          <a href="mailto:didyshen.oleksandr@gmail.com" target="_blank">
+            <Option>Drop an E-Mail</Option>
           </a>
-          <a href="">
-            <Option>Visit my GitHub</Option>
+          <a href="https://github.com/alex-dishen">
+            <Option>See my GitHub</Option>
           </a>
-          <a href="">
-            <Option>See Linkedin</Option>
+          <a href="https://www.linkedin.com/in/oleksandr-didyshen/">
+            <Option>Visit my Linkedin</Option>
           </a>
         </ContactsWrapper>
       </Card>

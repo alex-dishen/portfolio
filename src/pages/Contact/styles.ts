@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { glowingColors } from 'styles/palette';
 
 const topToBottom = keyframes`
   0% {
@@ -33,6 +34,13 @@ export const StyledContact = styled.div`
   gap: 40px;
   color: rgb(194, 194, 194);
 
+  * {
+    &::selection {
+      background-color: #74009e;
+      color: white;
+    }
+  }
+
   p {
     margin: 0;
   }
@@ -55,7 +63,7 @@ export const StyledContact = styled.div`
       rgba(188, 1, 255, 0.3)
     );
     border-radius: 50%;
-    animation: ${topToBottom} 20s linear infinite;
+    animation: ${topToBottom} 15s linear infinite;
   }
 
   &::after {
@@ -64,7 +72,7 @@ export const StyledContact = styled.div`
     bottom: 50%;
     left: 50%;
     background: radial-gradient(rgba(188, 1, 255, 0.4), rgba(188, 1, 255, 0));
-    animation: ${scale} 10s linear infinite;
+    animation: ${scale} 7s linear infinite;
   }
 `;
 
@@ -81,6 +89,10 @@ export const Intro = styled.div`
     font-size: 45px;
     font-weight: 400;
   }
+
+  * {
+    z-index: 2;
+  }
 `;
 
 export const Card = styled.div`
@@ -88,9 +100,13 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 40px 60px;
+  padding: 50px 80px;
   border: 2px solid rgb(28, 28, 28);
   border-radius: 20px;
+
+  * {
+    z-index: 2;
+  }
 `;
 
 export const ImageHolder = styled.div`
@@ -108,7 +124,7 @@ export const ImageHolder = styled.div`
     width: 100%;
     object-fit: cover;
     transform: scale(2.4);
-    filter: brightness(1.15);
+    filter: brightness(1.1);
   }
 `;
 
@@ -125,18 +141,14 @@ export const Name = styled.div`
 
 export const ContactsWrapper = styled.div`
   display: flex;
-  gap: 15px;
-
-  a {
-    z-index: 2;
-  }
+  gap: 25px;
 `;
 
 export const Option = styled.button`
   padding: 14px 18px;
   font-size: 14px;
   border: 2px solid rgb(42, 42, 42);
-  border-radius: 17px;
+  border-radius: 18px;
   background-color: inherit;
   color: rgb(150, 150, 150);
   cursor: pointer;
