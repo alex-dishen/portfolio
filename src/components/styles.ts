@@ -24,7 +24,7 @@ export const StyledNavbar = styled.nav`
   @media (min-width: 850px) {
     flex-direction: column;
     top: 50%;
-    left: 20px;
+    left: 30px;
     transform: translateY(-50%);
   }
 `;

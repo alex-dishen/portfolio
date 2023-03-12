@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { options } from 'pages/Home/constants';
 import {
   StyledHome,
@@ -6,8 +5,9 @@ import {
   ImageHolder,
   NavigationSection,
   Option,
+  ArrowContainer,
   Text,
-  Underline,
+  StyledLink,
 } from 'pages/Home/styles';
 import meInBlueShirt from 'assets/black-shirt.JPG';
 import { ReactComponent as RightArrow } from 'assets/ui/arrow-right.svg';
@@ -21,9 +21,9 @@ function Home() {
           <ImageHolder>
             <img src={meInBlueShirt} alt="Oleksandr in blue shirt" />
           </ImageHolder>
-          Oleksandr.
+          Oleksandr
         </h1>
-        <h1>A Front-End Developer</h1>
+        <h1>A Software Engineer</h1>
       </Greeting>
       <NavigationSection>
         {options.map((option) => (
@@ -31,15 +31,15 @@ function Home() {
             <p>
               <span>{option.variant}</span> {option.text}
             </p>
-            <RightArrow />
+            <ArrowContainer>
+              <RightArrow />
+              <RightArrow />
+            </ArrowContainer>
           </Option>
         ))}
       </NavigationSection>
       <Text>
-        Never Mind -
-        <Link to="/contact">
-          Just Say Hi <Underline />
-        </Link>
+        Never Mind -- <StyledLink to="/contact">Just Say Hi</StyledLink>
       </Text>
     </StyledHome>
   );

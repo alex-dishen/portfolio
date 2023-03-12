@@ -69,7 +69,7 @@ export const ImageHolder = styled.div`
     width: 100%;
     object-fit: cover;
     transform: scale(2.4);
-    filter: brightness(1.15);
+    filter: brightness(1.1);
   }
 `;
 
@@ -99,7 +99,7 @@ export const Option = styled(Link)`
     border-color: rgb(70, 70, 70);
 
     svg {
-      fill: white;
+      transform: translateX(25px);
     }
   }
 
@@ -115,13 +115,27 @@ export const Option = styled(Link)`
   svg {
     height: 22px;
     width: 22px;
-    transition: 0.3s;
+    transition: 0.5s;
   }
+
+  svg:first-child {
+    position: absolute;
+    left: -25px;
+    fill: white;
+  }
+`;
+
+export const ArrowContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  overflow: hidden;
 `;
 
 export const Text = styled.div`
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
 
   a {
     position: relative;
@@ -138,10 +152,28 @@ export const Text = styled.div`
   }
 `;
 
-export const Underline = styled.div`
-  position: absolute;
-  bottom: -2px;
-  height: 1px;
-  width: 100%;
-  background-color: rgb(37, 37, 37);
+export const StyledLink = styled(Link)`
+  position: relative;
+  cursor: pointer;
+  transition: text-shadow 0.5s;
+
+  &::after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.64);
+    transform: scaleX(0) translateY(20px);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.864);
+    &::after {
+      transform: scaleX(1) translateY(20px);
+      transform-origin: left;
+    }
+  }
 `;
