@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { IImageHolder } from 'components/interfaces';
 
 const rotate = keyframes`
-    from {
+  from {
     transform: rotate(360deg);
   }
   to {
@@ -11,21 +12,18 @@ const rotate = keyframes`
   }
 `;
 
-export const StyledNavbar = styled.nav`
+export const StyledNavbar = styled(motion.nav)`
   position: fixed;
   z-index: 2;
-  bottom: 20px;
-  left: 50%;
+  bottom: -5px;
   display: flex;
   gap: 12px;
   height: fit-content;
-  transform: translateX(-50%);
 
   @media (min-width: 850px) {
     flex-direction: column;
     top: 50%;
     left: 30px;
-    transform: translateY(-50%);
   }
 `;
 

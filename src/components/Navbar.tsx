@@ -16,6 +16,16 @@ function Navbar() {
   const [glowingColor, setGlowingColor] = useState('');
   const location = useLocation();
 
+  const navAnimation = {
+    hidden: { x: -90, y: '-50%' },
+    show: { x: 0, y: '-50%', transition: { duration: 2, delay: 3.5 } },
+  };
+
+  const first = {
+    hidden: { y: 90 },
+    show: { y: '-50%', transition: { duration: 2, delay: 3.3 } },
+  };
+
   const getGlowingColor = () => {
     if (location.pathname === '/') return setGlowingColor(glowingColors.blue);
 
@@ -35,7 +45,11 @@ function Navbar() {
 
   return (
     <>
-      <StyledNavbar>
+      <StyledNavbar
+        variants={window.innerWidth <= 850 ? first : navAnimation}
+        initial="hidden"
+        animate="show"
+      >
         <ImageHolder to="/" glowingColor={glowingColor}>
           {location.pathname === '/' ? <FExplore /> : <Explore />}
         </ImageHolder>
