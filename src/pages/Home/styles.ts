@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export const StyledHome = styled.section`
+export const StyledHome = styled(motion.main)`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -43,21 +44,26 @@ export const Greeting = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  h1 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px;
-    font-size: 50px;
-    font-weight: 300;
-  }
 `;
 
-export const ImageHolder = styled.div`
+export const TopGreeting = styled(motion.div)`
+  display: flex;
+  gap: 10px;
+`;
+
+export const Header = styled(motion.h1)`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  font-size: 50px;
+  font-weight: 300;
+`;
+
+export const ImageHolder = styled(motion.div)`
   position: relative;
-  height: 110px;
-  width: 110px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   overflow: hidden;
 
@@ -73,14 +79,17 @@ export const ImageHolder = styled.div`
   }
 `;
 
-export const NavigationSection = styled.div`
+export const NavigationSection = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 10px;
 `;
 
-export const Option = styled(Link)`
+export const Option = styled(motion.div)`
   z-index: 2;
+`;
+
+export const NavigationLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,7 +142,7 @@ export const ArrowContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Text = styled.div`
+export const Text = styled(motion.div)`
   display: flex;
   font-size: 13px;
 

@@ -4,6 +4,7 @@ import { StyledNavbar, ImageHolder, Overflow } from 'components/styles';
 import { glowingColors } from 'styles/palette';
 import { ReactComponent as Bolt } from 'assets/ui/bolt.svg';
 import { ReactComponent as FBolt } from 'assets/ui/bolt-filled.svg';
+import { ReactComponent as Pen } from 'assets/ui/pen.svg';
 import { ReactComponent as Explore } from 'assets/ui/explore.svg';
 import { ReactComponent as FExplore } from 'assets/ui/explore-filled.svg';
 import { ReactComponent as Person } from 'assets/ui/person.svg';
@@ -40,6 +41,13 @@ function Navbar() {
         </ImageHolder>
         <ImageHolder glowingColor={glowingColor} to="/projects">
           {location.pathname === '/projects' ? <FBolt /> : <Bolt />}
+        </ImageHolder>
+        <ImageHolder
+          glowingColor={glowingColor}
+          to="https://medium.com/@oleksandrdidyshen"
+          target="_blank"
+        >
+          <Pen />
         </ImageHolder>
         <ImageHolder glowingColor={glowingColor} to="/about">
           {location.pathname === '/about' ? <FPerson /> : <Person />}
