@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledAbout = styled.div`
   display: flex;
@@ -29,18 +30,18 @@ export const StyledAbout = styled.div`
     text-align: center;
     margin-bottom: 10px;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   p {
-    margin: 10px 0;
+    margin: 20px 0;
     text-align: justify;
     font-size: 18px;
     line-height: 29px;
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
   height: 350px;
   width: 700px;
   border-radius: 12px;
@@ -77,7 +78,7 @@ export const SkillSection = styled.div`
   gap: 30px;
 `;
 
-export const Skills = styled.div`
+export const Skills = styled(motion.div)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

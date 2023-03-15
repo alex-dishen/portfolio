@@ -11,6 +11,13 @@ export const StyledHome = styled(motion.main)`
   gap: 40px;
   color: rgb(194, 194, 194);
 
+  * {
+    &::selection {
+      background-color: #072ea3;
+      color: white;
+    }
+  }
+
   &::after,
   &::before {
     content: '';

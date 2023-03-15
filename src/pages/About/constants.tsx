@@ -37,3 +37,81 @@ export const tools = [
   { name: 'Vitest', picture: <Vitest /> },
   { name: 'Figma', picture: <Figma /> },
 ];
+
+export const meetOleksandrAnimation = {
+  hidden: { scale: 0.6, opacity: 0, skewY: 3, translateY: 50 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    skewY: 0,
+    translateY: 0,
+    transition: { duration: 0.8, delay: 0.1, ease: 'easeOut' },
+  },
+};
+
+export const imageAnimation = {
+  hidden: { scale: 0.7, opacity: 0, skewY: 8, translateY: 90 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    skewY: 0,
+    translateY: 0,
+    transition: { duration: 0.7, delay: 0.3, ease: 'easeOut' },
+  },
+};
+
+export const greetingsAnimation = {
+  hidden: { scale: 0.8, opacity: 0, skewY: 3, translateY: 50 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    skewY: 0,
+    translateY: 0,
+    transition: { duration: 0.6, delay: 0.6, ease: 'easeOut' },
+  },
+};
+
+export const pitchAnimation = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.8, ease: 'easeOut' },
+  },
+};
+
+export const finishedProjectsAnimation = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+  },
+};
+
+export const experienceAnimation = {
+  hidden: finishedProjectsAnimation.hidden,
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.5, ease: 'easeOut' },
+  },
+};
+
+export const skillsAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+  },
+};
+
+export const toolsAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' },
+  },
+};

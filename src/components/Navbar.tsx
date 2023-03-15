@@ -1,6 +1,7 @@
+import uniqid from 'uniqid';
 import { pages, mobile, desktop } from 'components/constants';
 import { StyledNavbar, ImageHolder, Overflow } from 'components/styles';
-import useNavbar from './useNavbar';
+import useNavbar from 'components/useNavbar';
 
 function Navbar() {
   const { glowingColor, location } = useNavbar();
@@ -14,6 +15,7 @@ function Navbar() {
       >
         {pages.map((page) => (
           <ImageHolder
+            key={uniqid()}
             to={page.path}
             glowingColor={glowingColor}
             target={page.path.includes('http') ? '_blank' : ''}
