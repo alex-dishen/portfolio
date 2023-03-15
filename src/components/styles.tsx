@@ -27,7 +27,20 @@ export const StyledNavbar = styled(motion.nav)`
   }
 `;
 
-export const ImageHolder = styled(Link)<IImageHolder>`
+// This custom element is needed to prevent the error that occurs if using
+// styled-components, framer motion and custom property
+const CustomGamePage = ({
+  glowingColor,
+  to,
+  children,
+  ...rest
+}: IImageHolder) => (
+  <Link to={to} {...rest}>
+    {children}
+  </Link>
+);
+
+export const ImageHolder = styled(CustomGamePage)<IImageHolder>`
   display: flex;
   justify-content: center;
   align-items: center;

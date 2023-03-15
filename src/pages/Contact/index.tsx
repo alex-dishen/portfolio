@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import uniqid from 'uniqid';
 import {
   linkOptions,
   headerAnimation,
@@ -41,7 +42,7 @@ function Contact() {
         </Name>
         <ContactsWrapper>
           {linkOptions.map((option) => (
-            <Option href={option.link} target="_blank">
+            <Option key={uniqid()} href={option.link} target="_blank">
               {option.text}
             </Option>
           ))}

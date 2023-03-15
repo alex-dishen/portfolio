@@ -1,3 +1,4 @@
+import uniqid from 'uniqid';
 import {
   options,
   styledHomeAnimation,
@@ -40,7 +41,7 @@ function Home() {
       </Greeting>
       <NavigationSection variants={navigationSectionAnimation}>
         {options.map((option) => (
-          <Option variants={optionAnimation}>
+          <Option key={uniqid()} variants={optionAnimation}>
             <NavigationLink to={option.page}>
               <p>
                 <span>{option.variant}</span> {option.text}
