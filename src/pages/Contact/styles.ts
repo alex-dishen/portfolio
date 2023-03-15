@@ -144,13 +144,14 @@ export const ContactsWrapper = styled.div`
   gap: 25px;
 `;
 
-export const Option = styled.button`
+export const Option = styled.a`
   padding: 14px 18px;
   font-size: 14px;
   border: 2px solid rgb(42, 42, 42);
   border-radius: 18px;
   background-color: inherit;
   color: rgb(150, 150, 150);
+  text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
 

@@ -1,3 +1,4 @@
+import { linkOptions } from 'pages/Contact/constants';
 import {
   StyledContact,
   Intro,
@@ -22,22 +23,18 @@ function Contact() {
       </Intro>
       <Card>
         <ImageHolder>
-          <img src={meInRedShirt} alt="" />
+          <img src={meInRedShirt} alt="Oleksandr in red shirt" />
         </ImageHolder>
         <Name>
           <p>Oleksandr Didyshen</p>
           <p>Software engineer </p>
         </Name>
         <ContactsWrapper>
-          <a href="mailto:didyshen.oleksandr@gmail.com" target="_blank">
-            <Option>Drop an E-Mail</Option>
-          </a>
-          <a href="https://github.com/alex-dishen">
-            <Option>See my GitHub</Option>
-          </a>
-          <a href="https://www.linkedin.com/in/oleksandr-didyshen/">
-            <Option>Visit my Linkedin</Option>
-          </a>
+          {linkOptions.map((option) => (
+            <Option href={option.link} target="_blank">
+              {option.text}
+            </Option>
+          ))}
         </ContactsWrapper>
       </Card>
     </StyledContact>
