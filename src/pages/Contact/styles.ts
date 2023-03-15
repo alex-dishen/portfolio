@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { glowingColors } from 'styles/palette';
+import { motion } from 'framer-motion';
 
 const topToBottom = keyframes`
   0% {
@@ -81,13 +81,19 @@ export const Intro = styled.div`
   flex-direction: column;
   align-items: center;
 
-  & p:nth-child(3) {
-    margin-top: 8px;
-  }
-
   h1 {
     font-size: 45px;
     font-weight: 400;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p:nth-child(2) {
+      margin-top: 8px;
+    }
   }
 
   * {
@@ -95,7 +101,7 @@ export const Intro = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const Card = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;

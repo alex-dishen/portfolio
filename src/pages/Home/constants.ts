@@ -16,7 +16,7 @@ export const options = [
   },
 ];
 
-export const homeStyle = {
+export const styledHomeAnimation = {
   hidden: { translateY: 160 },
   show: {
     translateY: 0,
@@ -27,7 +27,7 @@ export const homeStyle = {
   },
 };
 
-export const imStyle = {
+export const imAnimation = {
   hidden: {
     scale: 0.8,
     opacity: 0,
@@ -43,7 +43,7 @@ export const imStyle = {
   },
 };
 
-export const imageStyle = {
+export const imageHolderAnimation = {
   hidden: {
     scale: 0.8,
     opacity: 0,
@@ -63,7 +63,7 @@ export const imageStyle = {
   },
 };
 
-export const nameStyle = {
+export const nameAnimation = {
   hidden: { scale: 0.9, opacity: 0, translateY: 40 },
   show: {
     scale: 1,
@@ -73,12 +73,12 @@ export const nameStyle = {
   },
 };
 
-export const positionStyle = {
+export const positionAnimation = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 1.2, delay: 2.1 } },
 };
 
-export const navigationStyle = {
+export const navigationSectionAnimation = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -89,12 +89,12 @@ export const navigationStyle = {
   },
 };
 
-export const item = {
+export const optionAnimation = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.5 } },
 };
 
-export const textStyle = {
+export const textAnimation = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.4, delay: 3.45 } },
 };

@@ -1,13 +1,13 @@
 import {
   options,
-  homeStyle,
-  imStyle,
-  imageStyle,
-  nameStyle,
-  positionStyle,
-  navigationStyle,
-  item,
-  textStyle,
+  styledHomeAnimation,
+  imAnimation,
+  imageHolderAnimation,
+  nameAnimation,
+  positionAnimation,
+  navigationSectionAnimation,
+  optionAnimation,
+  textAnimation,
 } from 'pages/Home/constants';
 import {
   StyledHome,
@@ -27,20 +27,20 @@ import { ReactComponent as RightArrow } from 'assets/ui/arrow-right.svg';
 
 function Home() {
   return (
-    <StyledHome variants={homeStyle} initial="hidden" animate="show">
+    <StyledHome variants={styledHomeAnimation} initial="hidden" animate="show">
       <Greeting>
         <TopGreeting>
-          <Header variants={imStyle}>Hey, I'm</Header>
-          <ImageHolder variants={imageStyle}>
+          <Header variants={imAnimation}>Hey, I'm</Header>
+          <ImageHolder variants={imageHolderAnimation}>
             <img src={meInBlueShirt} alt="Oleksandr in blue shirt" />
           </ImageHolder>
-          <Header variants={nameStyle}>Oleksandr</Header>
+          <Header variants={nameAnimation}>Oleksandr</Header>
         </TopGreeting>
-        <Header variants={positionStyle}>A Software Engineer</Header>
+        <Header variants={positionAnimation}>A Software Engineer</Header>
       </Greeting>
-      <NavigationSection variants={navigationStyle}>
+      <NavigationSection variants={navigationSectionAnimation}>
         {options.map((option) => (
-          <Option variants={item}>
+          <Option variants={optionAnimation}>
             <NavigationLink to={option.page}>
               <p>
                 <span>{option.variant}</span> {option.text}
@@ -53,7 +53,7 @@ function Home() {
           </Option>
         ))}
       </NavigationSection>
-      <Text variants={textStyle}>
+      <Text variants={textAnimation}>
         Never Mind -- <StyledLink to="/contact">Just Say Hi</StyledLink>
       </Text>
     </StyledHome>

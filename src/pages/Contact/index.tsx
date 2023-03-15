@@ -1,4 +1,10 @@
-import { linkOptions } from 'pages/Contact/constants';
+import { motion } from 'framer-motion';
+import {
+  linkOptions,
+  headerAnimation,
+  pitchAnimation,
+  cardAnimation,
+} from 'pages/Contact/constants';
 import {
   StyledContact,
   Intro,
@@ -14,14 +20,18 @@ function Contact() {
   return (
     <StyledContact>
       <Intro>
-        <h1>The Stage is Yours</h1>
-        <p>
-          I'm always looking to collaborate on interesting projects with great
-          people.
-        </p>
-        <p>Need a supportive hand? I have two!</p>
+        <motion.h1 variants={headerAnimation} initial="hidden" animate="show">
+          The Stage is Yours
+        </motion.h1>
+        <motion.div variants={pitchAnimation} initial="hidden" animate="show">
+          <p>
+            I'm always looking to collaborate on interesting projects with great
+            people.
+          </p>
+          <p>Need a supportive hand? I have two!</p>
+        </motion.div>
       </Intro>
-      <Card>
+      <Card variants={cardAnimation} initial="hidden" animate="show">
         <ImageHolder>
           <img src={meInRedShirt} alt="Oleksandr in red shirt" />
         </ImageHolder>
