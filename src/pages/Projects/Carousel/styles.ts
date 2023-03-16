@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const CarouselWrapper = styled.div`
   position: relative;
-  height: 415px;
+  height: 420px;
   width: 740px;
   background-color: rgb(46, 46, 46);
   border-radius: 30px;

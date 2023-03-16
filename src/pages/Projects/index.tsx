@@ -24,6 +24,10 @@ function Projects() {
               <p>{project.technologies}</p>
             </div>
             <div>
+              <h4>About</h4>
+              <p>{project.summery}</p>
+            </div>
+            <div>
               <button type="button">Live Preview</button>
               <button type="button">View code</button>
             </div>

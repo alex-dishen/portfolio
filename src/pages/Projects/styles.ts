@@ -8,6 +8,8 @@ export const StyledProjects = styled.main`
 
 export const ProjectHolder = styled.div``;
 
-export const ProjectInfo = styled.div``;
+export const ProjectInfo = styled.div`
+  white-space: pre-wrap;
+`;
 
 export const Summery = styled.div``;
