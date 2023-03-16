@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getGlowingColor } from 'components/helpers';
+import { getGlowingColor } from 'components/Navbar/helpers';
 
 const useNavbar = () => {
   const [glowingColor, setGlowingColor] = useState('');

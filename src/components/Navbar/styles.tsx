@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { IImageHolder } from 'components/interfaces';
+import { IImageHolder } from 'components/Navbar/interfaces';
 
 const rotate = keyframes`
   from {
@@ -14,7 +14,7 @@ const rotate = keyframes`
 
 export const StyledNavbar = styled(motion.nav)`
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   bottom: -5px;
   display: flex;
   gap: 12px;
@@ -86,7 +86,7 @@ export const ImageHolder = styled(CustomGamePage)<IImageHolder>`
 
 export const Overflow = styled.div`
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   bottom: 0;
   height: 90px;
   width: 100vw;

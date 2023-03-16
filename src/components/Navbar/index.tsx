@@ -1,7 +1,7 @@
 import uniqid from 'uniqid';
-import { pages, mobile, desktop } from 'components/constants';
-import { StyledNavbar, ImageHolder, Overflow } from 'components/styles';
-import useNavbar from 'components/useNavbar';
+import { pages, mobile, desktop } from 'components/Navbar/constants';
+import { StyledNavbar, ImageHolder, Overflow } from 'components/Navbar/styles';
+import useNavbar from 'components/Navbar/useNavbar';
 
 function Navbar() {
   const { glowingColor, location } = useNavbar();

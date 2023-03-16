@@ -11,7 +11,7 @@ import {
   DotsWrapper,
   Dot,
   ActiveDot,
-} from 'pages/Projects/Carousel/styles';
+} from 'components/Carousel/styles';
 
 interface CarouselProps {
   pictures: { id: number; src: string }[];
@@ -24,7 +24,6 @@ function Carousel({ pictures }: CarouselProps) {
   const animateCarousel = () => {
     carouselControls.start({ x: `${-index * 100}%` });
   };
-  const timeout = useRef<NodeJS.Timer>();
 
   const setIndexByPosition = (_event: never, info: PanInfo) => {
     const { x } = info.offset;
@@ -45,8 +44,6 @@ function Carousel({ pictures }: CarouselProps) {
     if (index >= pictures.length) return setIndex(0);
 
     if (index < 0) return setIndex(pictures.length - 1);
-
-    return () => clearTimeout(timeout.current);
   }, [index]);
 
   return (
@@ -62,7 +59,6 @@ function Carousel({ pictures }: CarouselProps) {
         drag="x"
         dragMomentum={false}
         onMouseDown={(e) => e.preventDefault()}
-        onDragStart={() => clearTimeout(timeout.current)}
         onDragEnd={setIndexByPosition}
         initial={{ x: 0 }}
         animate={carouselControls}

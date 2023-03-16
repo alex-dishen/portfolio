@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 export const CarouselWrapper = styled.div`
   position: relative;
-  height: 420px;
-  width: 740px;
+  height: 480px;
+  width: 850px;
   background-color: rgb(46, 46, 46);
   border-radius: 30px;
   overflow: hidden;
@@ -80,7 +80,7 @@ export const ActiveDot = styled(motion.div)`
   left: 16px;
   height: 11px;
   width: 11px;
-  background-color: rgba(1, 255, 1, 1);
+  background-color: rgba(255, 145, 1, 1);
   border-radius: 50%;
   cursor: pointer;
 `;

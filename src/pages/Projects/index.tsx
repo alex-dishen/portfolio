@@ -1,37 +1,41 @@
-import Carousel from 'pages/Projects/Carousel';
+import uniqid from 'uniqid';
+import Carousel from 'components/Carousel';
+import Dots from 'components/Dots';
 import projects from 'pages/Projects/constants';
 import {
   StyledProjects,
   ProjectHolder,
   ProjectInfo,
-  Summery,
+  ProjectLinks,
+  Link,
 } from 'pages/Projects/styles';
 
 function Projects() {
   return (
     <StyledProjects>
-      <h1>Projects</h1>
-      {projects.map((project) => (
-        <ProjectHolder>
+      <h1>Welcome to my projects</h1>
+      {projects.map((project, i) => (
+        <ProjectHolder key={uniqid()}>
+          <h2>{project.name}</h2>
+          <h4>{project.description}</h4>
           <Carousel pictures={project.pictures} />
           <ProjectInfo>
-            <Summery>
-              <h3>Summery</h3>
-              <p>{project.description}</p>
-            </Summery>
-            <div>
-              <h4>Technologies</h4>
-              <p>{project.technologies}</p>
-            </div>
-            <div>
-              <h4>About</h4>
-              <p>{project.summery}</p>
-            </div>
-            <div>
-              <button type="button">Live Preview</button>
-              <button type="button">View code</button>
-            </div>
+            <h3>Technologies</h3>
+            <p>{project.technologies}</p>
+
+            <h3>Summery</h3>
+            <p>{project.summery}</p>
+
+            <ProjectLinks>
+              <Link href={project.live} target="_blank">
+                Live Preview
+              </Link>
+              <Link href={project.code} target="_blank">
+                View Code
+              </Link>
+            </ProjectLinks>
           </ProjectInfo>
+          {projects.length !== i + 1 && <Dots />}
         </ProjectHolder>
       ))}
     </StyledProjects>
