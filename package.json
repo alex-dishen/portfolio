@@ -5,6 +5,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
