@@ -16,7 +16,11 @@ export const pages = [
     filledPicture: <Pen />,
     plainPicture: <Pen />,
   },
-  { path: '/about', filledPicture: <FPerson />, plainPicture: <Person /> },
+  {
+    path: '/portfolio/about',
+    filledPicture: <FPerson />,
+    plainPicture: <Person />,
+  },
   { path: '/contact', filledPicture: <FMail />, plainPicture: <Mail /> },
 ];
 
