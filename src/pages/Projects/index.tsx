@@ -1,7 +1,13 @@
+import { motion } from 'framer-motion';
 import uniqid from 'uniqid';
 import Carousel from 'components/Carousel';
 import Dots from 'components/Dots';
-import projects from 'pages/Projects/constants';
+import {
+  projects,
+  headerAnimation,
+  secondaryHeaderAnimation,
+  generalAnimation,
+} from 'pages/Projects/constants';
 import {
   StyledProjects,
   ProjectHolder,
@@ -13,20 +19,69 @@ import {
 function Projects() {
   return (
     <StyledProjects>
-      <h1>Welcome to my projects</h1>
+      <motion.h1 variants={headerAnimation} initial="hidden" animate="show">
+        Welcome to my projects
+      </motion.h1>
       {projects.map((project, i) => (
         <ProjectHolder key={uniqid()}>
-          <h2>{project.name}</h2>
-          <h4>{project.description}</h4>
+          <motion.h2
+            variants={secondaryHeaderAnimation}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            {project.name}
+          </motion.h2>
+          <motion.h4
+            variants={generalAnimation}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            {project.description}
+          </motion.h4>
           <Carousel pictures={project.pictures} />
           <ProjectInfo>
-            <h3>Technologies</h3>
-            <p>{project.technologies}</p>
+            <motion.h3
+              variants={generalAnimation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              Technologies
+            </motion.h3>
+            <motion.p
+              variants={generalAnimation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              {project.technologies}
+            </motion.p>
 
-            <h3>Summery</h3>
-            <p>{project.summery}</p>
+            <motion.h3
+              variants={generalAnimation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              Summery
+            </motion.h3>
+            <motion.p
+              variants={generalAnimation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              {project.summery}
+            </motion.p>
 
-            <ProjectLinks>
+            <ProjectLinks
+              variants={generalAnimation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               <Link href={project.live} target="_blank">
                 Live Preview
               </Link>

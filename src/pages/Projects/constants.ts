@@ -44,7 +44,7 @@ const memoryGamePics = [
   { id: 5, src: lose },
 ];
 
-const projects = [
+export const projects = [
   {
     name: 'Game Harbor',
     description: 'Game shop with database from RAWG API',
@@ -88,4 +88,29 @@ const projects = [
   },
 ];
 
-export default projects;
+export const headerAnimation = {
+  hidden: { opacity: 0, translateY: 50 },
+  show: {
+    opacity: 1,
+    translateY: 0,
+    transition: { duration: 0.9, delay: 0.1, ease: 'easeOut' },
+  },
+};
+
+export const secondaryHeaderAnimation = {
+  hidden: { opacity: 0, translateY: 50 },
+  show: {
+    opacity: 1,
+    translateY: 0,
+    transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
+  },
+};
+
+export const generalAnimation = {
+  hidden: { opacity: 0, translateY: 50 },
+  show: {
+    opacity: 1,
+    translateY: 0,
+    transition: { duration: 0.8, delay: 0.4, ease: 'easeOut' },
+  },
+};

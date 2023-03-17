@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledProjects = styled.main`
   max-width: 850px;
@@ -52,7 +53,7 @@ export const ProjectInfo = styled.div`
   text-align: justify;
 `;
 
-export const ProjectLinks = styled.div`
+export const ProjectLinks = styled(motion.div)`
   display: flex;
   justify-content: center;
   gap: 50px;

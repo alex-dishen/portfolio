@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const CarouselWrapper = styled.div`
+export const CarouselWrapper = styled(motion.div)`
   position: relative;
   height: 480px;
   width: 850px;

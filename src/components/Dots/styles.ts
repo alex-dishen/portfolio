@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const DotsWrapper = styled.div`
+export const DotsWrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   gap: 22px;

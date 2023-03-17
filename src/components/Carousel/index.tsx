@@ -47,7 +47,16 @@ function Carousel({ pictures }: CarouselProps) {
   }, [index]);
 
   return (
-    <CarouselWrapper ref={carousel}>
+    <CarouselWrapper
+      ref={carousel}
+      initial={{ opacity: 0, translateY: 50 }}
+      whileInView={{
+        opacity: 1,
+        translateY: 0,
+        transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' },
+      }}
+      viewport={{ once: true }}
+    >
       <LeftButton
         onClick={() => {
           setIndex(index - 1);
