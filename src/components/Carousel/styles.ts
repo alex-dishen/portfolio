@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 export const CarouselWrapper = styled(motion.div)`
   position: relative;
-  height: 480px;
-  width: 850px;
+  aspect-ratio: 1.77 / 1;
+  width: 100%;
   background-color: rgb(46, 46, 46);
   border-radius: 30px;
   overflow: hidden;
@@ -64,6 +64,11 @@ export const DotsWrapper = styled.div`
 
   background-color: rgb(15, 16, 17);
   border-radius: 10px;
+
+  @media (max-width: 600px) {
+    top: 83%;
+    padding: 10px 18px;
+  }
 `;
 
 export const Dot = styled(motion.div)`
@@ -72,6 +77,11 @@ export const Dot = styled(motion.div)`
   background-color: rgb(140, 140, 140);
   border-radius: 50%;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    height: 6px;
+    width: 6px;
+  }
 `;
 
 export const ActiveDot = styled(motion.div)`
@@ -83,6 +93,11 @@ export const ActiveDot = styled(motion.div)`
   background-color: rgba(255, 145, 1, 1);
   border-radius: 50%;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    height: 9px;
+    width: 9px;
+  }
 `;
 
 export const RightButton = styled(LeftButton)`

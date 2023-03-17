@@ -9,6 +9,7 @@ export const StyledHome = styled(motion.main)`
   justify-content: center;
   align-items: center;
   gap: 40px;
+  margin: 0 20px;
   color: rgb(194, 194, 194);
 
   * {
@@ -45,6 +46,13 @@ export const StyledHome = styled(motion.main)`
     left: 50%;
     background: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
   }
+
+  @media (max-width: 600px) {
+    &::after {
+      height: 110px;
+      width: 170px;
+    }
+  }
 `;
 
 export const Greeting = styled.div`
@@ -56,6 +64,10 @@ export const Greeting = styled.div`
 export const TopGreeting = styled(motion.div)`
   display: flex;
   gap: 10px;
+
+  @media (max-width: 600px) {
+    gap: 5px;
+  }
 `;
 
 export const Header = styled(motion.h1)`
@@ -65,10 +77,16 @@ export const Header = styled(motion.h1)`
   margin: 10px;
   font-size: 50px;
   font-weight: 300;
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+  }
 `;
 
 export const ImageHolder = styled(motion.div)`
   position: relative;
+  display: flex;
+  flex-shrink: 0;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -83,6 +101,16 @@ export const ImageHolder = styled(motion.div)`
     object-fit: cover;
     transform: scale(2.4);
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 600px) {
+    width: 60px;
+    height: 60px;
+
+    img {
+      top: 30px;
+      left: -6px;
+    }
   }
 `;
 
@@ -119,13 +147,14 @@ export const NavigationLink = styled(Link)`
     }
   }
 
-  p {
-    margin: 0;
+  div {
+    display: flex;
+    align-items: center;
   }
 
-  span {
+  p {
     color: rgb(97, 97, 97);
-    margin-right: 15px;
+    margin: 0 15px 0 0;
   }
 
   svg {
@@ -138,6 +167,10 @@ export const NavigationLink = styled(Link)`
     position: absolute;
     left: -25px;
     fill: white;
+  }
+
+  @media (max-width: 600px) {
+    padding: 15px 24px;
   }
 `;
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 700px;
+  width: min(700px, 90vw);
   margin: 40px 0 100px 0;
   color: rgb(194, 194, 194);
 
@@ -39,11 +39,15 @@ export const StyledAbout = styled.div`
     font-size: 18px;
     line-height: 29px;
   }
+
+  @media (max-width: 600px) {
+    margin: 20px 0 100px 0;
+  }
 `;
 
 export const Image = styled(motion.img)`
   height: 350px;
-  width: 700px;
+  width: 100%;
   border-radius: 12px;
   object-fit: cover;
   filter: brightness(1.4);
@@ -76,6 +80,10 @@ export const SkillSection = styled.div`
   display: flex;
   justify-content: space-evenly;
   gap: 30px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Skills = styled(motion.div)`

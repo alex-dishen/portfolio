@@ -43,9 +43,9 @@ function Home() {
         {options.map((option) => (
           <Option key={uniqid()} variants={optionAnimation}>
             <NavigationLink to={option.page}>
-              <p>
-                <span>{option.variant}</span> {option.text}
-              </p>
+              <div>
+                <p>{option.variant}</p> {option.text}
+              </div>
               <ArrowContainer>
                 <RightArrow />
                 <RightArrow />

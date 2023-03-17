@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledProjects = styled.main`
-  max-width: 850px;
+  width: min(850px, 90vw);
   margin: 50px 30px;
   color: rgb(220, 220, 220);
 
@@ -40,6 +40,24 @@ export const StyledProjects = styled.main`
   p {
     margin-top: 7px;
     color: rgb(188, 188, 188);
+  }
+
+  @media (max-width: 600px) {
+    margin: 20px 30px 50px 30px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 16px;
+    }
   }
 `;
 

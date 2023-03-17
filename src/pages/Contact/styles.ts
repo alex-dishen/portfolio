@@ -31,6 +31,7 @@ export const StyledContact = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 20px 20px 100px 20px;
   gap: 40px;
   color: rgb(194, 194, 194);
 
@@ -74,6 +75,13 @@ export const StyledContact = styled.div`
     background: radial-gradient(rgba(188, 1, 255, 0.4), rgba(188, 1, 255, 0));
     animation: ${scale} 7s linear infinite;
   }
+
+  @media (max-width: 600px) {
+    &::after {
+      height: 110px;
+      width: 170px;
+    }
+  }
 `;
 
 export const Intro = styled.div`
@@ -81,23 +89,32 @@ export const Intro = styled.div`
   flex-direction: column;
   align-items: center;
 
+  * {
+    z-index: 2;
+  }
+
   h1 {
     font-size: 45px;
     font-weight: 400;
+
+    @media (max-width: 600px) {
+      font-size: 38px;
+    }
   }
 
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 24px;
+
+    p {
+      text-align: center;
+    }
 
     & p:nth-child(2) {
       margin-top: 8px;
     }
-  }
-
-  * {
-    z-index: 2;
   }
 `;
 
@@ -132,6 +149,16 @@ export const ImageHolder = styled.div`
     transform: scale(2.4);
     filter: brightness(1.1);
   }
+
+  @media (max-width: 600px) {
+    height: 100px;
+    width: 100px;
+
+    img {
+      top: 50px;
+      left: -8px;
+    }
+  }
 `;
 
 export const Name = styled.div`
@@ -148,6 +175,10 @@ export const Name = styled.div`
 export const ContactsWrapper = styled.div`
   display: flex;
   gap: 25px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Option = styled.a`
