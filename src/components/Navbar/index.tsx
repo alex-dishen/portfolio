@@ -12,6 +12,10 @@ function Navbar() {
         variants={window.innerWidth <= 850 ? mobile : desktop}
         initial="hidden"
         animate="show"
+        transition={{
+          duration: 2,
+          delay: location.pathname === '/' ? 3.4 : 0.9,
+        }}
       >
         {pages.map((page) => (
           <ImageHolder

@@ -22,10 +22,10 @@ export const pages = [
 
 export const desktop = {
   hidden: { x: -90, y: '-50%' },
-  show: { x: 0, y: '-50%', transition: { duration: 2, delay: 3.5 } },
+  show: { x: 0, y: '-50%' },
 };
 
 export const mobile = {
   hidden: { y: 90 },
-  show: { y: '-50%', transition: { duration: 2, delay: 3.3 } },
+  show: { y: '-50%' },
 };
