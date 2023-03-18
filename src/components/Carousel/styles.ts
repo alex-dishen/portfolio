@@ -87,7 +87,6 @@ export const Dot = styled(motion.div)`
 export const ActiveDot = styled(motion.div)`
   position: absolute;
   top: 35%;
-  left: 16px;
   height: 11px;
   width: 11px;
   background-color: rgba(255, 145, 1, 1);
