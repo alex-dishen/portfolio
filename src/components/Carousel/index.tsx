@@ -19,6 +19,7 @@ interface CarouselProps {
 
 function Carousel({ pictures }: CarouselProps) {
   const [index, setIndex] = useState(0);
+  const [dotsSpace, setDotsSpace] = useState(0);
   const carousel = useRef<HTMLDivElement>(null);
   const carouselControls = useAnimation();
   const animateCarousel = () => {
@@ -45,6 +46,19 @@ function Carousel({ pictures }: CarouselProps) {
 
     if (index < 0) return setIndex(pictures.length - 1);
   }, [index]);
+
+  useEffect(() => {
+    setDotsSpace(window.innerWidth <= 600 ? 19 : 22);
+
+    const handleResize = () => {
+      setDotsSpace(window.innerWidth <= 600 ? 19 : 22);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <CarouselWrapper
@@ -94,7 +108,7 @@ function Carousel({ pictures }: CarouselProps) {
         <ActiveDot
           initial={false}
           transition={{ duration: 0.35 }}
-          animate={{ x: index * 22 }}
+          animate={{ x: index * dotsSpace }}
         />
       </DotsWrapper>
       <RightButton
