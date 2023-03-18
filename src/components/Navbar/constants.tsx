@@ -17,7 +17,7 @@ export const pages = [
     plainPicture: <Pen />,
   },
   {
-    path: '/portfolio/about',
+    path: '/about',
     filledPicture: <FPerson />,
     plainPicture: <Person />,
   },
