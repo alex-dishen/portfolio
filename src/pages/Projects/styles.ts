@@ -71,6 +71,25 @@ export const ProjectInfo = styled.div`
   text-align: justify;
 `;
 
+export const ProjectSummery = styled(motion.div)`
+  position: relative;
+  height: 85px;
+  overflow: hidden;
+  cursor: pointer;
+`;
+
+export const SVGHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    height: 25px;
+    width: 25px;
+    fill: white;
+  }
+`;
+
 export const ProjectLinks = styled(motion.div)`
   display: flex;
   justify-content: center;

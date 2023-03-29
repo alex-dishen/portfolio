@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import uniqid from 'uniqid';
 import Carousel from 'components/Carousel';
 import Dots from 'components/Dots';
+import Summery from 'components/Summery/Summery';
 import {
   projects,
   headerAnimation,
@@ -67,14 +68,8 @@ function Projects() {
             >
               Summery
             </motion.h3>
-            <motion.p
-              variants={generalAnimation}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              {project.summery}
-            </motion.p>
+
+            <Summery summery={project.summery} />
 
             <ProjectLinks
               variants={generalAnimation}
