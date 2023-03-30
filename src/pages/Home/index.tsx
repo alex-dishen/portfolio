@@ -1,22 +1,13 @@
 import uniqid from 'uniqid';
-import {
-  options,
-  styledHomeAnimation,
-  imAnimation,
-  imageHolderAnimation,
-  nameAnimation,
-  positionAnimation,
-  navigationSectionAnimation,
-  optionAnimation,
-  textAnimation,
-} from 'pages/Home/constants';
+import { options } from 'pages/Home/constants';
 import {
   StyledHome,
-  Greeting,
+  Welcome,
   TopGreeting,
-  NavigationLink,
-  Header,
+  Greeting,
   ImageHolder,
+  Name,
+  Position,
   NavigationSection,
   Option,
   ArrowContainer,
@@ -28,33 +19,35 @@ import { ReactComponent as RightArrow } from 'assets/ui/arrow-right.svg';
 
 function Home() {
   return (
-    <StyledHome variants={styledHomeAnimation} initial="hidden" animate="show">
-      <Greeting>
+    <StyledHome>
+      <Welcome>
         <TopGreeting>
-          <Header variants={imAnimation}>Hey, I'm</Header>
-          <ImageHolder variants={imageHolderAnimation}>
+          <Greeting>Hey, I'm</Greeting>
+          <ImageHolder>
             <img src={meInBlueShirt} alt="Oleksandr in blue shirt" />
           </ImageHolder>
-          <Header variants={nameAnimation}>Oleksandr</Header>
+          <Name>Oleksandr</Name>
         </TopGreeting>
-        <Header variants={positionAnimation}>A Software Engineer</Header>
-      </Greeting>
-      <NavigationSection variants={navigationSectionAnimation}>
-        {options.map((option) => (
-          <Option key={uniqid()} variants={optionAnimation}>
-            <NavigationLink to={option.page}>
-              <div>
-                <p>{option.variant}</p> {option.text}
-              </div>
-              <ArrowContainer>
-                <RightArrow />
-                <RightArrow />
-              </ArrowContainer>
-            </NavigationLink>
+        <Position>A Software Engineer</Position>
+      </Welcome>
+      <NavigationSection>
+        {options.map((option, index) => (
+          <Option
+            to={option.page}
+            key={uniqid()}
+            animationDelay={2.5 + (index * 3) / 10}
+          >
+            <div>
+              <p>{option.variant}</p> {option.text}
+            </div>
+            <ArrowContainer>
+              <RightArrow />
+              <RightArrow />
+            </ArrowContainer>
           </Option>
         ))}
       </NavigationSection>
-      <Text variants={textAnimation}>
+      <Text>
         Never Mind -- <StyledLink to="/contact">Just Say Hi</StyledLink>
       </Text>
     </StyledHome>

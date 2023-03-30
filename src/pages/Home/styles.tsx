@@ -1,8 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import {
+  styledHomeAnimation,
+  greetingAnimation,
+  imageAnimation,
+  nameAnimation,
+  showElement,
+} from 'pages/Home/animations';
+import { IOption } from 'pages/Home/interfaces';
 
-export const StyledHome = styled(motion.main)`
+export const StyledHome = styled.main`
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -12,11 +20,12 @@ export const StyledHome = styled(motion.main)`
   margin: 0 20px;
   color: rgb(194, 194, 194);
 
-  * {
-    &::selection {
-      background-color: #072ea3;
-      color: white;
-    }
+  transform: translateY(160px);
+  animation: ${styledHomeAnimation} 2.6s ease-in-out forwards 1.6s;
+
+  *::selection {
+    background-color: #072ea3;
+    color: white;
   }
 
   &::after,
@@ -55,13 +64,13 @@ export const StyledHome = styled(motion.main)`
   }
 `;
 
-export const Greeting = styled.div`
+export const Welcome = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const TopGreeting = styled(motion.div)`
+export const TopGreeting = styled.div`
   display: flex;
   gap: 10px;
 
@@ -70,7 +79,7 @@ export const TopGreeting = styled(motion.div)`
   }
 `;
 
-export const Header = styled(motion.h1)`
+export const Greeting = styled.h1`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -78,12 +87,16 @@ export const Header = styled(motion.h1)`
   font-size: 50px;
   font-weight: 300;
 
+  opacity: 0;
+  transform: translateY(30px) translateX(30px) scale(0.8);
+  animation: ${greetingAnimation} 0.75s ease-out forwards 0.1s;
+
   @media (max-width: 600px) {
     font-size: 28px;
   }
 `;
 
-export const ImageHolder = styled(motion.div)`
+export const ImageHolder = styled.div`
   position: relative;
   display: flex;
   flex-shrink: 0;
@@ -91,6 +104,10 @@ export const ImageHolder = styled(motion.div)`
   width: 100px;
   border-radius: 50%;
   overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(50px) scale(0.8) rotate(10deg);
+  animation: ${imageAnimation} 0.65s ease-out forwards 0.35s;
 
   img {
     position: absolute;
@@ -114,65 +131,78 @@ export const ImageHolder = styled(motion.div)`
   }
 `;
 
-export const NavigationSection = styled(motion.div)`
+export const Name = styled(Greeting)`
+  transform: scale(0.9) translateY(40px);
+  animation: ${nameAnimation} 0.65s ease-out forwards 0.55s;
+`;
+
+export const Position = styled(Greeting)`
+  opacity: 0;
+  transform: translateY(0px) translateX(0px) scale(1);
+  animation: ${showElement} 1.4s ease-out forwards 2.1s;
+`;
+
+export const NavigationSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
 `;
 
-export const Option = styled(motion.div)`
-  z-index: 2;
-`;
-
-export const NavigationLink = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 20px 24px;
-  color: rgb(194, 194, 194);
-  font-size: 14px;
-  border: 2px solid rgb(40, 40, 40);
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-
-  &:hover {
-    color: white;
-    border-color: rgb(70, 70, 70);
-
-    svg {
-      transform: translateX(25px);
-    }
-  }
-
-  div {
+export const Option = styled(Link)<IOption>(
+  ({ animationDelay }) => css`
+    z-index: 2;
     display: flex;
     align-items: center;
-  }
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 24px;
+    color: rgb(194, 194, 194);
+    font-size: 14px;
+    border: 2px solid rgb(40, 40, 40);
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
 
-  p {
-    color: rgb(97, 97, 97);
-    margin: 0 15px 0 0;
-  }
+    opacity: 0;
+    transition: 0.3s;
+    animation: ${showElement} 0.7s ease-out forwards ${animationDelay}s;
 
-  svg {
-    height: 22px;
-    width: 22px;
-    transition: 0.5s;
-  }
+    &:hover {
+      color: white;
+      border-color: rgb(70, 70, 70);
 
-  svg:first-child {
-    position: absolute;
-    left: -25px;
-    fill: white;
-  }
+      svg {
+        transform: translateX(25px);
+      }
+    }
 
-  @media (max-width: 600px) {
-    padding: 15px 24px;
-  }
-`;
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      color: rgb(97, 97, 97);
+      margin: 0 15px 0 0;
+    }
+
+    svg {
+      height: 22px;
+      width: 22px;
+      transition: 0.5s;
+
+      &:first-child {
+        position: absolute;
+        left: -25px;
+        fill: white;
+      }
+    }
+
+    @media (max-width: 600px) {
+      padding: 15px 24px;
+    }
+  `
+);
 
 export const ArrowContainer = styled.div`
   position: relative;
@@ -182,9 +212,11 @@ export const ArrowContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Text = styled(motion.div)`
+export const Text = styled.div`
   display: flex;
   font-size: 13px;
+  opacity: 0;
+  animation: ${showElement} 0.5s ease-out forwards 3.45s;
 
   a {
     position: relative;
