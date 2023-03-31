@@ -1,14 +1,10 @@
-import { motion } from 'framer-motion';
 import uniqid from 'uniqid';
-import {
-  linkOptions,
-  headerAnimation,
-  pitchAnimation,
-  cardAnimation,
-} from 'pages/Contact/constants';
+import { linkOptions } from 'pages/Contact/constants';
 import {
   StyledContact,
   Intro,
+  Header,
+  Pitch,
   Card,
   ImageHolder,
   Name,
@@ -21,18 +17,16 @@ function Contact() {
   return (
     <StyledContact>
       <Intro>
-        <motion.h1 variants={headerAnimation} initial="hidden" animate="show">
-          The Stage is Yours
-        </motion.h1>
-        <motion.div variants={pitchAnimation} initial="hidden" animate="show">
+        <Header>The Stage is Yours</Header>
+        <Pitch>
           <p>
             I'm always looking to collaborate on interesting projects with great
             people.
           </p>
           <p>Need a supportive hand? I have two!</p>
-        </motion.div>
+        </Pitch>
       </Intro>
-      <Card variants={cardAnimation} initial="hidden" animate="show">
+      <Card>
         <ImageHolder>
           <img src={meInRedShirt} alt="Oleksandr in red shirt" />
         </ImageHolder>

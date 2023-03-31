@@ -1,29 +1,5 @@
-import styled, { keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
-
-const topToBottom = keyframes`
-  0% {
-    transform: translateY(-40px);
-  }
-  50% {
-    transform: translateY(200px);
-  }
-  100% {
-    transform: translateY(-40px);
-  }
-`;
-
-const scale = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.6);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
+import styled from 'styled-components';
+import { topToBottom, scale, showElement } from './animations';
 
 export const StyledContact = styled.div`
   flex: 1;
@@ -92,33 +68,41 @@ export const Intro = styled.div`
   * {
     z-index: 2;
   }
+`;
 
-  h1 {
-    font-size: 45px;
-    font-weight: 400;
+export const Header = styled.h1`
+  font-size: 45px;
+  font-weight: 400;
 
-    @media (max-width: 600px) {
-      font-size: 38px;
-    }
-  }
+  opacity: 0;
+  transform: translateY(60px) scale(0.6) skewY(3deg);
+  animation: ${showElement} 1s ease-out forwards 0.1s;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 24px;
-
-    p {
-      text-align: center;
-    }
-
-    & p:nth-child(2) {
-      margin-top: 8px;
-    }
+  @media (max-width: 600px) {
+    font-size: 38px;
   }
 `;
 
-export const Card = styled(motion.div)`
+export const Pitch = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 24px;
+
+  opacity: 0;
+  transform: translateY(70px) scale(0.7) skewY(3deg);
+  animation: ${showElement} 1s ease-out forwards 0.5s;
+
+  p {
+    text-align: center;
+  }
+
+  & p:nth-child(2) {
+    margin-top: 8px;
+  }
+`;
+
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,6 +110,10 @@ export const Card = styled(motion.div)`
   padding: 50px 80px;
   border: 2px solid rgb(28, 28, 28);
   border-radius: 20px;
+
+  opacity: 0;
+  transform: translateY(90px) scale(0.7) skewY(8deg);
+  animation: ${showElement} 0.8s ease-out forwards 0.7s;
 
   * {
     z-index: 2;
