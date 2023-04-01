@@ -1,50 +1,31 @@
-import { motion } from 'framer-motion';
-import uniqid from 'uniqid';
-import {
-  languages,
-  tools,
-  meetOleksandrAnimation,
-  imageAnimation,
-  greetingsAnimation,
-  pitchAnimation,
-  finishedProjectsAnimation,
-  experienceAnimation,
-  skillsAnimation,
-  toolsAnimation,
-} from 'pages/About/constants';
+import useInView from 'hooks/useInView';
+import { languages, tools } from 'pages/About/constants';
 import {
   StyledAbout,
+  Header,
   Image,
+  Greeting,
+  AboutMe,
   Specifics,
+  Projects,
+  Experience,
   Number,
-  SkillSection,
+  SkillsHeader,
+  SkillsSection,
   Skills,
+  Tools,
 } from 'pages/About/styles';
 import meInRedShirt from 'assets/red-shirt.JPG';
 
 function About() {
+  const visibleSections = useInView('section[id], h2[id]');
+
   return (
     <StyledAbout>
-      <motion.h1
-        variants={meetOleksandrAnimation}
-        initial="hidden"
-        animate="show"
-      >
-        Meet Oleksandr
-      </motion.h1>
-      <Image
-        src={meInRedShirt}
-        onMouseDown={(e) => {
-          e.preventDefault();
-        }}
-        variants={imageAnimation}
-        initial="hidden"
-        animate="show"
-      />
-      <motion.h3 variants={greetingsAnimation} initial="hidden" animate="show">
-        Greetings and welcome to my personal website!
-      </motion.h3>
-      <motion.div variants={pitchAnimation} initial="hidden" animate="show">
+      <Header>Meet Oleksandr</Header>
+      <Image src={meInRedShirt} onMouseDown={(e) => e.preventDefault()} />
+      <Greeting>Greetings and welcome to my personal website!</Greeting>
+      <AboutMe>
         <p>
           My name is Oleksandr Didyshen, and I am a dynamic and motivated
           individual who is passionate about Software Engineering.
@@ -68,59 +49,34 @@ function About() {
           hope it will provide you with valuable information and inspiration.
           Thank you for visiting and I look forward to connecting with you.
         </p>
-      </motion.div>
-      <Specifics>
-        <motion.div
-          variants={finishedProjectsAnimation}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+      </AboutMe>
+      <Specifics id="specifics">
+        <Projects isVisible={visibleSections?.specifics}>
           <Number>17</Number> <p>Finished projects</p>
-        </motion.div>
-        <motion.div
-          variants={experienceAnimation}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+        </Projects>
+        <Experience isVisible={visibleSections?.specifics}>
           <Number>6</Number> <p>Months of experience</p>
-        </motion.div>
+        </Experience>
       </Specifics>
-      <motion.h2
-        variants={skillsAnimation}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-      >
+      <SkillsHeader id="skills" isVisible={visibleSections?.skills}>
         Skills
-      </motion.h2>
-      <SkillSection>
-        <Skills
-          variants={skillsAnimation}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+      </SkillsHeader>
+      <SkillsSection id="tools">
+        <Skills isVisible={visibleSections?.tools}>
           {languages.map((language) => (
-            <div key={uniqid()}>
+            <div key={language.id}>
               {language.picture} {language.name}
             </div>
           ))}
         </Skills>
-        <Skills
-          variants={toolsAnimation}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
+        <Tools isVisible={visibleSections?.tools}>
           {tools.map((tool) => (
-            <div key={uniqid()}>
+            <div key={tool.id}>
               {tool.picture} {tool.name}
             </div>
           ))}
-        </Skills>
-      </SkillSection>
+        </Tools>
+      </SkillsSection>
     </StyledAbout>
   );
 }
