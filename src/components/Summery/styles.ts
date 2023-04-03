@@ -3,10 +3,10 @@ import { IText } from 'components/Summery/interfaces';
 
 export const Text = styled.p<IText>(
   ({ isShowSummery }) => css`
-    height: ${isShowSummery ? 'fit-content' : '85px'};
+    max-height: ${isShowSummery ? '500px' : '85px'};
     margin: 7px 0 0 0;
     overflow: hidden;
-    transition: all 2s;
+    transition: max-height 1s ease-in-out;
   `
 );
 
