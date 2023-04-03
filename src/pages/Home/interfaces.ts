@@ -1,3 +1,3 @@
 export interface IOption {
-  animationDelay: number;
+  index: number;
 }

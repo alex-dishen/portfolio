@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Slider from 'infinite-image-slider';
 import {
   CarouselWrapper,
@@ -36,4 +37,4 @@ function Carousel({ pictures, id, isVisible }: CarouselProps) {
   );
 }
 
-export default Carousel;
+export default memo(Carousel);

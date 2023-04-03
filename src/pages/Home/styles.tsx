@@ -149,7 +149,7 @@ export const NavigationSection = styled.div`
 `;
 
 export const Option = styled(Link)<IOption>(
-  ({ animationDelay }) => css`
+  ({ index }) => css`
     z-index: 2;
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@ export const Option = styled(Link)<IOption>(
 
     opacity: 0;
     transition: 0.3s;
-    animation: ${showElement} 0.7s ease-out forwards ${animationDelay}s;
+    animation: ${showElement} 0.7s ease-out forwards ${2.5 + (index * 3) / 10}s;
 
     &:hover {
       color: white;

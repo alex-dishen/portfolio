@@ -32,11 +32,7 @@ function Home() {
       </Welcome>
       <NavigationSection>
         {options.map((option, index) => (
-          <Option
-            to={option.page}
-            key={uniqid()}
-            animationDelay={2.5 + (index * 3) / 10}
-          >
+          <Option to={option.page} key={uniqid()} index={index}>
             <div>
               <p>{option.variant}</p> {option.text}
             </div>

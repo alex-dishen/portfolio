@@ -23,13 +23,3 @@ export const pages = [
   },
   { path: '/contact', filledPicture: <FMail />, plainPicture: <Mail /> },
 ];
-
-export const desktop = {
-  hidden: { x: -90, y: '-50%' },
-  show: { x: 0, y: '-50%' },
-};
-
-export const mobile = {
-  hidden: { y: 90 },
-  show: { y: '-50%' },
-};

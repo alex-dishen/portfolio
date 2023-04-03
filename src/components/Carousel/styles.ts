@@ -31,6 +31,7 @@ export const CarouselWrapper = styled.div<IIsVisibleValue>(
     button {
       z-index: 2;
       position: absolute;
+      height: 100%;
 
       &:last-child {
         right: 0;
