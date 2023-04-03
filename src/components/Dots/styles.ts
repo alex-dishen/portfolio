@@ -1,12 +1,24 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled, { css, keyframes } from 'styled-components';
+import { IIsVisibleValue } from 'components/Dots/types';
 
-export const DotsWrapper = styled(motion.div)`
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  margin-top: 50px;
+export const moveUp = keyframes`
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 `;
+
+export const DotsWrapper = styled.div<IIsVisibleValue>(
+  ({ isVisible }) => css`
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 0.8s ease-out forwards 0.8s;
+  `
+);
 
 export const Dot = styled.div`
   aspect-ratio: 1 / 1;

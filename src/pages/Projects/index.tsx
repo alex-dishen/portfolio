@@ -1,91 +1,81 @@
-import { motion } from 'framer-motion';
-import uniqid from 'uniqid';
+import useInView from 'hooks/useInView';
 import Carousel from 'components/Carousel';
 import Dots from 'components/Dots';
-import Summery from 'components/Summery/Summery';
-import {
-  projects,
-  headerAnimation,
-  secondaryHeaderAnimation,
-  generalAnimation,
-} from 'pages/Projects/constants';
+import Summery from 'components/Summery';
+import { projects } from 'pages/Projects/constants';
 import {
   StyledProjects,
+  MainHeader,
   ProjectHolder,
-  ProjectInfo,
+  ProjectInitials,
+  ProjectName,
+  ProjectDescription,
+  TechnologiesSection,
+  TechnologiesHeader,
+  Technologies,
+  SummerySection,
+  SummeryHeader,
   ProjectLinks,
   Link,
 } from 'pages/Projects/styles';
 
 function Projects() {
+  const visibleSections = useInView('h2[id], p[id], #root div[id]');
+
   return (
     <StyledProjects>
-      <motion.h1 variants={headerAnimation} initial="hidden" animate="show">
-        Welcome to my projects
-      </motion.h1>
-      {projects.map((project, i) => (
-        <ProjectHolder key={uniqid()}>
-          <motion.h2
-            variants={secondaryHeaderAnimation}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+      <MainHeader>Welcome to my projects</MainHeader>
+      {projects.map((project, index) => (
+        <ProjectHolder key={project.id}>
+          <ProjectInitials
+            id={`projectInitials${index}`}
+            isVisible={visibleSections[`projectInitials${index}`]}
           >
-            {project.name}
-          </motion.h2>
-          <motion.h4
-            variants={generalAnimation}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+            <ProjectName>{project.name}</ProjectName>
+            <ProjectDescription>{project.description}</ProjectDescription>
+          </ProjectInitials>
+
+          <Carousel
+            pictures={project.pictures}
+            id={`carousel${index}`}
+            isVisible={visibleSections[`carousel${index}`]}
+          />
+
+          <TechnologiesSection
+            id={`technologiesSection${index}`}
+            isVisible={visibleSections[`technologiesSection${index}`]}
           >
-            {project.description}
-          </motion.h4>
-          <Carousel pictures={project.pictures} />
-          <ProjectInfo>
-            <motion.h3
-              variants={generalAnimation}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              Technologies
-            </motion.h3>
-            <motion.p
-              variants={generalAnimation}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              {project.technologies}
-            </motion.p>
+            <TechnologiesHeader>Technologies</TechnologiesHeader>
+            <Technologies>{project.technologies}</Technologies>
+          </TechnologiesSection>
 
-            <motion.h3
-              variants={generalAnimation}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-            >
-              Summery
-            </motion.h3>
-
+          <SummerySection
+            id={`summerySection${index}`}
+            isVisible={visibleSections[`summerySection${index}`]}
+          >
+            <SummeryHeader>Summery</SummeryHeader>
             <Summery summery={project.summery} />
+          </SummerySection>
 
-            <ProjectLinks
-              variants={generalAnimation}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
+          <ProjectLinks id={`projectLinks${index}`}>
+            <Link
+              href={project.live}
+              target="_blank"
+              isVisible={visibleSections[`projectLinks${index}`]}
             >
-              <Link href={project.live} target="_blank">
-                Live Preview
-              </Link>
-              <Link href={project.code} target="_blank">
-                View Code
-              </Link>
-            </ProjectLinks>
-          </ProjectInfo>
-          {projects.length !== i + 1 && <Dots />}
+              Live Preview
+            </Link>
+            <Link
+              href={project.code}
+              target="_blank"
+              isVisible={visibleSections[`projectLinks${index}`]}
+            >
+              View Code
+            </Link>
+          </ProjectLinks>
+          {projects.length !== index + 1 && (
+            <Dots isVisible={visibleSections[`projectLinks${index}`]} />
+          )}
         </ProjectHolder>
       ))}
     </StyledProjects>

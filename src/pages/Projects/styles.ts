@@ -1,115 +1,140 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled, { css } from 'styled-components';
+import { IIsVisibleValue } from 'pages/Projects/types';
+import { moveUp } from 'pages/Projects/animations';
 
 export const StyledProjects = styled.main`
   width: min(850px, 90vw);
   margin: 50px 30px;
   color: rgb(220, 220, 220);
 
-  * {
-    &::selection {
-      background-color: rgb(211, 120, 0);
-      color: white;
-    }
+  *::selection {
+    background-color: rgb(255, 157, 0);
+    color: white;
   }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 46px;
-    font-weight: 800;
-  }
-
-  h2 {
-    font-size: 38px;
-    font-weight: 800;
-    margin: 0;
-  }
-
-  h3 {
-    font-size: 20px;
-    margin-bottom: 0px;
-  }
-
-  h4 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: rgb(174, 174, 174);
-  }
-
+  h2,
+  h3,
+  h4,
   p {
-    margin-top: 7px;
-    color: rgb(188, 188, 188);
+    margin: 0;
   }
 
   @media (max-width: 600px) {
     margin: 20px 30px 50px 30px;
+  }
+`;
 
-    h1 {
-      font-size: 36px;
-      font-weight: 600;
-    }
+export const MainHeader = styled.h1`
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 46px;
+  font-weight: 800;
 
-    h2 {
-      font-size: 28px;
-      font-weight: 600;
-    }
+  opacity: 0;
+  transform: translateY(50px);
+  animation: ${moveUp} 1s ease-out forwards 0.1s;
 
-    h4 {
-      font-size: 16px;
-    }
+  @media (max-width: 600px) {
+    font-size: 36px;
+    font-weight: 600;
   }
 `;
 
 export const ProjectHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-bottom: 50px;
 `;
 
-export const ProjectInfo = styled.div`
-  line-height: 29px;
-  white-space: pre-wrap;
-  text-align: justify;
-`;
+export const ProjectInitials = styled.div<IIsVisibleValue>(
+  ({ isVisible }) => css`
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.2s;
+  `
+);
 
-export const ProjectSummery = styled(motion.div)`
-  position: relative;
-  height: 85px;
-  overflow: hidden;
-  cursor: pointer;
-`;
+export const ProjectName = styled.h2`
+  margin-bottom: 6px !important;
+  font-size: 38px;
+  font-weight: 800;
 
-export const SVGHolder = styled.div`
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-
-  svg {
-    height: 25px;
-    width: 25px;
-    fill: white;
+  @media (max-width: 600px) {
+    font-size: 28px;
+    font-weight: 600;
   }
 `;
 
-export const ProjectLinks = styled(motion.div)`
+export const ProjectDescription = styled.h4`
+  font-size: 18px;
+  color: rgb(174, 174, 174);
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+`;
+
+export const TechnologiesSection = styled.div<IIsVisibleValue>(
+  ({ isVisible }) => css`
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.55s;
+  `
+);
+
+export const TechnologiesHeader = styled.h3`
+  font-size: 20px;
+  margin-bottom: 6px !important;
+`;
+
+export const Technologies = styled.p`
+  color: rgb(188, 188, 188);
+`;
+
+export const SummerySection = styled.div<IIsVisibleValue>(
+  ({ isVisible }) => css`
+    line-height: 29px;
+    white-space: pre-wrap;
+    text-align: justify;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.65s;
+  `
+);
+
+export const SummeryHeader = styled(TechnologiesHeader)``;
+
+export const ProjectLinks = styled.div`
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
-export const Link = styled.a`
-  padding: 8px 18px;
-  font-size: 14px;
-  border: 2px solid rgb(42, 42, 42);
-  border-radius: 15px;
-  background-color: inherit;
-  color: rgb(194, 194, 194);
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
+export const Link = styled.a<IIsVisibleValue>(
+  ({ isVisible }) => css`
+    padding: 15px 18px;
+    font-size: 14px;
+    border: 2px solid rgb(42, 42, 42);
+    border-radius: 15px;
+    color: rgb(194, 194, 194);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
 
-  &:hover {
-    color: white;
-    border-color: rgb(70, 70, 70);
-  }
-`;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.35s;
+
+    &:hover {
+      color: white;
+      border-color: rgb(70, 70, 70);
+    }
+
+    &:last-child {
+      animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.7s;
+    }
+  `
+);

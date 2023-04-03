@@ -4,7 +4,7 @@ import { IText } from 'components/Summery/interfaces';
 export const Text = styled.p<IText>(
   ({ isShowSummery }) => css`
     height: ${isShowSummery ? 'fit-content' : '85px'};
-    margin: 0;
+    margin: 7px 0 0 0;
     overflow: hidden;
     transition: all 2s;
   `

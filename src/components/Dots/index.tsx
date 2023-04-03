@@ -1,14 +1,12 @@
 import { DotsWrapper, Dot } from 'components/Dots/styles';
-import { generalAnimation } from 'pages/Projects/constants';
 
-function Dots() {
+interface DotsProps {
+  isVisible: boolean;
+}
+
+function Dots({ isVisible }: DotsProps) {
   return (
-    <DotsWrapper
-      variants={generalAnimation}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-    >
+    <DotsWrapper isVisible={isVisible}>
       <Dot />
       <Dot />
       <Dot />

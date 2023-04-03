@@ -1,123 +1,37 @@
-import { useRef, useState, useEffect } from 'react';
-import { PanInfo, useAnimation } from 'framer-motion';
-import { ReactComponent as ChevronLeft } from 'assets/ui/chevron-left.svg';
-import { ReactComponent as ChevronRight } from 'assets/ui/chevron-right.svg';
+import Slider from 'infinite-image-slider';
 import {
   CarouselWrapper,
-  LeftButton,
   ImageHolder,
   Image,
-  RightButton,
-  DotsWrapper,
   Dot,
   ActiveDot,
 } from 'components/Carousel/styles';
+import { ReactComponent as ChevronLeft } from 'assets/ui/chevron-left.svg';
+import { ReactComponent as ChevronRight } from 'assets/ui/chevron-right.svg';
 
 interface CarouselProps {
-  pictures: { id: number; src: string }[];
+  pictures: { id: string; src: string }[];
+  id: string;
+  isVisible: boolean;
 }
 
-function Carousel({ pictures }: CarouselProps) {
-  const [index, setIndex] = useState(0);
-  const [dotsSpace, setDotsSpace] = useState(0);
-  const carousel = useRef<HTMLDivElement>(null);
-  const carouselControls = useAnimation();
-  const animateCarousel = () => {
-    carouselControls.start({ x: `${-index * 100}%` });
-  };
-
-  const setIndexByPosition = (_event: never, info: PanInfo) => {
-    const { x } = info.offset;
-    const carouselWidth = carousel.current?.clientWidth || 1;
-    const initialOffset = index * carouselWidth;
-    const newIndex = Math.round((initialOffset + x * -2) / carouselWidth);
-    if (newIndex !== index) {
-      setIndex(newIndex);
-    } else {
-      animateCarousel();
-    }
-  };
-
-  useEffect(() => {
-    if (!pictures) return;
-
-    animateCarousel();
-    if (index >= pictures.length) return setIndex(0);
-
-    if (index < 0) return setIndex(pictures.length - 1);
-  }, [index]);
-
-  useEffect(() => {
-    setDotsSpace(window.innerWidth <= 600 ? 19 : 22);
-
-    const handleResize = () => {
-      setDotsSpace(window.innerWidth <= 600 ? 19 : 22);
-    };
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+function Carousel({ pictures, id, isVisible }: CarouselProps) {
   return (
-    <CarouselWrapper
-      ref={carousel}
-      initial={{ opacity: 0, translateY: 50 }}
-      whileInView={{
-        opacity: 1,
-        translateY: 0,
-        transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' },
-      }}
-      viewport={{ once: true }}
-    >
-      <LeftButton
-        onClick={() => {
-          setIndex(index - 1);
-        }}
+    <CarouselWrapper id={id} isVisible={isVisible}>
+      <Slider
+        showDots
+        config={[{ slidesNumber: 1, maxWidth: 2000 }]}
+        prevButton={<ChevronLeft />}
+        nextButton={<ChevronRight />}
+        customDot={<Dot />}
+        customActiveDot={<ActiveDot />}
       >
-        <ChevronLeft />
-      </LeftButton>
-      <ImageHolder
-        drag="x"
-        dragMomentum={false}
-        onMouseDown={(e) => e.preventDefault()}
-        onDragEnd={setIndexByPosition}
-        initial={{ x: 0 }}
-        animate={carouselControls}
-        transition={{ duration: 0.6 }}
-      >
-        {pictures &&
-          pictures.map((picture) => (
-            <Image key={picture.id} src={picture.src} />
-          ))}
-      </ImageHolder>
-      <DotsWrapper>
-        {pictures &&
-          pictures.map((picture, i) => (
-            <Dot
-              key={picture.id}
-              initial={false}
-              animate={{ scale: +(index !== i) }}
-              transition={{ duration: 0.2 }}
-              onClick={() => {
-                setIndex(i);
-              }}
-            />
-          ))}
-        <ActiveDot
-          initial={false}
-          transition={{ duration: 0.35 }}
-          animate={{ x: index * dotsSpace }}
-        />
-      </DotsWrapper>
-      <RightButton
-        onClick={() => {
-          setIndex(index + 1);
-        }}
-      >
-        <ChevronRight />
-      </RightButton>
+        {pictures.map((picture) => (
+          <ImageHolder key={picture.id}>
+            <Image src={picture.src} />
+          </ImageHolder>
+        ))}
+      </Slider>
     </CarouselWrapper>
   );
 }

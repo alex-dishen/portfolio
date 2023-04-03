@@ -1,3 +1,4 @@
+import uniqid from 'uniqid';
 // Screen width needed to take a picture 1500
 import threeInRaw from 'assets/projects/slider/three-in-raw.png';
 import twoInRaw from 'assets/projects/slider/two-in-raw.png';
@@ -17,35 +18,36 @@ import addColor from 'assets/projects/to-do/add-color.png';
 import addEmoji from 'assets/projects/to-do/add-smiles.png';
 
 const gameHarborPics = [
-  { id: 1, src: homePage },
-  { id: 2, src: gamesPage },
-  { id: 3, src: gamesPage2 },
-  { id: 4, src: gamePage },
-  { id: 5, src: gamePage2 },
-  { id: 6, src: gamePage3 },
+  { id: uniqid(), src: homePage },
+  { id: uniqid(), src: gamesPage },
+  { id: uniqid(), src: gamesPage2 },
+  { id: uniqid(), src: gamePage },
+  { id: uniqid(), src: gamePage2 },
+  { id: uniqid(), src: gamePage3 },
 ];
 
 const sliderPics = [
-  { id: 1, src: threeInRaw },
-  { id: 2, src: twoInRaw },
+  { id: uniqid(), src: threeInRaw },
+  { id: uniqid(), src: twoInRaw },
 ];
 
 const toDoPics = [
-  { id: 1, src: mainPage },
-  { id: 2, src: addColor },
-  { id: 3, src: addEmoji },
+  { id: uniqid(), src: mainPage },
+  { id: uniqid(), src: addColor },
+  { id: uniqid(), src: addEmoji },
 ];
 
 const memoryGamePics = [
-  { id: 1, src: startPage },
-  { id: 2, src: loading },
-  { id: 3, src: playGround },
-  { id: 4, src: win },
-  { id: 5, src: lose },
+  { id: uniqid(), src: startPage },
+  { id: uniqid(), src: loading },
+  { id: uniqid(), src: playGround },
+  { id: uniqid(), src: win },
+  { id: uniqid(), src: lose },
 ];
 
 export const projects = [
   {
+    id: uniqid(),
     name: 'Game Harbor',
     description: 'Game shop with database from RAWG API',
     pictures: gameHarborPics,
@@ -57,6 +59,7 @@ export const projects = [
     code: 'https://github.com/alex-dishen/shop',
   },
   {
+    id: uniqid(),
     name: 'Infinite Image Slider',
     description: 'Light-weight slider',
     pictures: sliderPics,
@@ -67,6 +70,7 @@ export const projects = [
     code: 'https://github.com/MaKs-Tkachyk/infinite-image-slider',
   },
   {
+    id: uniqid(),
     name: 'To-Do',
     description: 'To-Do app',
     pictures: toDoPics,
@@ -77,6 +81,7 @@ export const projects = [
     code: 'https://github.com/alex-dishen/todo-app',
   },
   {
+    id: uniqid(),
     name: 'Gravity Falls',
     description: 'Memory game with Gravity Falls characters',
     pictures: memoryGamePics,
@@ -87,30 +92,3 @@ export const projects = [
     code: 'https://github.com/alex-dishen/memory-card',
   },
 ];
-
-export const headerAnimation = {
-  hidden: { opacity: 0, translateY: 50 },
-  show: {
-    opacity: 1,
-    translateY: 0,
-    transition: { duration: 0.9, delay: 0.1, ease: 'easeOut' },
-  },
-};
-
-export const secondaryHeaderAnimation = {
-  hidden: { opacity: 0, translateY: 50 },
-  show: {
-    opacity: 1,
-    translateY: 0,
-    transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
-  },
-};
-
-export const generalAnimation = {
-  hidden: { opacity: 0, translateY: 50 },
-  show: {
-    opacity: 1,
-    translateY: 0,
-    transition: { duration: 0.8, delay: 0.4, ease: 'easeOut' },
-  },
-};
