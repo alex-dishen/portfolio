@@ -25,59 +25,73 @@ function Projects() {
   return (
     <StyledProjects>
       <MainHeader>Welcome to my projects</MainHeader>
-      {projects.map((project, index) => (
-        <ProjectHolder key={project.id}>
-          <ProjectInitials
-            id={`projectInitials${index}`}
-            isVisible={visibleSections[`projectInitials${index}`]}
-          >
-            <ProjectName>{project.name}</ProjectName>
-            <ProjectDescription>{project.description}</ProjectDescription>
-          </ProjectInitials>
-
-          <Carousel
-            pictures={project.pictures}
-            id={`carousel${index}`}
-            isVisible={visibleSections[`carousel${index}`]}
-          />
-
-          <TechnologiesSection
-            id={`technologiesSection${index}`}
-            isVisible={visibleSections[`technologiesSection${index}`]}
-          >
-            <TechnologiesHeader>Technologies</TechnologiesHeader>
-            <Technologies>{project.technologies}</Technologies>
-          </TechnologiesSection>
-
-          <SummerySection
-            id={`summerySection${index}`}
-            isVisible={visibleSections[`summerySection${index}`]}
-          >
-            <SummeryHeader>Summery</SummeryHeader>
-            <Summery summery={project.summery} />
-          </SummerySection>
-
-          <ProjectLinks id={`projectLinks${index}`}>
-            <Link
-              href={project.live}
-              target="_blank"
-              isVisible={visibleSections[`projectLinks${index}`]}
+      {projects.map(
+        (
+          {
+            id,
+            name,
+            description,
+            pictures,
+            technologies,
+            summery,
+            live,
+            code,
+          },
+          index
+        ) => (
+          <ProjectHolder key={id}>
+            <ProjectInitials
+              id={`projectInitials${index}`}
+              isVisible={visibleSections[`projectInitials${index}`]}
             >
-              Live Preview
-            </Link>
-            <Link
-              href={project.code}
-              target="_blank"
-              isVisible={visibleSections[`projectLinks${index}`]}
+              <ProjectName>{name}</ProjectName>
+              <ProjectDescription>{description}</ProjectDescription>
+            </ProjectInitials>
+
+            <Carousel
+              pictures={pictures}
+              id={`carousel${index}`}
+              isVisible={visibleSections[`carousel${index}`]}
+            />
+
+            <TechnologiesSection
+              id={`technologiesSection${index}`}
+              isVisible={visibleSections[`technologiesSection${index}`]}
             >
-              View Code
-            </Link>
-          </ProjectLinks>
-          {projects.length !== index + 1 && (
-            <Dots isVisible={visibleSections[`projectLinks${index}`]} />
-          )}
-        </ProjectHolder>
-      ))}
+              <TechnologiesHeader>Technologies</TechnologiesHeader>
+              <Technologies>{technologies}</Technologies>
+            </TechnologiesSection>
+
+            <SummerySection
+              id={`summerySection${index}`}
+              isVisible={visibleSections[`summerySection${index}`]}
+            >
+              <SummeryHeader>Summery</SummeryHeader>
+              <Summery summery={summery} />
+            </SummerySection>
+
+            <ProjectLinks id={`projectLinks${index}`}>
+              <Link
+                href={live}
+                target="_blank"
+                isVisible={visibleSections[`projectLinks${index}`]}
+              >
+                Live Preview
+              </Link>
+              <Link
+                href={code}
+                target="_blank"
+                isVisible={visibleSections[`projectLinks${index}`]}
+              >
+                View Code
+              </Link>
+            </ProjectLinks>
+            {projects.length !== index + 1 && (
+              <Dots isVisible={visibleSections[`projectLinks${index}`]} />
+            )}
+          </ProjectHolder>
+        )
+      )}
     </StyledProjects>
   );
 }

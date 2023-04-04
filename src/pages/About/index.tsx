@@ -15,9 +15,9 @@ import {
   Skills,
   Tools,
 } from 'pages/About/styles';
-import meInRedShirt from 'assets/red-shirt.webp';
+import meInRedShirt from 'assets/images/red-shirt.webp';
 
-function About() {
+const About = () => {
   const visibleSections = useInView('section[id], h2[id]');
 
   return (
@@ -63,22 +63,22 @@ function About() {
       </SkillsHeader>
       <SkillsSection id="tools">
         <Skills isVisible={visibleSections?.tools}>
-          {languages.map((language) => (
-            <div key={language.id}>
-              {language.picture} {language.name}
+          {languages.map(({ id, picture, name }) => (
+            <div key={id}>
+              {picture} {name}
             </div>
           ))}
         </Skills>
         <Tools isVisible={visibleSections?.tools}>
-          {tools.map((tool) => (
-            <div key={tool.id}>
-              {tool.picture} {tool.name}
+          {tools.map(({ id, picture, name }) => (
+            <div key={id}>
+              {picture} {name}
             </div>
           ))}
         </Tools>
       </SkillsSection>
     </StyledAbout>
   );
-}
+};
 
 export default About;

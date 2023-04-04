@@ -1,3 +1,4 @@
+import useNavbar from 'components/Navbar/useNavbar';
 import { pages } from 'components/Navbar/constants';
 import {
   StyledNavbar,
@@ -5,26 +6,20 @@ import {
   LinkHolder,
   Overflow,
 } from 'components/Navbar/styles';
-import useNavbar from 'components/Navbar/useNavbar';
 
-function Navbar() {
-  const { glowingColor, location } = useNavbar();
+const Navbar = () => {
+  const { animationDelay, isMobile, glowingColor, location } = useNavbar();
 
   return (
     <>
-      <StyledNavbar
-        delay={location.pathname === '/' ? 3.4 : 0.9}
-        isMobile={window.innerWidth <= 850 ? true : false}
-      >
-        {pages.map((page) => (
-          <LinkHolder key={page.path} glowingColor={glowingColor}>
+      <StyledNavbar delay={animationDelay} isMobile={isMobile}>
+        {pages.map(({ path, filledPicture, plainPicture }) => (
+          <LinkHolder key={path} glowingColor={glowingColor}>
             <StyledLink
-              to={page.path}
-              target={page.path.includes('http') ? '_blank' : ''}
+              to={path}
+              target={path.includes('http') ? '_blank' : ''}
             >
-              {location.pathname === page.path
-                ? page.filledPicture
-                : page.plainPicture}
+              {location.pathname === path ? filledPicture : plainPicture}
             </StyledLink>
           </LinkHolder>
         ))}
@@ -32,6 +27,6 @@ function Navbar() {
       <Overflow />
     </>
   );
-}
+};
 
 export default Navbar;

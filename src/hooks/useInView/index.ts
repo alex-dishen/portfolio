@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { IVisibleSections } from './interfaces';
+import { IVisibleSections } from 'hooks/useInView/types';
 
 const useInView = (selector: string) => {
   const [visibleSections, setVisibleSections] = useState<IVisibleSections>({});

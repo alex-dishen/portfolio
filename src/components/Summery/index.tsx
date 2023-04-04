@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { SummeryProps } from 'components/Summery/interfaces';
+import { SummeryProps } from 'components/Summery/types';
 import { Text, SVGHolder } from 'components/Summery/styles';
-import { ReactComponent as ChevronUp } from 'assets/ui/chevron-up.svg';
-import { ReactComponent as ChevronDown } from 'assets/ui/chevron-down.svg';
+import { ReactComponent as ChevronUp } from 'assets/images/ui/chevron-up.svg';
+import { ReactComponent as ChevronDown } from 'assets/images/ui/chevron-down.svg';
 
-function Summery({ summery }: SummeryProps) {
+const Summery = ({ summery }: SummeryProps) => {
   const [isShowSummery, setIsShowSummery] = useState(false);
 
   return (
@@ -15,6 +15,6 @@ function Summery({ summery }: SummeryProps) {
       </SVGHolder>
     </>
   );
-}
+};
 
 export default Summery;

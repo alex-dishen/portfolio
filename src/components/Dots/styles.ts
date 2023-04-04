@@ -1,14 +1,8 @@
-import styled, { css, keyframes } from 'styled-components';
-import { IIsVisibleValue } from 'components/Dots/types';
+import styled, { css } from 'styled-components';
+import { DotsWrapperTypes } from 'components/Dots/types';
+import { moveUp } from 'components/Dots/animations';
 
-export const moveUp = keyframes`
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-`;
-
-export const DotsWrapper = styled.div<IIsVisibleValue>(
+export const DotsWrapper = styled.div<DotsWrapperTypes>(
   ({ isVisible }) => css`
     display: flex;
     justify-content: center;

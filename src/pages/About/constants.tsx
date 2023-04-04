@@ -1,20 +1,20 @@
 import uniqid from 'uniqid';
-import { ReactComponent as AWS } from 'assets/languages/aws.svg';
-import { ReactComponent as CSS } from 'assets/languages/css3.svg';
-import { ReactComponent as GIT } from 'assets/languages/git.svg';
-import { ReactComponent as GitHub } from 'assets/languages/github.svg';
-import { ReactComponent as GitLab } from 'assets/languages/gitlab.svg';
-import { ReactComponent as HTML } from 'assets/languages/html5.svg';
-import { ReactComponent as JavaScript } from 'assets/languages/javascript.svg';
-import { ReactComponent as NPM } from 'assets/languages/npm.svg';
-import { ReactComponent as React } from 'assets/languages/react.svg';
-import { ReactComponent as Redux } from 'assets/languages/redux.svg';
-import { ReactComponent as SASS } from 'assets/languages/sass.svg';
-import { ReactComponent as StyledComponents } from 'assets/languages/styled-components.svg';
-import { ReactComponent as TypeScript } from 'assets/languages/typescript.svg';
-import { ReactComponent as Vite } from 'assets/languages/vite.svg';
-import { ReactComponent as Vitest } from 'assets/languages/vitest.svg';
-import { ReactComponent as Figma } from 'assets/languages/figma.svg';
+import { ReactComponent as AWS } from 'assets/images/languages/aws.svg';
+import { ReactComponent as CSS } from 'assets/images/languages/css3.svg';
+import { ReactComponent as GIT } from 'assets/images/languages/git.svg';
+import { ReactComponent as GitHub } from 'assets/images/languages/github.svg';
+import { ReactComponent as GitLab } from 'assets/images/languages/gitlab.svg';
+import { ReactComponent as HTML } from 'assets/images/languages/html5.svg';
+import { ReactComponent as JavaScript } from 'assets/images/languages/javascript.svg';
+import { ReactComponent as NPM } from 'assets/images/languages/npm.svg';
+import { ReactComponent as React } from 'assets/images/languages/react.svg';
+import { ReactComponent as Redux } from 'assets/images/languages/redux.svg';
+import { ReactComponent as SASS } from 'assets/images/languages/sass.svg';
+import { ReactComponent as StyledComponents } from 'assets/images/languages/styled-components.svg';
+import { ReactComponent as TypeScript } from 'assets/images/languages/typescript.svg';
+import { ReactComponent as Vite } from 'assets/images/languages/vite.svg';
+import { ReactComponent as Vitest } from 'assets/images/languages/vitest.svg';
+import { ReactComponent as Figma } from 'assets/images/languages/figma.svg';
 
 export const languages = [
   { id: uniqid(), name: 'HTML', picture: <HTML /> },
@@ -38,21 +38,3 @@ export const tools = [
   { id: uniqid(), name: 'Vitest', picture: <Vitest /> },
   { id: uniqid(), name: 'Figma', picture: <Figma /> },
 ];
-
-export const skillsAnimation = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, delay: 0.3, ease: 'easeOut' },
-  },
-};
-
-export const toolsAnimation = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, delay: 0.6, ease: 'easeOut' },
-  },
-};

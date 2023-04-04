@@ -1,21 +1,21 @@
 import uniqid from 'uniqid';
 // Screen width needed to take a picture 1500
-import threeInRaw from 'assets/projects/slider/three-in-raw.webp';
-import twoInRaw from 'assets/projects/slider/two-in-raw.webp';
-import homePage from 'assets/projects/game-harbor/home-page.webp';
-import gamesPage from 'assets/projects/game-harbor/games-page.webp';
-import gamesPage2 from 'assets/projects/game-harbor/games-page2.webp';
-import gamePage from 'assets/projects/game-harbor/game-page.webp';
-import gamePage2 from 'assets/projects/game-harbor/game-page2.webp';
-import gamePage3 from 'assets/projects/game-harbor/game-page3.webp';
-import startPage from 'assets/projects/memory-game/start-page.webp';
-import loading from 'assets/projects/memory-game/loading.webp';
-import playGround from 'assets/projects/memory-game/playground.webp';
-import win from 'assets/projects/memory-game/win.webp';
-import lose from 'assets/projects/memory-game/lose.webp';
-import mainPage from 'assets/projects/to-do/main-page.webp';
-import addColor from 'assets/projects/to-do/add-color.webp';
-import addEmoji from 'assets/projects/to-do/add-smiles.webp';
+import threeInRaw from 'assets/images/projects/slider/three-in-raw.webp';
+import twoInRaw from 'assets/images/projects/slider/two-in-raw.webp';
+import homePage from 'assets/images/projects/game-harbor/home-page.webp';
+import gamesPage from 'assets/images/projects/game-harbor/games-page.webp';
+import gamesPage2 from 'assets/images/projects/game-harbor/games-page2.webp';
+import gamePage from 'assets/images/projects/game-harbor/game-page.webp';
+import gamePage2 from 'assets/images/projects/game-harbor/game-page2.webp';
+import gamePage3 from 'assets/images/projects/game-harbor/game-page3.webp';
+import startPage from 'assets/images/projects/memory-game/start-page.webp';
+import loading from 'assets/images/projects/memory-game/loading.webp';
+import playGround from 'assets/images/projects/memory-game/playground.webp';
+import win from 'assets/images/projects/memory-game/win.webp';
+import lose from 'assets/images/projects/memory-game/lose.webp';
+import mainPage from 'assets/images/projects/to-do/main-page.webp';
+import addColor from 'assets/images/projects/to-do/add-color.webp';
+import addEmoji from 'assets/images/projects/to-do/add-smiles.webp';
 
 const gameHarborPics = [
   { id: uniqid(), src: homePage },

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { IIsVisibleValue } from 'pages/Projects/types';
+import { AnimationType } from 'pages/Projects/types';
 import { moveUp } from 'pages/Projects/animations';
 
 export const StyledProjects = styled.main`
@@ -47,7 +47,7 @@ export const ProjectHolder = styled.div`
   margin-bottom: 50px;
 `;
 
-export const ProjectInitials = styled.div<IIsVisibleValue>(
+export const ProjectInitials = styled.div<AnimationType>(
   ({ isVisible }) => css`
     opacity: 0;
     transform: translateY(50px);
@@ -75,7 +75,7 @@ export const ProjectDescription = styled.h4`
   }
 `;
 
-export const TechnologiesSection = styled.div<IIsVisibleValue>(
+export const TechnologiesSection = styled.div<AnimationType>(
   ({ isVisible }) => css`
     opacity: 0;
     transform: translateY(50px);
@@ -92,7 +92,7 @@ export const Technologies = styled.p`
   color: rgb(188, 188, 188);
 `;
 
-export const SummerySection = styled.div<IIsVisibleValue>(
+export const SummerySection = styled.div<AnimationType>(
   ({ isVisible }) => css`
     line-height: 29px;
     white-space: pre-wrap;
@@ -113,7 +113,7 @@ export const ProjectLinks = styled.div`
   margin-bottom: 30px;
 `;
 
-export const Link = styled.a<IIsVisibleValue>(
+export const Link = styled.a<AnimationType>(
   ({ isVisible }) => css`
     padding: 15px 18px;
     font-size: 14px;

@@ -1,22 +1,14 @@
-import styled, { css, keyframes } from 'styled-components';
-import { IIsVisibleValue } from 'components/Carousel/types';
+import styled, { css } from 'styled-components';
+import { CarouselWrapperTypes } from 'components/Carousel/types';
+import { moveUp } from 'components/Carousel/animations';
 
-export const moveUp = keyframes`
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-`;
-
-export const CarouselWrapper = styled.div<IIsVisibleValue>(
+export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
   ({ isVisible }) => css`
     position: relative;
     aspect-ratio: 1.77 / 1;
     width: 100%;
-    background-color: rgb(46, 46, 46);
     border-radius: 30px;
     overflow: hidden;
-    grid-area: images;
 
     opacity: 0;
     transform: translateY(50px);
@@ -43,12 +35,11 @@ export const CarouselWrapper = styled.div<IIsVisibleValue>(
       bottom: 10px;
       gap: 13px !important;
       padding: 14px 18px;
-
       background-color: rgb(15, 16, 17);
-      border-radius: 10px;
+      border-radius: 13px;
 
       @media (max-width: 600px) {
-        top: 83%;
+        bottom: 5px;
         padding: 10px 18px;
       }
     }
@@ -60,11 +51,6 @@ export const ImageHolder = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-  }
 `;
 
 export const Image = styled.img`

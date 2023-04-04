@@ -1,17 +1,12 @@
 import { DotsWrapper, Dot } from 'components/Dots/styles';
+import { DotsProps } from 'components/Dots/types';
 
-interface DotsProps {
-  isVisible: boolean;
-}
-
-function Dots({ isVisible }: DotsProps) {
-  return (
-    <DotsWrapper isVisible={isVisible}>
-      <Dot />
-      <Dot />
-      <Dot />
-    </DotsWrapper>
-  );
-}
+const Dots = ({ isVisible }: DotsProps) => (
+  <DotsWrapper isVisible={isVisible}>
+    <Dot />
+    <Dot />
+    <Dot />
+  </DotsWrapper>
+);
 
 export default Dots;

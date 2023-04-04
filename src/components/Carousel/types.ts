@@ -1,7 +1,9 @@
-export interface IIsVisibleValue {
+export type CarouselWrapperTypes = {
   isVisible: boolean;
-}
+};
 
-export interface IImageHolder {
-  index: number;
-}
+export type CarouselProps = {
+  pictures: { id: string; src: string }[];
+  id: string;
+  isVisible: boolean;
+};

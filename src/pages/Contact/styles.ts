@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { topToBottom, scale, showElement } from './animations';
+import { topToBottom, scale, showElement } from 'pages/Contact/animations';
 
 export const StyledContact = styled.div`
   flex: 1;
@@ -11,11 +11,9 @@ export const StyledContact = styled.div`
   gap: 40px;
   color: rgb(194, 194, 194);
 
-  * {
-    &::selection {
-      background-color: #74009e;
-      color: white;
-    }
+  *::selection {
+    background-color: #74009e;
+    color: white;
   }
 
   p {
@@ -64,10 +62,6 @@ export const Intro = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  * {
-    z-index: 2;
-  }
 `;
 
 export const Header = styled.h1`

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { IText } from 'components/Summery/interfaces';
+import { TextTypes } from 'components/Summery/types';
 
-export const Text = styled.p<IText>(
+export const Text = styled.p<TextTypes>(
   ({ isShowSummery }) => css`
     max-height: ${isShowSummery ? '500px' : '85px'};
     margin: 7px 0 0 0;

@@ -1,20 +1,6 @@
-import styled, { css, keyframes } from 'styled-components';
-import { IAnimateValue } from 'pages/About/interfaces';
-
-export const showElement = keyframes`
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1) skewY(0deg);
-  }
-`;
-
-export const moveUp = keyframes`
-  from {}
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-`;
+import styled, { css } from 'styled-components';
+import { AnimationType } from 'pages/About/types';
+import { showElement, moveUp } from 'pages/About/animations';
 
 export const StyledAbout = styled.div`
   display: flex;
@@ -99,7 +85,7 @@ export const Specifics = styled.section`
   }
 `;
 
-export const Projects = styled.div<IAnimateValue>(
+export const Projects = styled.div<AnimationType>(
   ({ isVisible }) => css`
     display: flex;
     flex-direction: column;
@@ -116,7 +102,7 @@ export const Projects = styled.div<IAnimateValue>(
   `
 );
 
-export const Experience = styled(Projects)<IAnimateValue>(
+export const Experience = styled(Projects)<AnimationType>(
   ({ isVisible }) => css`
     animation: ${isVisible ? moveUp : ''} 0.8s ease-out forwards 0.6s;
   `
@@ -127,7 +113,7 @@ export const Number = styled.div`
   font-weight: 300;
 `;
 
-export const SkillsHeader = styled.h2<IAnimateValue>(
+export const SkillsHeader = styled.h2<AnimationType>(
   ({ isVisible }) => css`
     font-size: 36px;
     font-weight: 500;
@@ -149,7 +135,7 @@ export const SkillsSection = styled.section`
   }
 `;
 
-export const Skills = styled.div<IAnimateValue>(
+export const Skills = styled.div<AnimationType>(
   ({ isVisible }) => css`
     display: flex;
     justify-content: center;
@@ -179,7 +165,7 @@ export const Skills = styled.div<IAnimateValue>(
   `
 );
 
-export const Tools = styled(Skills)<IAnimateValue>(
+export const Tools = styled(Skills)<AnimationType>(
   ({ isVisible }) => css`
     opacity: 0;
     transform: translateY(50px);

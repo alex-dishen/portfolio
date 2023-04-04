@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { OptionTypes } from 'pages/Home/types';
 import {
   styledHomeAnimation,
   greetingAnimation,
@@ -7,7 +8,6 @@ import {
   nameAnimation,
   showElement,
 } from 'pages/Home/animations';
-import { IOption } from 'pages/Home/interfaces';
 
 export const StyledHome = styled.main`
   position: relative;
@@ -114,7 +114,6 @@ export const ImageHolder = styled.div`
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transform: scale(1);
     filter: brightness(1.1);
   }
 
@@ -141,7 +140,7 @@ export const NavigationSection = styled.div`
   gap: 10px;
 `;
 
-export const Option = styled(Link)<IOption>(
+export const Option = styled(Link)<OptionTypes>(
   ({ index }) => css`
     z-index: 2;
     display: flex;
