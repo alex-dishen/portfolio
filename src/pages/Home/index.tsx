@@ -14,7 +14,7 @@ import {
   Text,
   StyledLink,
 } from 'pages/Home/styles';
-import meInBlueShirt from 'assets/black-shirt.JPG';
+import meInBlueShirt from 'assets/black-shirt.webp';
 import { ReactComponent as RightArrow } from 'assets/ui/arrow-right.svg';
 
 function Home() {

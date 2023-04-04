@@ -111,23 +111,16 @@ export const ImageHolder = styled.div`
 
   img {
     position: absolute;
-    top: 55px;
-    left: -9px;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transform: scale(2.4);
+    transform: scale(1);
     filter: brightness(1.1);
   }
 
   @media (max-width: 600px) {
     width: 60px;
     height: 60px;
-
-    img {
-      top: 30px;
-      left: -6px;
-    }
   }
 `;
 

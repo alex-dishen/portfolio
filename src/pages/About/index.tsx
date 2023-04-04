@@ -15,7 +15,7 @@ import {
   Skills,
   Tools,
 } from 'pages/About/styles';
-import meInRedShirt from 'assets/red-shirt.JPG';
+import meInRedShirt from 'assets/red-shirt.webp';
 
 function About() {
   const visibleSections = useInView('section[id], h2[id]');
