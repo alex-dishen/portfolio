@@ -9,8 +9,16 @@ import { ReactComponent as Mail } from 'assets/ui/mail.svg';
 import { ReactComponent as FMail } from 'assets/ui/mail-filled.svg';
 
 export const pages = [
-  { path: '/', filledPicture: <FExplore />, plainPicture: <Explore /> },
-  { path: '/projects', filledPicture: <FBolt />, plainPicture: <Bolt /> },
+  {
+    path: '/',
+    filledPicture: <FExplore />,
+    plainPicture: <Explore />,
+  },
+  {
+    path: '/projects',
+    filledPicture: <FBolt />,
+    plainPicture: <Bolt />,
+  },
   {
     path: 'https://medium.com/@oleksandrdidyshen',
     filledPicture: <Pen />,
