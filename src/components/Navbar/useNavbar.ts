@@ -12,7 +12,7 @@ const useNavbar = () => {
     setAnimationDelay(location.pathname === '/' ? 3.4 : 0.9);
 
   const getIsMobile = () =>
-    setIsMobile(window.innerWidth <= 850 ? true : false);
+    setIsMobile(window.innerWidth < 1050 ? true : false);
 
   useEffect(() => {
     getGlowingColor(location.pathname, setGlowingColor);

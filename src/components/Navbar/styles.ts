@@ -20,7 +20,7 @@ export const StyledNavbar = styled.nav<StyledNavbarTypes>(
     animation: ${isMobile ? showFromBottom : showFromLeft} 2s ease-out forwards
       ${delay}s;
 
-    @media (min-width: 850px) {
+    @media (min-width: 1050px) {
       flex-direction: column;
       top: 50%;
       left: 30px;
