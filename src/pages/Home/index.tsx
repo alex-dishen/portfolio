@@ -30,7 +30,12 @@ const Home = () => (
     </Welcome>
     <NavigationSection>
       {options.map(({ page, variant, text }, index) => (
-        <Option to={page} key={page} index={index}>
+        <Option
+          to={page}
+          key={page}
+          index={index}
+          target={page.includes('http') ? '_blank' : ''}
+        >
           <div>
             <p>{variant}</p> {text}
           </div>
