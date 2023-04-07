@@ -17,7 +17,7 @@ export const StyledHome = styled.main`
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin: 0 20px;
+  margin: 40px 20px 100px 20px;
   color: rgb(194, 194, 194);
 
   transform: translateY(160px);
