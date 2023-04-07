@@ -36,6 +36,7 @@ export const StyledHome = styled.main`
   }
 
   &::before {
+    z-index: 1;
     width: 480px;
     height: 360px;
     margin-left: -400px;
@@ -129,7 +130,7 @@ export const Name = styled(Greeting)`
 `;
 
 export const Position = styled(Greeting)`
-  opacity: 0;
+  z-index: 1;
   transform: translateY(0px) translateX(0px) scale(1);
   animation: ${showElement} 1.4s ease-out forwards 2.1s;
 `;
@@ -205,6 +206,7 @@ export const ArrowContainer = styled.div`
 `;
 
 export const Text = styled.div`
+  z-index: 2;
   display: flex;
   font-size: 13px;
   opacity: 0;
