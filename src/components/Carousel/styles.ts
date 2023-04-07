@@ -20,14 +20,17 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
       fill: white;
     }
 
-    button {
+    .left-button {
+      position: absolute;
+      height: 100%;
+      right: -5px;
+    }
+
+    .right-button {
       z-index: 2;
       position: absolute;
       height: 100%;
-
-      &:last-child {
-        right: 0;
-      }
+      left: -5px;
     }
 
     .dots-wrapper {
@@ -37,10 +40,19 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
       padding: 14px 18px;
       background-color: rgb(15, 16, 17);
       border-radius: 13px;
+    }
 
-      @media (max-width: 600px) {
+    @media (max-width: 600px) {
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+
+      .dots-wrapper {
+        gap: 10px !important;
         bottom: 5px;
-        padding: 10px 18px;
+        padding: 10px 15px;
+        border-radius: 10px;
       }
     }
   `
@@ -57,4 +69,28 @@ export const Image = styled.img`
   height: 100%;
   min-width: 100%;
   object-fit: cover;
+`;
+
+export const Dot = styled.div`
+  height: 9px;
+  width: 9px;
+  background-color: rgb(140, 140, 140);
+  border-radius: 50%;
+  cursor: pointer;
+  @media (max-width: 600px) {
+    height: 6px;
+    width: 6px;
+  }
+`;
+
+export const ActiveDot = styled.div`
+  height: 11px;
+  width: 11px;
+  background-color: rgba(255, 145, 1, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  @media (max-width: 600px) {
+    height: 9px;
+    width: 9px;
+  }
 `;

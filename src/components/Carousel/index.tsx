@@ -5,6 +5,8 @@ import {
   CarouselWrapper,
   ImageHolder,
   Image,
+  Dot,
+  ActiveDot,
 } from 'components/Carousel/styles';
 import { ReactComponent as ChevronLeft } from 'assets/images/ui/chevron-left.svg';
 import { ReactComponent as ChevronRight } from 'assets/images/ui/chevron-right.svg';
@@ -13,10 +15,11 @@ const Carousel = ({ pictures, id, isVisible }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
     <Slider
       showDots
-      config={[{ slidesNumber: 1, maxWidth: 2000 }]}
+      config={[{ slidesNumber: 1, maxWidth: 3000 }]}
+      customDot={<Dot />}
+      customActiveDot={<ActiveDot />}
       prevButton={<ChevronLeft />}
       nextButton={<ChevronRight />}
-      activeDotColor="rgba(255, 145, 1, 1)"
     >
       {pictures.map((picture) => (
         <ImageHolder key={picture.id}>
