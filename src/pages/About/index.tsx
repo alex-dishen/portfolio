@@ -23,7 +23,11 @@ const About = () => {
   return (
     <StyledAbout>
       <Header>Meet Oleksandr</Header>
-      <Image src={meInRedShirt} onMouseDown={(e) => e.preventDefault()} />
+      <Image
+        src={meInRedShirt}
+        alt="Oleksandr in red shirt"
+        onMouseDown={(e) => e.preventDefault()}
+      />
       <Greeting>Greetings and welcome to my personal website!</Greeting>
       <AboutMe>
         <p>

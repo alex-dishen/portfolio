@@ -18,31 +18,35 @@ import addColor from 'assets/images/projects/to-do/add-color.webp';
 import addEmoji from 'assets/images/projects/to-do/add-smiles.webp';
 
 const gameHarborPics = [
-  { id: uniqid(), src: homePage },
-  { id: uniqid(), src: gamesPage },
-  { id: uniqid(), src: gamesPage2 },
-  { id: uniqid(), src: gamePage },
-  { id: uniqid(), src: gamePage2 },
-  { id: uniqid(), src: gamePage3 },
+  { id: uniqid(), src: homePage, alt: 'Home page' },
+  {
+    id: uniqid(),
+    src: gamesPage,
+    alt: 'Games page with filter "Popular in 2022"',
+  },
+  { id: uniqid(), src: gamesPage2, alt: 'Games page with filter "Next week"' },
+  { id: uniqid(), src: gamePage, alt: 'Lost Ark' },
+  { id: uniqid(), src: gamePage2, alt: 'Lost Ark with opened description' },
+  { id: uniqid(), src: gamePage3, alt: 'The Witcher 3: Wild Hunt ' },
 ];
 
 const sliderPics = [
-  { id: uniqid(), src: threeInRaw },
-  { id: uniqid(), src: twoInRaw },
+  { id: uniqid(), src: threeInRaw, alt: 'Three pictures in row' },
+  { id: uniqid(), src: twoInRaw, alt: 'Two pictures in row' },
 ];
 
 const toDoPics = [
-  { id: uniqid(), src: mainPage },
-  { id: uniqid(), src: addColor },
-  { id: uniqid(), src: addEmoji },
+  { id: uniqid(), src: mainPage, alt: 'Home page' },
+  { id: uniqid(), src: addColor, alt: 'Add color panel' },
+  { id: uniqid(), src: addEmoji, alt: 'Add emoji panel' },
 ];
 
 const memoryGamePics = [
-  { id: uniqid(), src: startPage },
-  { id: uniqid(), src: loading },
-  { id: uniqid(), src: playGround },
-  { id: uniqid(), src: win },
-  { id: uniqid(), src: lose },
+  { id: uniqid(), src: startPage, alt: 'Home page' },
+  { id: uniqid(), src: loading, alt: 'Loading screen' },
+  { id: uniqid(), src: playGround, alt: 'Playground page' },
+  { id: uniqid(), src: win, alt: 'Win' },
+  { id: uniqid(), src: lose, alt: 'Lose' },
 ];
 
 export const projects = [

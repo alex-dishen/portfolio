@@ -22,7 +22,7 @@ const Home = () => (
       <TopGreeting>
         <Greeting>Hey, I'm</Greeting>
         <ImageHolder>
-          <img src={meInBlueShirt} alt="Oleksandr in blue shirt" />
+          <img src={meInBlueShirt} alt="Oleksandr in black shirt" />
         </ImageHolder>
         <Name>Oleksandr</Name>
       </TopGreeting>

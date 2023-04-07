@@ -26,7 +26,7 @@ const Contact = () => (
     </Intro>
     <Card>
       <ImageHolder>
-        <img src={meInRedShirt} alt="Oleksandr in red shirt" />
+        <img src={meInRedShirt} alt="Oleksandr in black shirt" />
       </ImageHolder>
       <Name>
         <p>Oleksandr Didyshen</p>
