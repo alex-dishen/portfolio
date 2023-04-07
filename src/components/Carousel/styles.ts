@@ -31,7 +31,7 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
     }
 
     .dots-wrapper {
-      position: absolute;
+      position: absolute !important;
       bottom: 10px;
       gap: 13px !important;
       padding: 14px 18px;
@@ -57,30 +57,4 @@ export const Image = styled.img`
   height: 100%;
   min-width: 100%;
   object-fit: cover;
-`;
-
-export const Dot = styled.div`
-  height: 9px;
-  width: 9px;
-  background-color: rgb(140, 140, 140);
-  border-radius: 50%;
-  cursor: pointer;
-
-  @media (max-width: 600px) {
-    height: 6px;
-    width: 6px;
-  }
-`;
-
-export const ActiveDot = styled.div`
-  height: 11px;
-  width: 11px;
-  background-color: rgba(255, 145, 1, 1);
-  border-radius: 50%;
-  cursor: pointer;
-
-  @media (max-width: 600px) {
-    height: 9px;
-    width: 9px;
-  }
 `;

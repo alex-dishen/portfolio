@@ -1,12 +1,10 @@
 import { memo } from 'react';
-import Slider from 'infinite-image-slider';
+import Slider from 'swipi';
 import { CarouselProps } from 'components/Carousel/types';
 import {
   CarouselWrapper,
   ImageHolder,
   Image,
-  Dot,
-  ActiveDot,
 } from 'components/Carousel/styles';
 import { ReactComponent as ChevronLeft } from 'assets/images/ui/chevron-left.svg';
 import { ReactComponent as ChevronRight } from 'assets/images/ui/chevron-right.svg';
@@ -18,8 +16,7 @@ const Carousel = ({ pictures, id, isVisible }: CarouselProps) => (
       config={[{ slidesNumber: 1, maxWidth: 2000 }]}
       prevButton={<ChevronLeft />}
       nextButton={<ChevronRight />}
-      customDot={<Dot />}
-      customActiveDot={<ActiveDot />}
+      activeDotColor="rgba(255, 145, 1, 1)"
     >
       {pictures.map((picture) => (
         <ImageHolder key={picture.id}>
