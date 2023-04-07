@@ -23,7 +23,7 @@ const Carousel = ({ pictures, id, isVisible }: CarouselProps) => (
     >
       {pictures.map((picture) => (
         <ImageHolder key={picture.id}>
-          <Image src={picture.src} />
+          <Image src={picture.src} alt={picture.alt} />
         </ImageHolder>
       ))}
     </Slider>

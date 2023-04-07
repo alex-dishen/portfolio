@@ -3,7 +3,7 @@ export type CarouselWrapperTypes = {
 };
 
 export type CarouselProps = {
-  pictures: { id: string; src: string }[];
+  pictures: { id: string; src: string; alt: string }[];
   id: string;
   isVisible: boolean;
 };
