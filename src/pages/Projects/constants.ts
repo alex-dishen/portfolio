@@ -8,11 +8,6 @@ import gamesPage2 from 'assets/images/projects/game-harbor/games-page2.webp';
 import gamePage from 'assets/images/projects/game-harbor/game-page.webp';
 import gamePage2 from 'assets/images/projects/game-harbor/game-page2.webp';
 import gamePage3 from 'assets/images/projects/game-harbor/game-page3.webp';
-import startPage from 'assets/images/projects/memory-game/start-page.webp';
-import loading from 'assets/images/projects/memory-game/loading.webp';
-import playGround from 'assets/images/projects/memory-game/playground.webp';
-import win from 'assets/images/projects/memory-game/win.webp';
-import lose from 'assets/images/projects/memory-game/lose.webp';
 import mainPage from 'assets/images/projects/to-do/main-page.webp';
 import addColor from 'assets/images/projects/to-do/add-color.webp';
 import addEmoji from 'assets/images/projects/to-do/add-smiles.webp';
@@ -39,14 +34,6 @@ const toDoPics = [
   { id: uniqid(), src: mainPage, alt: 'Home page' },
   { id: uniqid(), src: addColor, alt: 'Add color panel' },
   { id: uniqid(), src: addEmoji, alt: 'Add emoji panel' },
-];
-
-const memoryGamePics = [
-  { id: uniqid(), src: startPage, alt: 'Home page' },
-  { id: uniqid(), src: loading, alt: 'Loading screen' },
-  { id: uniqid(), src: playGround, alt: 'Playground page' },
-  { id: uniqid(), src: win, alt: 'Win' },
-  { id: uniqid(), src: lose, alt: 'Lose' },
 ];
 
 export const projects = [
@@ -83,16 +70,5 @@ export const projects = [
     technologies: 'React, Redux Toolkit, Styled-Components',
     live: 'https://alex-dishen.github.io/todo-app/',
     code: 'https://github.com/alex-dishen/todo-app',
-  },
-  {
-    id: uniqid(),
-    name: 'Gravity Falls',
-    description: 'Memory game with Gravity Falls characters',
-    pictures: memoryGamePics,
-    summery:
-      "This is a React memory game based on the popular animated TV show Gravity Falls. The game involves a grid of cards featuring different characters from the show. The objective of the game is to remember which card you have already chosen and not click on it again.\n\nWhen the game starts, all the cards are face up, allowing the player to see all the characters. However, when the player clicks on a card, it flips over to reveal it's background. The other cards also flip over and shuffle, making it harder for the player to remember which card corresponds to which character.\n\nTo win the game, the player must correctly match all the cards to their respective characters. The game can be played multiple times, and the player's score is based on how many cards where clicked correctly.\n\nThis project uses React, a popular JavaScript library for building user interfaces. The game's components are built using React's modular approach, allowing for easy customization and scalability. The game's functionality is implemented using JavaScript, and the game's styling is done using SCSS.\n\nOverall, the project is an engaging and challenging game that combines a popular TV show with a classic memory game. It's a fun way for fans of Gravity Falls to test their memory skills while enjoying the show's characters.",
-    technologies: 'React, SCSS',
-    live: 'https://alex-dishen.github.io/memory-card/',
-    code: 'https://github.com/alex-dishen/memory-card',
   },
 ];
