@@ -1,32 +1,57 @@
-# APP NAME
-The **APP NAME** project is created according to the assignment from **The Odin Project** [course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript).
-<br>
-<br>
+<h1 align='center'>Portfolio</h1>
 
-![Preview](public/.png)
+![Preview](public/images/portfolio-intro.png)
 
-### 🔗 **Live preview** of the project is [here](https://alex-dishen.github.io/REPOSITORY NAME/).
+## Demo
 
-## **Features**
-* 
+🔥 [Live Demo](https://github.com/alex-dishen/portfolio)
 
-## **Outcome**
-* Used **React**
-* 
+## Built with
 
-## **Getting Started**
+- React
+- TypeScript
+- Styled-Components
+
+## Screenshots
+
+![](public/images/home-page.png)
+![](public/images/contact-page.png)
+![](public/images/about-page.png)
+
+## Development
+
+Here are the steps to run the project locally.
+
+1. Clone the repository.
+
+```sh
+HTTPS - $ git clone https://github.com/alex-dishen/portfolio.git
+or
+SSH - $ git clone git@github.com:alex-dishen/portfolio.git
 ```
-HTTPS - git clone https://github.com/alex-dishen/REPOSITORY NAME.git
 
-SSH - git clone git@github.com:alex-dishen/REPOSITORY NAME.git
+2. Move to the cloned directory.
 
-cd REPOSITORY NAME
-
-npm install
-
-npm start
+```sh
+$ cd portfolio
 ```
 
-## **Navigation**
-* See my next project [NEXT PROJECT](https://github.com/alex-dishen/REPOSITORY NAME)
-* See my previous project [PREVIOUS PROJECT](https://github.com/alex-dishen/REPOSITORY NAME)
+3. Install the dependencies.
+
+```sh
+$ npm i
+or
+$ yarn
+```
+
+4. Run the project.
+
+```sh
+$ npm start
+or
+$ yarn start
+```
+
+## Navigation
+
+- See my previous project [Swipi](https://github.com/MaKs-Tkachyk/swipi)
