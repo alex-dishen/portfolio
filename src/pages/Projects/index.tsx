@@ -1,7 +1,7 @@
 import useInView from 'hooks/useInView';
 import Carousel from 'components/Carousel';
 import Dots from 'components/Dots';
-import Summery from 'components/Summery';
+import Summary from 'components/Summary';
 import { projects } from 'pages/Projects/constants';
 import {
   StyledProjects,
@@ -13,8 +13,8 @@ import {
   TechnologiesSection,
   TechnologiesHeader,
   Technologies,
-  SummerySection,
-  SummeryHeader,
+  SummarySection,
+  SummaryHeader,
   ProjectLinks,
   Link,
 } from 'pages/Projects/styles';
@@ -33,7 +33,7 @@ function Projects() {
             description,
             pictures,
             technologies,
-            summery,
+            summary,
             live,
             code,
           },
@@ -62,13 +62,13 @@ function Projects() {
               <Technologies>{technologies}</Technologies>
             </TechnologiesSection>
 
-            <SummerySection
-              id={`summerySection${index}`}
-              isVisible={visibleSections[`summerySection${index}`]}
+            <SummarySection
+              id={`summarySection${index}`}
+              isVisible={visibleSections[`summarySection${index}`]}
             >
-              <SummeryHeader>Summery</SummeryHeader>
-              <Summery summery={summery} />
-            </SummerySection>
+              <SummaryHeader>Summary</SummaryHeader>
+              <Summary summary={summary} />
+            </SummarySection>
 
             <ProjectLinks id={`projectLinks${index}`}>
               <Link

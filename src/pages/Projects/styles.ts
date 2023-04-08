@@ -92,7 +92,7 @@ export const Technologies = styled.p`
   color: rgb(188, 188, 188);
 `;
 
-export const SummerySection = styled.div<AnimationType>(
+export const SummarySection = styled.div<AnimationType>(
   ({ isVisible }) => css`
     line-height: 29px;
     white-space: pre-wrap;
@@ -104,7 +104,7 @@ export const SummerySection = styled.div<AnimationType>(
   `
 );
 
-export const SummeryHeader = styled(TechnologiesHeader)``;
+export const SummaryHeader = styled(TechnologiesHeader)``;
 
 export const ProjectLinks = styled.div`
   display: flex;
