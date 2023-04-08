@@ -8,9 +8,6 @@ import gamesPage2 from 'assets/images/projects/game-harbor/games-page2.webp';
 import gamePage from 'assets/images/projects/game-harbor/game-page.webp';
 import gamePage2 from 'assets/images/projects/game-harbor/game-page2.webp';
 import gamePage3 from 'assets/images/projects/game-harbor/game-page3.webp';
-import mainPage from 'assets/images/projects/to-do/main-page.webp';
-import addColor from 'assets/images/projects/to-do/add-color.webp';
-import addEmoji from 'assets/images/projects/to-do/add-smiles.webp';
 
 const gameHarborPics = [
   { id: uniqid(), src: homePage, alt: 'Home page' },
@@ -28,12 +25,6 @@ const gameHarborPics = [
 const sliderPics = [
   { id: uniqid(), src: threeInRaw, alt: 'Three pictures in row' },
   { id: uniqid(), src: twoInRaw, alt: 'Two pictures in row' },
-];
-
-const toDoPics = [
-  { id: uniqid(), src: mainPage, alt: 'Home page' },
-  { id: uniqid(), src: addColor, alt: 'Add color panel' },
-  { id: uniqid(), src: addEmoji, alt: 'Add emoji panel' },
 ];
 
 export const projects = [
@@ -59,16 +50,5 @@ export const projects = [
     technologies: 'React, TypeScript',
     live: 'https://codesandbox.io/s/all-custom-demo-vfxhtr',
     code: 'https://github.com/MaKs-Tkachyk/swipi',
-  },
-  {
-    id: uniqid(),
-    name: 'To-Do',
-    description: 'To-Do app',
-    pictures: toDoPics,
-    summery:
-      "It's a todo app built using React. The app allows users to create, manage, and track their daily tasks in a simple and intuitive way.\n\nOne of the unique features of the app is that it allows users to choose emojis and colors to represent their tasks, adding a personal touch to the user experience. Users can assign different emojis and colors to different types of tasks, making it easier to differentiate between them.\n\nAnother feature of the app is the ability to create categories for tasks. This feature helps users to organize their tasks in a meaningful way, making it easier to find and manage them. For example, users might create a 'Work' folder for all their work-related tasks and a 'Personal' folder for all their personal tasks.\n\nIn addition to creating new tasks, users can also edit existing tasks and mark them as done. This allows users to keep track of their progress and stay on top of their to-do list.\n\nThe app provides a simple and intuitive user interface that makes it easy for users to add, edit, and manage their tasks.",
-    technologies: 'React, Redux Toolkit, Styled-Components',
-    live: 'https://alex-dishen.github.io/todo-app/',
-    code: 'https://github.com/alex-dishen/todo-app',
   },
 ];
