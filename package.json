@@ -11,12 +11,11 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "infinite-image-slider": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "styled-components": "^5.3.8",
-    "swipi": "^1.0.9",
+    "swipi": "^1.1.1",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {

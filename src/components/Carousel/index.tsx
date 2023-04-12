@@ -15,7 +15,10 @@ const Carousel = ({ pictures, id, isVisible }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
     <Slider
       showDots
-      config={[{ slidesNumber: 1, maxWidth: 3000 }]}
+      autoplay
+      slidesNumber={1}
+      animationSpeed={500}
+      dotsAnimation="sliding"
       customDot={<Dot />}
       customActiveDot={<ActiveDot />}
       prevButton={<ChevronLeft />}
