@@ -50,6 +50,7 @@ function Projects() {
 
             <Carousel
               pictures={pictures}
+              name={name}
               id={`carousel${index}`}
               isVisible={visibleSections[`carousel${index}`]}
             />
@@ -78,13 +79,15 @@ function Projects() {
               >
                 Live Preview
               </Link>
-              <Link
-                href={code}
-                target="_blank"
-                isVisible={visibleSections[`projectLinks${index}`]}
-              >
-                View Code
-              </Link>
+              {code && (
+                <Link
+                  href={code}
+                  target="_blank"
+                  isVisible={visibleSections[`projectLinks${index}`]}
+                >
+                  View Code
+                </Link>
+              )}
             </ProjectLinks>
             {projects.length !== index + 1 && (
               <Dots isVisible={visibleSections[`projectLinks${index}`]} />

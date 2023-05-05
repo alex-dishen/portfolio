@@ -11,12 +11,13 @@ import {
 import { ReactComponent as ChevronLeft } from 'assets/images/ui/chevron-left.svg';
 import { ReactComponent as ChevronRight } from 'assets/images/ui/chevron-right.svg';
 
-const Carousel = ({ pictures, id, isVisible }: CarouselProps) => (
+const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
     <Slider
       showDots
-      autoplay
-      slidesNumber={1}
+      autoplay={isVisible}
+      slidesNumber={name === 'Weaponry' ? 3 : 1}
+      spaceBetweenSlides={name === 'Weaponry' ? 15 : 0}
       animationSpeed={500}
       dotsAnimation="sliding"
       customDot={<Dot />}

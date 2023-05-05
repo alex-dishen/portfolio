@@ -6,4 +6,5 @@ export type CarouselProps = {
   pictures: { id: string; src: string; alt: string }[];
   id: string;
   isVisible: boolean;
+  name: string;
 };
