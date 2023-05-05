@@ -13,6 +13,7 @@ import { ReactComponent as SASS } from 'assets/images/languages/sass.svg';
 import { ReactComponent as StyledComponents } from 'assets/images/languages/styled-components.svg';
 import { ReactComponent as TypeScript } from 'assets/images/languages/typescript.svg';
 import { ReactComponent as Vite } from 'assets/images/languages/vite.svg';
+import { ReactComponent as Cypress } from 'assets/images/languages/cypress.svg';
 import { ReactComponent as Vitest } from 'assets/images/languages/vitest.svg';
 import { ReactComponent as Figma } from 'assets/images/languages/figma.svg';
 
@@ -35,6 +36,7 @@ export const tools = [
   { id: uniqid(), name: 'GitLab', picture: <GitLab /> },
   { id: uniqid(), name: 'NPM', picture: <NPM /> },
   { id: uniqid(), name: 'Vite', picture: <Vite /> },
+  { id: uniqid(), name: 'Cypress', picture: <Cypress /> },
   { id: uniqid(), name: 'Vitest', picture: <Vitest /> },
   { id: uniqid(), name: 'Figma', picture: <Figma /> },
 ];
