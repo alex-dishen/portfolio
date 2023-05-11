@@ -5,7 +5,8 @@
   "homepage": "http://alex-dishen.github.io/portfolio",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build:prod": "vite build --base=/portfolio/",
+    "build:dev": "vite build",
     "deploy": "vite build && gh-pages -d dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
