@@ -1,6 +1,6 @@
 <h1 align='center'>Portfolio</h1>
 
-![Preview](public/images/portfolio-intro.png)
+![Preview](images/portfolio-intro.png)
 
 ## Demo
 
@@ -14,9 +14,9 @@
 
 ## Screenshots
 
-![](public/images/home-page.png)
-![](public/images/contact-page.png)
-![](public/images/about-page.png)
+![](images/home-page.png)
+![](images/contact-page.png)
+![](images/about-page.png)
 
 ## Development
 
@@ -54,4 +54,5 @@ $ yarn start
 
 ## Navigation
 
-- See my previous project [Swipi](https://github.com/MaKs-Tkachyk/swipi)
+- See my previous project [Swipi](https://github.com/midstem/swipi)
+- See my next project [Swipi Landing](https://github.com/midstem/swipi-landing)
