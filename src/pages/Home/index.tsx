@@ -20,7 +20,7 @@ const Home = () => (
   <StyledHome>
     <Welcome>
       <TopGreeting>
-        <Greeting>Hey, I'm Branch for Testing 2</Greeting>
+        <Greeting>Hey, I'm Branch for Testing 5</Greeting>
         <ImageHolder>
           <img src={meInBlueShirt} alt="Oleksandr in black shirt" />
         </ImageHolder>
