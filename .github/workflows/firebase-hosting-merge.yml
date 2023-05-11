@@ -24,22 +24,19 @@ on:
       - develop
 
 jobs:
-  DevBuild:
+  DevDeploy:
     name: Build
     if: github.event.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build:dev
+      - uses: actions/checkout@v3
+      - run: 'npm i && npm run build:dev'
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_DEV_33A95 }}'
+          channelId: live
+          projectId: portfolio-dev-33a95
 
   ProdBuild:
       name: Build
@@ -57,23 +54,6 @@ jobs:
   
         - name: Build project
           run: npm run build:prod
-
-  DeployDev:
-    name: Deploy to Dev 
-    if: github.event.ref == 'refs/heads/develop'
-    needs: DevBuild
-    runs-on: ubuntu-latest
-    environment: 
-      name: development
-      url: 'https://portfolio-dev-33a95.web.app'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_DEV_33A95 }}'
-          channelId: live
-          projectId: portfolio-dev-33a95
 
   DeployProd:
     name: Deploy to Prod 
