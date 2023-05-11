@@ -26,7 +26,7 @@ const Home = () => (
         </ImageHolder>
         <Name>Oleksandr</Name>
       </TopGreeting>
-      <Position>A Software Engineer</Position>
+      <Position>A Software Engineer that got this thing working</Position>
     </Welcome>
     <NavigationSection>
       {options.map(({ page, variant, text }, index) => (
