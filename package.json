@@ -7,7 +7,7 @@
     "start": "vite",
     "build:prod": "vite build --base=/portfolio/",
     "build:dev": "vite build",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "yarn build:prod && gh-pages -d dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
