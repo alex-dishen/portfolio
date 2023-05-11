@@ -28,6 +28,9 @@ jobs:
     name: Build
     if: github.event.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
+    environment: 
+      name: development
+      url: https://portfolio-dev-33a95.web.app
     steps:
       - uses: actions/checkout@v3
       - run: 'npm i && npm run build:dev'
