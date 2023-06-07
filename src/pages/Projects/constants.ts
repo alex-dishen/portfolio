@@ -79,7 +79,7 @@ export const projects = [
       "Game Harbor is an online game shop that allows users to browse a wide variety of games from different genres and operating systems. It harnesses the power of the RAWG API to ensure that all games are up-to-date and accurate. Users can easily filter games by operating system, game genre and others.\n\nThe website is designed to be user-friendly, allowing users to easily browse and view all games for the specific filter or details of individual game. Users can add games to their cart for 'purchase', and can also create wishlists to keep track of their favorite games.\n\nGame Harbor also allows registered users to contribute to the website by adding new games if they believe that any are missing. Additionally, the website has a powerful search feature that allows users to quickly find specific games they are looking for.\n\nGame Harbor is an exceptional gaming platform that provides a rich and immersive user experience. It is a must-have addition to any gamer's arsenal.",
     technologies:
       'React, TypeScript, Redux Toolkit, Styled-Components, RAWG API',
-    live: 'https://alex-dishen.github.io/shop/',
+    live: 'https://alex-dishen.github.io/game-harbor/',
     code: 'https://github.com/alex-dishen/shop',
   },
 ];
