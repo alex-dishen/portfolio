@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Slider from 'swipi';
+import Swipi from 'swipi';
 import { CarouselProps } from 'components/Carousel/types';
 import {
   CarouselWrapper,
@@ -13,9 +13,9 @@ import { ReactComponent as ChevronRight } from 'assets/images/ui/chevron-right.s
 
 const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
-    <Slider
+    <Swipi
       showDots
-      autoplay={isVisible}
+      loop
       slidesNumber={name === 'Weaponry' ? 3 : 1}
       spaceBetweenSlides={name === 'Weaponry' ? 15 : 0}
       animationSpeed={500}
@@ -30,7 +30,7 @@ const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
           <Image src={picture.src} alt={picture.alt} />
         </ImageHolder>
       ))}
-    </Slider>
+    </Swipi>
   </CarouselWrapper>
 );
 
