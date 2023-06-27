@@ -23,20 +23,19 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
     .left-button {
       position: absolute;
       height: 100%;
-      right: -5px;
-    }
-
-    .right-button {
-      z-index: 2;
-      position: absolute;
-      height: 100%;
       left: -5px;
     }
 
+    .right-button {
+      position: absolute;
+      height: 100%;
+      right: -5px;
+    }
+
     .dots-wrapper {
-      position: absolute !important;
+      position: absolute;
       bottom: 10px;
-      gap: 13px !important;
+      gap: 13px;
       padding: 14px 18px;
       background-color: rgb(15, 16, 17);
       border-radius: 13px;
@@ -49,7 +48,7 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
       }
 
       .dots-wrapper {
-        gap: 10px !important;
+        gap: 10px;
         bottom: 5px;
         padding: 10px 15px;
         border-radius: 10px;
