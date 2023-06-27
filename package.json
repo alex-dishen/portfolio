@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "http://alex-dishen.github.io/portfolio",
   "scripts": {
-    "start": "vite",
+    "start": "vite --host --open",
     "build:prod": "vite build --base=/portfolio/",
     "build:dev": "vite build",
     "lint": "eslint .",
@@ -14,7 +14,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "styled-components": "^5.3.8",
-    "swipi": "^1.1.1",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
@@ -36,6 +35,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.4",
+    "swipi": "^1.1.8",
     "typescript": "^4.9.5",
     "vite": "^4.1.4",
     "vite-plugin-svgr": "^2.4.0",
