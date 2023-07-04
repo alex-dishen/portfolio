@@ -2095,6 +2095,11 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
+moris@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/moris/-/moris-1.0.3.tgz#fe68ab98ab4274d29fd0bbe12bf0358852bd4111"
+  integrity sha512-o3nF2OS1+7z/p3RaVjfDJrSKeVXhmX8tu1eWmTCehVSwnSJBzPyrXV1XcbxkHmgD735/26d0DtFf5a6WHcxgyA==
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"

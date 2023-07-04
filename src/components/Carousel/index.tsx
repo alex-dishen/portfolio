@@ -8,8 +8,8 @@ import {
   Dot,
   ActiveDot,
 } from 'components/Carousel/styles';
-import { ReactComponent as ChevronLeft } from 'assets/images/ui/chevron-left.svg';
-import { ReactComponent as ChevronRight } from 'assets/images/ui/chevron-right.svg';
+import { ReactComponent as ChevronLeft } from 'assets/icons/chevron-left.svg';
+import { ReactComponent as ChevronRight } from 'assets/icons/chevron-right.svg';
 
 const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
