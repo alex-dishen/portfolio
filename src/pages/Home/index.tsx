@@ -14,7 +14,7 @@ import {
   StyledLink,
 } from 'pages/Home/styles';
 import meInBlueShirt from 'assets/images/black-shirt.webp';
-import { ReactComponent as RightArrow } from 'assets/images/ui/arrow-right.svg';
+import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg';
 
 const Home = () => (
   <StyledHome>
