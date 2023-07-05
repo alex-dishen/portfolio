@@ -75,16 +75,18 @@ const Projects = () => {
                   target="_blank"
                   isVisible={visibleSections[`projectLinks${index}`]}
                 >
-                  Live Preview
+                  🚀 Live Preview
                 </Link>
 
-                <Link
-                  href={project.code}
-                  target="_blank"
-                  isVisible={visibleSections[`projectLinks${index}`]}
-                >
-                  View Code
-                </Link>
+                {project.code && (
+                  <Link
+                    href={project.code}
+                    target="_blank"
+                    isVisible={visibleSections[`projectLinks${index}`]}
+                  >
+                    ⚗️ View Code
+                  </Link>
+                )}
               </>
             )}
           </ProjectLinks>

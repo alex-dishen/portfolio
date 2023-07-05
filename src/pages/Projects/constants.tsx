@@ -1,6 +1,11 @@
 import uniqid from 'uniqid';
-import DownloadButton from 'components/DownloadButton';
-// Screen width needed to take a picture 1500
+// To get the most out of a picture take a screenshot at 1500px width and 850px height
+// Then put the picture into that converter: https://cloudconvert.com/png-to-webp and woala they are in webp and have way smaller size
+import Intro from 'assets/images/projects/swipi-landing/intro.webp';
+import Autoplay from 'assets/images/projects/swipi-landing/autoplay.webp';
+import JSXElement from 'assets/images/projects/swipi-landing/jsx_example.webp';
+import Playground from 'assets/images/projects/swipi-landing/playground.webp';
+import Installation from 'assets/images/projects/swipi-landing/installation.webp';
 import homeScreen from 'assets/images/projects/weaponry/home-screen.webp';
 import cameraScreen from 'assets/images/projects/weaponry/camera-screen.webp';
 import infoScreen from 'assets/images/projects/weaponry/info-screen.webp';
@@ -14,8 +19,14 @@ import gamesPage2 from 'assets/images/projects/game-harbor/games-page2.webp';
 import gamePage from 'assets/images/projects/game-harbor/game-page.webp';
 import gamePage2 from 'assets/images/projects/game-harbor/game-page2.webp';
 import gamePage3 from 'assets/images/projects/game-harbor/game-page3.webp';
-import { ReactComponent as Apple } from 'assets/icons/apple.svg';
-import { ReactComponent as GooglePlay } from 'assets/icons/google_play.svg';
+
+const swipiLandingPics = [
+  { id: uniqid(), src: Intro, alt: 'Swipi Landing Top' },
+  { id: uniqid(), src: Autoplay, alt: 'Swipi Landing Top' },
+  { id: uniqid(), src: JSXElement, alt: 'Swipi Landing Top' },
+  { id: uniqid(), src: Playground, alt: 'Swipi Landing Top' },
+  { id: uniqid(), src: Installation, alt: 'Swipi Landing Top' },
+];
 
 const weaponryPics = [
   { id: uniqid(), src: homeScreen, alt: 'Home screen' },
@@ -52,6 +63,16 @@ const gameHarborPics = [
 ];
 
 export const projects = [
+  {
+    id: uniqid(),
+    name: 'Swipi Landing',
+    description: 'Landing page for Swipi project',
+    pictures: swipiLandingPics,
+    summary:
+      "Swipi Landing Page is a showcase platform I designed and led the development of, highlighting the remarkable features and functionalities of Swipi, a customizable slider npm package.\n\nThe landing page serves as a comprehensive resource, providing visitors with a firsthand experience of Swipi's versatility. It showcases a collection of multiple examples, each demonstrating the power and flexibility of the Swipi slider. I want to mention that Swipi effortlessly adapts to various use cases, thanks to its robust feature set.\n\nOne of the standout features of Swipi Landing Page is its unique configuration customization. Visitors can easily adjust and fine-tune the slider's settings to suit their specific needs. As they modify the configurations, the landing page dynamically generates the corresponding code, enabling users to quickly copy and paste the generated code into their projects. This streamlined process empowers developers and designers to seamlessly integrate Swipi into their applications.\n\nExperience the magic of Swipi through the Swipi Landing Page, and embark on a journey of stunning and interactive web experiences.",
+    technologies: 'React, TypeScript, Next.js, ChakraUI',
+    live: 'https://swipi.midstem.net',
+  },
   {
     id: uniqid(),
     name: 'Weaponry',

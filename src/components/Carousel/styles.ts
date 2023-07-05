@@ -69,27 +69,3 @@ export const Image = styled.img`
   min-width: 100%;
   object-fit: cover;
 `;
-
-export const Dot = styled.div`
-  height: 9px;
-  width: 9px;
-  background-color: rgb(140, 140, 140);
-  border-radius: 50%;
-  cursor: pointer;
-  @media (max-width: 600px) {
-    height: 6px;
-    width: 6px;
-  }
-`;
-
-export const ActiveDot = styled.div`
-  height: 11px;
-  width: 11px;
-  background-color: rgba(255, 145, 1, 1);
-  border-radius: 50%;
-  cursor: pointer;
-  @media (max-width: 600px) {
-    height: 9px;
-    width: 9px;
-  }
-`;
