@@ -25,5 +25,5 @@ export const Text = styled.p`
 export const Platform = styled.p`
   color: #fff;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 `;
