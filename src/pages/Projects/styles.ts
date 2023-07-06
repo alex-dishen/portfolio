@@ -28,7 +28,7 @@ export const MainHeader = styled.h1`
   text-align: center;
   margin-bottom: 50px;
   font-size: 46px;
-  font-weight: 800;
+  font-weight: 600;
 
   opacity: 0;
   transform: translateY(50px);
@@ -58,7 +58,7 @@ export const ProjectInitials = styled.div<AnimationType>(
 export const ProjectName = styled.h2`
   margin-bottom: 6px !important;
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 600;
 
   @media (max-width: 600px) {
     font-size: 28px;
@@ -69,6 +69,7 @@ export const ProjectName = styled.h2`
 export const ProjectDescription = styled.h4`
   font-size: 18px;
   color: rgb(174, 174, 174);
+  font-weight: 500;
 
   @media (max-width: 600px) {
     font-size: 16px;

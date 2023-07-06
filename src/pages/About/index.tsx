@@ -1,5 +1,5 @@
 import useInView from 'hooks/useInView';
-import { languages, tools } from 'pages/About/constants';
+import { front, back, tools } from 'pages/About/constants';
 import {
   StyledAbout,
   Header,
@@ -13,12 +13,11 @@ import {
   SkillsHeader,
   SkillsSection,
   Skills,
-  Tools,
 } from 'pages/About/styles';
 import meInRedShirt from 'assets/images/red-shirt.webp';
 
 const About = () => {
-  const visibleSections = useInView('section[id], h2[id]');
+  const visibleSections = useInView('section[id], h2[id], #root div[id]');
 
   return (
     <StyledAbout>
@@ -56,30 +55,37 @@ const About = () => {
       </AboutMe>
       <Specifics id="specifics">
         <Projects isVisible={visibleSections?.specifics}>
-          <Number>17</Number> <p>Finished projects</p>
+          <Number>21</Number> <p>Finished projects</p>
         </Projects>
         <Experience isVisible={visibleSections?.specifics}>
-          <Number>6</Number> <p>Months of experience</p>
+          <Number>12</Number> <p>Months of experience</p>
         </Experience>
       </Specifics>
       <SkillsHeader id="skills" isVisible={visibleSections?.skills}>
         Skills
       </SkillsHeader>
-      <SkillsSection id="tools">
-        <Skills isVisible={visibleSections?.tools}>
-          {languages.map(({ id, picture, name }) => (
+      <SkillsSection>
+        <Skills id="front" isVisible={visibleSections?.front}>
+          {front.map(({ id, picture, name }) => (
             <div key={id}>
               {picture} {name}
             </div>
           ))}
         </Skills>
-        <Tools isVisible={visibleSections?.tools}>
+        <Skills id="back" isVisible={visibleSections?.back}>
+          {back.map(({ id, picture, name }) => (
+            <div key={id}>
+              {picture} {name}
+            </div>
+          ))}
+        </Skills>
+        <Skills id="tools" isVisible={visibleSections?.tools}>
           {tools.map(({ id, picture, name }) => (
             <div key={id}>
               {picture} {name}
             </div>
           ))}
-        </Tools>
+        </Skills>
       </SkillsSection>
     </StyledAbout>
   );

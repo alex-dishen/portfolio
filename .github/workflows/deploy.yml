@@ -7,25 +7,25 @@ on:
 
 jobs:
   DevDeploy:
-    name: Build and deploy for dev
-    if: github.event.ref == 'refs/heads/develop'
+    name: Build and deploy for prod
+    if: github.event.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: 
       name: development
-      url: https://portfolio-dev-33a95.web.app
+      url: https://alex-dishen.web.app
     steps:
       - uses: actions/checkout@v3
-      - run: 'npm i && npm run build:dev'
+      - run: npm i && npm run build:prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_DEV_33A95 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ALEX_DISHEN }}'
           channelId: live
-          projectId: portfolio-dev-33a95
+          projectId: alex-dishen
 
   ProdDeploy:
-    name: Build and deploy for prod
-    if: github.event.ref == 'refs/heads/main'
+    name: Build and deploy for dev
+    if: github.event.ref == 'refs/heads/develop'
     environment:
       name: github-pages
       url: https://alex-dishen.github.io/portfolio/
@@ -41,7 +41,7 @@ jobs:
         run: yarn
 
       - name: Build project
-        run: yarn build:prod
+        run: yarn build:dev
         
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
