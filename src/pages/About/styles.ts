@@ -126,13 +126,8 @@ export const SkillsHeader = styled.h2<AnimationType>(
 
 export const SkillsSection = styled.section`
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   gap: 30px;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const Skills = styled.div<AnimationType>(
@@ -141,9 +136,8 @@ export const Skills = styled.div<AnimationType>(
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 350px;
     padding: 25px 35px;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 2px solid rgb(40, 40, 40);
 
     opacity: 0;
@@ -162,13 +156,5 @@ export const Skills = styled.div<AnimationType>(
       height: 40px;
       width: 40px;
     }
-  `
-);
-
-export const Tools = styled(Skills)<AnimationType>(
-  ({ isVisible }) => css`
-    opacity: 0;
-    transform: translateY(50px);
-    animation: ${isVisible ? moveUp : ''} 0.8s ease-out forwards 0.6s;
   `
 );

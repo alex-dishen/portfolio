@@ -67,6 +67,7 @@ const Projects = () => {
                 text="Download on the"
                 platform="App Store"
                 href={project.appleLink}
+                isVisible={visibleSections[`projectLinks${index}`]}
               />
             ) : (
               <>

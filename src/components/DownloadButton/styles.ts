@@ -1,14 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { moveUp } from 'pages/Projects/animations';
+import { DownloadButtonWrapperT } from 'components/DownloadButton/types';
 
-export const DownloadButtonWrapper = styled.a`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
-  border: 1px solid #2a2a2a;
-  border-radius: 15px;
-  text-decoration: none;
-`;
+export const DownloadButtonWrapper = styled.a<DownloadButtonWrapperT>(
+  ({ isVisible }) => css`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border: 1px solid #2a2a2a;
+    border-radius: 15px;
+    text-decoration: none;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.35s;
+  `
+);
 
 export const Info = styled.div`
   display: flex;

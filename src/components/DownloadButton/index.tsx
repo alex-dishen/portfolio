@@ -11,8 +11,9 @@ const DownloadButton = ({
   text,
   platform,
   href,
+  isVisible,
 }: DownloadButtonProps) => (
-  <DownloadButtonWrapper href={href} target="blank">
+  <DownloadButtonWrapper href={href} target="blank" isVisible={isVisible}>
     {icon}
     <Info>
       <Text>{text}</Text>
