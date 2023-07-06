@@ -5,4 +5,9 @@ export type DownloadButtonProps = {
   text: string;
   platform: string;
   href: string;
+  isVisible: boolean;
+};
+
+export type DownloadButtonWrapperT = {
+  isVisible: boolean;
 };
