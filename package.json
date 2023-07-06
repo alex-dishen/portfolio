@@ -4,8 +4,8 @@
   "homepage": "http://alex-dishen.github.io/portfolio",
   "scripts": {
     "start": "vite --host --open",
-    "build:prod": "vite build --base=/portfolio/",
-    "build:dev": "vite build",
+    "build:dev": "vite build --base=/portfolio/",
+    "build:prod": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
