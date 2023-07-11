@@ -1,6 +1,6 @@
 'use client'
 
-// import Image from 'next/image'
+import Image from 'next/image'
 import { Paths } from 'src/constants'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
@@ -9,7 +9,7 @@ import {
   Welcome,
   TopGreeting,
   Greeting,
-  // ImageHolder,
+  ImageHolder,
   Name,
   Position,
   NavigationSection,
@@ -19,23 +19,21 @@ import {
   StyledLink,
 } from './styles'
 
-// const imageLoader = ({ src, width }: { src: string; width: number }) =>
-//   `https://s3.amazonaws.com/assets.portfolio/${src}?w=${width}`
-
 const Home = () => (
   <StyledHome>
     <Welcome>
       <TopGreeting>
         <Greeting>Hey, I'm</Greeting>
-        {/* <ImageHolder>
+        <ImageHolder>
           <Image
-            src="black-shirt.webp"
+            src="/black-shirt.webp"
             alt="Oleksandr in black shirt"
+            priority
             width={100}
             height={100}
-            loader={imageLoader}
+            unoptimized
           />
-        </ImageHolder> */}
+        </ImageHolder>
         <Name>Oleksandr</Name>
       </TopGreeting>
       <Position>A Software Engineer</Position>
