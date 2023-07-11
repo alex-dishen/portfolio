@@ -1,11 +1,14 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import { ImageHolderTypes, StyledNavbarTypes } from 'components/Navbar/types';
+import styled, { css } from 'styled-components'
+import Link from 'next/link'
+import {
+  ImageHolderTypes,
+  StyledNavbarTypes,
+} from 'src/components/Navbar/types'
 import {
   showFromBottom,
   showFromLeft,
   rotate,
-} from 'components/Navbar/animations';
+} from 'src/components/Navbar/animations'
 
 export const StyledNavbar = styled.nav<StyledNavbarTypes>(
   ({ isMobile, delay }) => css`
@@ -25,8 +28,8 @@ export const StyledNavbar = styled.nav<StyledNavbarTypes>(
       top: 50%;
       left: 30px;
     }
-  `
-);
+  `,
+)
 
 export const StyledLink = styled(Link)`
   display: flex;
@@ -35,8 +38,9 @@ export const StyledLink = styled(Link)`
   height: 100%;
   width: 100%;
   border-radius: 12px;
+  /* padding: 10px; */
   background-color: black;
-`;
+`
 
 export const LinkHolder = styled.div<ImageHolderTypes>(
   ({ glowingColor }) => css`
@@ -51,7 +55,10 @@ export const LinkHolder = styled.div<ImageHolderTypes>(
     overflow: hidden;
 
     svg {
+      /* height: 100%; */
+      /* width: 100%; */
       height: 26px;
+      width: 26px;
       transition: 0.4s;
     }
 
@@ -70,8 +77,8 @@ export const LinkHolder = styled.div<ImageHolderTypes>(
       background: conic-gradient(${glowingColor});
       animation: 6s ${rotate} linear infinite;
     }
-  `
-);
+  `,
+)
 
 export const Overflow = styled.div`
   position: fixed;
@@ -80,4 +87,4 @@ export const Overflow = styled.div`
   height: 90px;
   width: 100vw;
   background-image: linear-gradient(to bottom, transparent, black);
-`;
+`

@@ -4,5 +4,8 @@ node_modules
 # production
 /dist
 
+.next
+tsconfig.tsbuildinfo
+
 .firebase
 *.log

@@ -1,29 +1,28 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { getGlowingColor } from 'components/Navbar/helpers';
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { getGlowingColor } from 'src/components/Navbar/helpers'
 
 const useNavbar = () => {
-  const [glowingColor, setGlowingColor] = useState('');
-  const [animationDelay, setAnimationDelay] = useState(3.4);
-  const [isMobile, setIsMobile] = useState(false);
-  const location = useLocation();
+  const [glowingColor, setGlowingColor] = useState('')
+  const [animationDelay, setAnimationDelay] = useState(3.4)
+  const [isMobile, setIsMobile] = useState(false)
+  const pathName = usePathname()
 
   const getAnimationDelay = () =>
-    setAnimationDelay(location.pathname === '/' ? 3.4 : 0.9);
+    setAnimationDelay(pathName === '/' ? 3.4 : 0.9)
 
-  const getIsMobile = () =>
-    setIsMobile(window.innerWidth < 1050 ? true : false);
-
-  useEffect(() => {
-    getGlowingColor(location.pathname, setGlowingColor);
-  }, [location.pathname]);
+  const getIsMobile = () => setIsMobile(window.innerWidth < 1050 ? true : false)
 
   useEffect(() => {
-    getAnimationDelay();
-    getIsMobile();
-  }, []);
+    getGlowingColor(pathName, setGlowingColor)
+  }, [pathName])
 
-  return { animationDelay, isMobile, glowingColor, location };
-};
+  useEffect(() => {
+    getAnimationDelay()
+    getIsMobile()
+  }, [])
 
-export default useNavbar;
+  return { animationDelay, isMobile, glowingColor, pathName }
+}
+
+export default useNavbar

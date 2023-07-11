@@ -1,14 +1,14 @@
-import { glowingColors } from 'styles/palette';
+import { glowingColors } from 'src/styles/palette'
 
 export const getGlowingColor = (
   location: string,
-  setGlowingColor: (a: string) => void
+  setGlowingColor: (a: string) => void,
 ) => {
-  if (location === '/') return setGlowingColor(glowingColors.blue);
+  if (location === '/') return setGlowingColor(glowingColors.blue)
 
-  if (location === '/projects') return setGlowingColor(glowingColors.orange);
+  if (location === '/projects') return setGlowingColor(glowingColors.orange)
 
-  if (location === '/about') return setGlowingColor(glowingColors.red);
+  if (location === '/about') return setGlowingColor(glowingColors.red)
 
-  if (location === '/contact') return setGlowingColor(glowingColors.purple);
-};
+  if (location === '/contact') return setGlowingColor(glowingColors.purple)
+}

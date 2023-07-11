@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { topToBottom, scale, showElement } from 'pages/Contact/animations';
+import styled from 'styled-components'
+import { topToBottom, scale, showElement } from './animations'
 
 export const StyledContact = styled.div`
   flex: 1;
@@ -56,13 +56,13 @@ export const StyledContact = styled.div`
       width: 170px;
     }
   }
-`;
+`
 
 export const Intro = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const Header = styled.h1`
   font-size: 45px;
@@ -75,7 +75,7 @@ export const Header = styled.h1`
   @media (max-width: 600px) {
     font-size: 38px;
   }
-`;
+`
 
 export const Pitch = styled.div`
   display: flex;
@@ -94,7 +94,7 @@ export const Pitch = styled.div`
   & p:nth-child(2) {
     margin-top: 8px;
   }
-`;
+`
 
 export const Card = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ export const Card = styled.div`
   * {
     z-index: 2;
   }
-`;
+`
 
 export const ImageHolder = styled.div`
   position: relative;
@@ -133,7 +133,7 @@ export const ImageHolder = styled.div`
     height: 100px;
     width: 100px;
   }
-`;
+`
 
 export const Name = styled.div`
   display: flex;
@@ -144,7 +144,7 @@ export const Name = styled.div`
   & p:nth-child(2) {
     color: rgb(130, 130, 130);
   }
-`;
+`
 
 export const ContactsWrapper = styled.div`
   display: flex;
@@ -153,7 +153,7 @@ export const ContactsWrapper = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
   }
-`;
+`
 
 export const Option = styled.a`
   padding: 14px 18px;
@@ -170,4 +170,4 @@ export const Option = styled.a`
     color: white;
     border-color: rgb(70, 70, 70);
   }
-`;
+`

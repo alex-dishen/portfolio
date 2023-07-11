@@ -1,9 +1,11 @@
-import useInView from 'hooks/useInView';
-import { front, back, tools } from 'pages/About/constants';
+'use client'
+
+import Image from 'next/image'
+import useInView from 'src/hooks/useInView'
+import { front, back, tools } from './constants'
 import {
   StyledAbout,
   Header,
-  Image,
   Greeting,
   AboutMe,
   Specifics,
@@ -13,19 +15,20 @@ import {
   SkillsHeader,
   SkillsSection,
   Skills,
-} from 'pages/About/styles';
-import meInRedShirt from 'assets/images/red-shirt.webp';
+} from './styles'
 
 const About = () => {
-  const visibleSections = useInView('section[id], h2[id], #root div[id]');
+  const visibleSections = useInView('section[id], h2[id], body div[id]')
 
   return (
     <StyledAbout>
       <Header>Meet Oleksandr</Header>
       <Image
-        src={meInRedShirt}
+        src="/red-shirt.webp"
         alt="Oleksandr in red shirt"
-        onMouseDown={(e) => e.preventDefault()}
+        height={350}
+        width={600}
+        quality={100}
       />
       <Greeting>Greetings and welcome to my personal website!</Greeting>
       <AboutMe>
@@ -88,7 +91,7 @@ const About = () => {
         </Skills>
       </SkillsSection>
     </StyledAbout>
-  );
-};
+  )
+}
 
-export default About;
+export default About

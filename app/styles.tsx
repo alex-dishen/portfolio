@@ -1,13 +1,13 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import { OptionTypes } from 'pages/Home/types';
+import styled, { css } from 'styled-components'
+import Link from 'next/link'
+import { OptionTypes } from './types'
 import {
   styledHomeAnimation,
   greetingAnimation,
   imageAnimation,
   nameAnimation,
   showElement,
-} from 'pages/Home/animations';
+} from './animations'
 
 export const StyledHome = styled.main`
   position: relative;
@@ -63,13 +63,13 @@ export const StyledHome = styled.main`
       width: 170px;
     }
   }
-`;
+`
 
 export const Welcome = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const TopGreeting = styled.div`
   display: flex;
@@ -78,7 +78,7 @@ export const TopGreeting = styled.div`
   @media (max-width: 600px) {
     gap: 5px;
   }
-`;
+`
 
 export const Greeting = styled.h1`
   display: flex;
@@ -95,7 +95,7 @@ export const Greeting = styled.h1`
   @media (max-width: 600px) {
     font-size: 28px;
   }
-`;
+`
 
 export const ImageHolder = styled.div`
   position: relative;
@@ -122,24 +122,24 @@ export const ImageHolder = styled.div`
     width: 60px;
     height: 60px;
   }
-`;
+`
 
 export const Name = styled(Greeting)`
   transform: scale(0.9) translateY(40px);
   animation: ${nameAnimation} 0.65s ease-out forwards 0.55s;
-`;
+`
 
 export const Position = styled(Greeting)`
   z-index: 1;
   transform: translateY(0px) translateX(0px) scale(1);
   animation: ${showElement} 1.4s ease-out forwards 2.1s;
-`;
+`
 
 export const NavigationSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-`;
+`
 
 export const Option = styled(Link)<OptionTypes>(
   ({ index }) => css`
@@ -194,8 +194,8 @@ export const Option = styled(Link)<OptionTypes>(
     @media (max-width: 600px) {
       padding: 15px 24px;
     }
-  `
-);
+  `,
+)
 
 export const ArrowContainer = styled.div`
   position: relative;
@@ -203,7 +203,7 @@ export const ArrowContainer = styled.div`
   justify-content: center;
   width: 25px;
   overflow: hidden;
-`;
+`
 
 export const Text = styled.div`
   z-index: 2;
@@ -214,7 +214,6 @@ export const Text = styled.div`
 
   a {
     position: relative;
-    margin-left: 2px;
     color: rgb(194, 194, 194);
     text-decoration: none;
     cursor: pointer;
@@ -225,7 +224,7 @@ export const Text = styled.div`
       }
     }
   }
-`;
+`
 
 export const StyledLink = styled(Link)`
   position: relative;
@@ -251,4 +250,4 @@ export const StyledLink = styled(Link)`
       transform-origin: left;
     }
   }
-`;
+`

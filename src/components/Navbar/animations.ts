@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components'
 
 export const rotate = keyframes`
   from {
@@ -7,7 +7,7 @@ export const rotate = keyframes`
   to {
     transform: rotate(0deg);
   }
-`;
+`
 
 export const showFromBottom = keyframes`
   0% {
@@ -21,7 +21,7 @@ export const showFromBottom = keyframes`
     opacity: 1;
     transform: translateY(-50%);
   }
-`;
+`
 
 export const showFromLeft = keyframes`
   0% {
@@ -35,4 +35,4 @@ export const showFromLeft = keyframes`
     opacity: 1;
     transform: translateX(0px) translateY(-50%);
   }
-`;
+`
