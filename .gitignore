@@ -8,5 +8,8 @@ node_modules
 tsconfig.tsbuildinfo
 .eslintcache
 
+.next
+tsconfig.tsbuildinfo
+
 .firebase
 *.log
