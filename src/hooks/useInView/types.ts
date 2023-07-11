@@ -1,3 +1,3 @@
 export interface IVisibleSections {
-  [key: string]: boolean;
+  [key: string]: boolean
 }

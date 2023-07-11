@@ -2,10 +2,11 @@
 node_modules
 
 # production
-/dist
+/out
 
 .next
 tsconfig.tsbuildinfo
+.eslintcache
 
 .firebase
 *.log
