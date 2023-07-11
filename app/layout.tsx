@@ -7,7 +7,7 @@ import Navbar from 'src/components/Navbar'
 
 export const metadata: Metadata = {
   title: 'Oleksandr Didyshen',
-  description: '...',
+  description: 'This is my portfolio',
 }
 
 const RootLayout = ({ children }: { children: ReactNode }) => {

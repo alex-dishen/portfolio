@@ -1,6 +1,6 @@
 'use client'
 
-import Image, { ImageLoaderProps } from 'next/image'
+import Image from 'next/image'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -26,7 +26,7 @@ const imageLoader = ({
   src: string
   width: number
   quality?: number
-}) => `${src}?w=${width}&q=${quality}`
+}) => `http://s3.amazonaws.com/assets.portfolio/${src}?w=${width}&q=${quality}`
 
 const Home = () => (
   <StyledHome>
@@ -35,12 +35,13 @@ const Home = () => (
         <Greeting>Hey, I'm</Greeting>
         <ImageHolder>
           <Image
-            src="/black-shirt.webp"
+            src="black-shirt.webp"
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            quality={100}
+            quality={40}
             loader={imageLoader}
+            priority
           />
         </ImageHolder>
         <Name>Oleksandr</Name>
