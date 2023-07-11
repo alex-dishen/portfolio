@@ -10,6 +10,7 @@
 
 - React
 - TypeScript
+- Next.js
 - Styled-Components
 
 ## Screenshots
@@ -47,12 +48,7 @@ $ yarn
 4. Run the project.
 
 ```sh
-$ npm start
+$ npm run dev
 or
-$ yarn start
+$ yarn dev
 ```
-
-## Navigation
-
-- See my previous project [Swipi](https://github.com/midstem/swipi)
-- See my next project [Swipi Landing](https://github.com/midstem/swipi-landing)
