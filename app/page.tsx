@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { ImageLoaderProps } from 'next/image'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -39,9 +39,8 @@ const Home = () => (
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            quality={40}
+            quality={80}
             loader={imageLoader}
-            priority
           />
         </ImageHolder>
         <Name>Oleksandr</Name>

@@ -2,7 +2,7 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   image: {
-    loader: 'custom',
+    loader: 'custom'
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(rule =>
