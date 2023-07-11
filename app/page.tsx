@@ -1,6 +1,7 @@
 'use client'
 
-import Image from 'next/image'
+// import Image from 'next/image'
+import { Paths } from 'src/constants'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -8,7 +9,7 @@ import {
   Welcome,
   TopGreeting,
   Greeting,
-  ImageHolder,
+  // ImageHolder,
   Name,
   Position,
   NavigationSection,
@@ -18,31 +19,23 @@ import {
   StyledLink,
 } from './styles'
 
-const imageLoader = ({
-  src,
-  width,
-  quality,
-}: {
-  src: string
-  width: number
-  quality?: number
-}) => `https://s3.amazonaws.com/assets.portfolio/${src}?w=${width}&q=${quality}`
+// const imageLoader = ({ src, width }: { src: string; width: number }) =>
+//   `https://s3.amazonaws.com/assets.portfolio/${src}?w=${width}`
 
 const Home = () => (
   <StyledHome>
     <Welcome>
       <TopGreeting>
         <Greeting>Hey, I'm</Greeting>
-        <ImageHolder>
+        {/* <ImageHolder>
           <Image
             src="black-shirt.webp"
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            quality={80}
             loader={imageLoader}
           />
-        </ImageHolder>
+        </ImageHolder> */}
         <Name>Oleksandr</Name>
       </TopGreeting>
       <Position>A Software Engineer</Position>
@@ -66,7 +59,7 @@ const Home = () => (
       ))}
     </NavigationSection>
     <Text>
-      Never Mind -- <StyledLink href="/contact">Just Say Hi</StyledLink>
+      Never Mind -- <StyledLink href={Paths.CONTACT}>Just Say Hi</StyledLink>
     </Text>
   </StyledHome>
 )
