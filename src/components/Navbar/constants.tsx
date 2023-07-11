@@ -1,3 +1,4 @@
+import { Paths } from 'src/constants'
 import Bolt from 'src/assets/icons/bolt.svg'
 import FBolt from 'src/assets/icons/bolt-filled.svg'
 import Pen from 'src/assets/icons/pen.svg'
@@ -10,24 +11,34 @@ import FMail from 'src/assets/icons/mail-filled.svg'
 
 export const pages = [
   {
-    path: '/',
+    path: Paths.HOME,
+    ariaLabel: 'Home',
     filledPicture: <FExplore />,
     plainPicture: <Explore />,
   },
   {
-    path: '/projects',
+    path: Paths.PROJECTS,
+    ariaLabel: 'Projects',
     filledPicture: <FBolt />,
     plainPicture: <Bolt />,
   },
   {
-    path: 'https://medium.com/@oleksandrdidyshen',
+    path: Paths.BLOG,
+    ariaLabel: 'Blog',
     filledPicture: <Pen />,
     plainPicture: <Pen />,
   },
   {
-    path: '/about',
+    path: Paths.ABOUT,
+    ariaLabel: 'About',
     filledPicture: <FPerson />,
     plainPicture: <Person />,
   },
-  { path: '/contact', filledPicture: <FMail />, plainPicture: <Mail /> },
+  {
+    path: Paths.CONTACT,
+    ariaLabel: 'Contact information',
+
+    filledPicture: <FMail />,
+    plainPicture: <Mail />,
+  },
 ]

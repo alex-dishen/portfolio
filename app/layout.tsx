@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html>
+    <html lang="en">
       <body>
         <StyledComponentsRegistry>
           <Navbar />
