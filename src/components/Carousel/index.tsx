@@ -1,13 +1,10 @@
-import { memo } from 'react';
-import Swipi from 'swipi';
-import { CarouselProps } from 'components/Carousel/types';
-import {
-  CarouselWrapper,
-  ImageHolder,
-  Image,
-} from 'components/Carousel/styles';
-import { ReactComponent as ChevronLeft } from 'assets/icons/chevron-left.svg';
-import { ReactComponent as ChevronRight } from 'assets/icons/chevron-right.svg';
+import { memo } from 'react'
+import Image from 'next/image'
+import Swipi from 'swipi'
+import ChevronLeft from 'src/assets/icons/chevron-left.svg'
+import ChevronRight from 'src/assets/icons/chevron-right.svg'
+import { CarouselProps } from 'src/components/Carousel/types'
+import { CarouselWrapper, ImageHolder } from 'src/components/Carousel/styles'
 
 const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
   <CarouselWrapper id={id} isVisible={isVisible}>
@@ -19,13 +16,19 @@ const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (
       prevButton={<ChevronLeft />}
       nextButton={<ChevronRight />}
     >
-      {pictures.map((picture) => (
+      {pictures.map(picture => (
         <ImageHolder key={picture.id}>
-          <Image src={picture.src} alt={picture.alt} />
+          <Image
+            unoptimized
+            height={100}
+            width={350}
+            src={picture.src}
+            alt={picture.alt}
+          />
         </ImageHolder>
       ))}
     </Swipi>
   </CarouselWrapper>
-);
+)
 
-export default memo(Carousel);
+export default memo(Carousel)

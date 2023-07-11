@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components'
 
 export const topToBottom = keyframes`
   0% {
@@ -10,7 +10,7 @@ export const topToBottom = keyframes`
   100% {
     transform: translateY(-40px);
   }
-`;
+`
 
 export const scale = keyframes`
   0% {
@@ -22,11 +22,11 @@ export const scale = keyframes`
   100% {
     transform: scale(1);
   }
-`;
+`
 
 export const showElement = keyframes`
   to {
     opacity: 1;
     transform: translateY(0px) scale(1) skewY(0deg);
   }
-`;
+`

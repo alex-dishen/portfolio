@@ -1,7 +1,7 @@
 export type SummaryProps = {
-  summary: string;
-};
+  summary: string
+}
 
 export type TextTypes = {
-  isShowSummary: boolean;
-};
+  isShowSummary: boolean
+}

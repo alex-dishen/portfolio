@@ -1,70 +1,112 @@
-import uniqid from 'uniqid';
+import { nanoid } from 'nanoid'
 // To get the most out of a picture take a screenshot at 1500px width and 850px height
 // Then put the picture into that converter: https://cloudconvert.com/png-to-webp and woala they are in webp and have way smaller size
-import Intro from 'assets/images/projects/swipi-landing/intro.webp';
-import Autoplay from 'assets/images/projects/swipi-landing/autoplay.webp';
-import JSXElement from 'assets/images/projects/swipi-landing/jsx_example.webp';
-import Playground from 'assets/images/projects/swipi-landing/playground.webp';
-import Installation from 'assets/images/projects/swipi-landing/installation.webp';
-import homeScreen from 'assets/images/projects/weaponry/home-screen.webp';
-import cameraScreen from 'assets/images/projects/weaponry/camera-screen.webp';
-import infoScreen from 'assets/images/projects/weaponry/info-screen.webp';
-import secondCameraScreen from 'assets/images/projects/weaponry/camera-screen2.webp';
-import secondInfoScreen from 'assets/images/projects/weaponry/info-screen2.webp';
-import threeInRaw from 'assets/images/projects/slider/three-in-raw.webp';
-import twoInRaw from 'assets/images/projects/slider/two-in-raw.webp';
-import homePage from 'assets/images/projects/game-harbor/home-page.webp';
-import gamesPage from 'assets/images/projects/game-harbor/games-page.webp';
-import gamesPage2 from 'assets/images/projects/game-harbor/games-page2.webp';
-import gamePage from 'assets/images/projects/game-harbor/game-page.webp';
-import gamePage2 from 'assets/images/projects/game-harbor/game-page2.webp';
-import gamePage3 from 'assets/images/projects/game-harbor/game-page3.webp';
 
 const swipiLandingPics = [
-  { id: uniqid(), src: Intro, alt: 'Swipi Landing Top' },
-  { id: uniqid(), src: Autoplay, alt: 'Swipi Landing Top' },
-  { id: uniqid(), src: JSXElement, alt: 'Swipi Landing Top' },
-  { id: uniqid(), src: Playground, alt: 'Swipi Landing Top' },
-  { id: uniqid(), src: Installation, alt: 'Swipi Landing Top' },
-];
+  {
+    id: nanoid(),
+    src: '/projects/swipi-landing/intro.webp',
+    alt: 'Swipi Landing Top',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/swipi-landing/autoplay.webp',
+    alt: 'Autoplay example',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/swipi-landing/jsx_example.webp',
+    alt: 'Example with JSX elements',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/swipi-landing/playground.webp',
+    alt: 'Playground section',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/swipi-landing/installation.webp',
+    alt: 'Installation section',
+  },
+]
 
 const weaponryPics = [
-  { id: uniqid(), src: homeScreen, alt: 'Home screen' },
-  { id: uniqid(), src: cameraScreen, alt: 'Camera screen with Abrams' },
-  { id: uniqid(), src: infoScreen, alt: 'Information screen with Abrams' },
   {
-    id: uniqid(),
-    src: secondCameraScreen,
+    id: nanoid(),
+    src: '/projects/weaponry/home-screen.webp',
+    alt: 'Home screen',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/weaponry/camera-screen.webp',
+    alt: 'Camera screen with Abrams',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/weaponry/info-screen.webp',
+    alt: 'Information screen with Abrams',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/weaponry/camera-screen2.webp',
     alt: 'Camera screen with Challenger 2',
   },
   {
-    id: uniqid(),
-    src: secondInfoScreen,
+    id: nanoid(),
+    src: '/projects/weaponry/info-screen2.webp',
     alt: 'Information screen with Challenger 2',
   },
-];
+]
 
 const sliderPics = [
-  { id: uniqid(), src: threeInRaw, alt: 'Three pictures in row' },
-  { id: uniqid(), src: twoInRaw, alt: 'Two pictures in row' },
-];
+  {
+    id: nanoid(),
+    src: '/projects/slider/three-in-raw.webp',
+    alt: 'Three pictures in row',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/slider/two-in-raw.webp',
+    alt: 'Two pictures in row',
+  },
+]
 
 const gameHarborPics = [
-  { id: uniqid(), src: homePage, alt: 'Home page' },
   {
-    id: uniqid(),
-    src: gamesPage,
+    id: nanoid(),
+    src: '/projects/game-harbor/home-page.webp',
+    alt: 'Home page',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/game-harbor/games-page.webp',
     alt: 'Games page with filter "Popular in 2022"',
   },
-  { id: uniqid(), src: gamesPage2, alt: 'Games page with filter "Next week"' },
-  { id: uniqid(), src: gamePage, alt: 'Lost Ark' },
-  { id: uniqid(), src: gamePage2, alt: 'Lost Ark with opened description' },
-  { id: uniqid(), src: gamePage3, alt: 'The Witcher 3: Wild Hunt ' },
-];
+  {
+    id: nanoid(),
+    src: '/projects/game-harbor/games-page2.webp',
+    alt: 'Games page with filter "Next week"',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/game-harbor/game-page.webp',
+    alt: 'Lost Ark',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/game-harbor/game-page2.webp',
+    alt: 'Lost Ark with opened description',
+  },
+  {
+    id: nanoid(),
+    src: '/projects/game-harbor/game-page3.webp',
+    alt: 'The Witcher 3: Wild Hunt ',
+  },
+]
 
 export const projects = [
   {
-    id: uniqid(),
+    id: nanoid(),
     name: 'Swipi Landing',
     description: 'Landing page for Swipi project',
     pictures: swipiLandingPics,
@@ -74,7 +116,7 @@ export const projects = [
     live: 'https://swipi.midstem.net',
   },
   {
-    id: uniqid(),
+    id: nanoid(),
     name: 'Weaponry',
     description: 'Weapon recognition app',
     pictures: weaponryPics,
@@ -85,7 +127,7 @@ export const projects = [
     googleButton: '',
   },
   {
-    id: uniqid(),
+    id: nanoid(),
     name: 'Swipi',
     description: 'Light-weight slider',
     pictures: sliderPics,
@@ -96,7 +138,7 @@ export const projects = [
     code: 'https://github.com/midstem/swipi-landing',
   },
   {
-    id: uniqid(),
+    id: nanoid(),
     name: 'Game Harbor',
     description: 'Game shop with main database from RAWG API',
     pictures: gameHarborPics,
@@ -107,4 +149,4 @@ export const projects = [
     live: 'https://alex-dishen.github.io/game-harbor/',
     code: 'https://github.com/alex-dishen/game-harbor',
   },
-];
+]

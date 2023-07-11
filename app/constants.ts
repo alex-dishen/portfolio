@@ -14,4 +14,4 @@ export const options = [
     variant: 'C',
     text: 'Oleksandr, who?!',
   },
-];
+]

@@ -1,5 +1,5 @@
-import { DotsWrapper, Dot } from 'components/Dots/styles';
-import { DotsProps } from 'components/Dots/types';
+import { DotsWrapper, Dot } from 'src/components/Dots/styles'
+import { DotsProps } from 'src/components/Dots/types'
 
 const Dots = ({ isVisible }: DotsProps) => (
   <DotsWrapper isVisible={isVisible}>
@@ -7,6 +7,6 @@ const Dots = ({ isVisible }: DotsProps) => (
     <Dot />
     <Dot />
   </DotsWrapper>
-);
+)
 
-export default Dots;
+export default Dots

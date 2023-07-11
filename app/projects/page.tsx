@@ -1,8 +1,12 @@
-import useInView from 'hooks/useInView';
-import Carousel from 'components/Carousel';
-import Dots from 'components/Dots';
-import Summary from 'components/Summary';
-import { projects } from 'pages/Projects/constants';
+'use client'
+
+import useInView from 'src/hooks/useInView'
+import Carousel from 'src/components/Carousel'
+import Dots from 'src/components/Dots'
+import Summary from 'src/components/Summary'
+import DownloadButton from 'src/components/DownloadButton'
+import { projects } from './constants'
+import Apple from 'src/assets/icons/apple.svg'
 import {
   StyledProjects,
   MainHeader,
@@ -17,12 +21,10 @@ import {
   SummaryHeader,
   ProjectLinks,
   Link,
-} from 'pages/Projects/styles';
-import DownloadButton from 'components/DownloadButton';
-import { ReactComponent as Apple } from 'assets/icons/apple.svg';
+} from './styles'
 
 const Projects = () => {
-  const visibleSections = useInView('h2[id], p[id], #root div[id]');
+  const visibleSections = useInView('h2[id], p[id], body div[id]')
 
   return (
     <StyledProjects>
@@ -97,7 +99,7 @@ const Projects = () => {
         </ProjectHolder>
       ))}
     </StyledProjects>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

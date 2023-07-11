@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { AnimationType } from 'pages/Projects/types';
-import { moveUp } from 'pages/Projects/animations';
+import styled, { css } from 'styled-components'
+import { AnimationType } from './types'
+import { moveUp } from './animations'
 
 export const StyledProjects = styled.main`
   width: min(850px, 90vw);
@@ -22,7 +22,7 @@ export const StyledProjects = styled.main`
   @media (max-width: 600px) {
     margin: 20px 30px 50px 30px;
   }
-`;
+`
 
 export const MainHeader = styled.h1`
   text-align: center;
@@ -38,22 +38,22 @@ export const MainHeader = styled.h1`
     font-size: 36px;
     font-weight: 600;
   }
-`;
+`
 
 export const ProjectHolder = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 50px;
-`;
+`
 
 export const ProjectInitials = styled.div<AnimationType>(
   ({ isVisible }) => css`
     opacity: 0;
     transform: translateY(50px);
     animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.2s;
-  `
-);
+  `,
+)
 
 export const ProjectName = styled.h2`
   margin-bottom: 6px !important;
@@ -64,7 +64,7 @@ export const ProjectName = styled.h2`
     font-size: 28px;
     font-weight: 600;
   }
-`;
+`
 
 export const ProjectDescription = styled.h4`
   font-size: 18px;
@@ -74,24 +74,24 @@ export const ProjectDescription = styled.h4`
   @media (max-width: 600px) {
     font-size: 16px;
   }
-`;
+`
 
 export const TechnologiesSection = styled.div<AnimationType>(
   ({ isVisible }) => css`
     opacity: 0;
     transform: translateY(50px);
     animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.55s;
-  `
-);
+  `,
+)
 
 export const TechnologiesHeader = styled.h3`
   font-size: 20px;
   margin-bottom: 6px !important;
-`;
+`
 
 export const Technologies = styled.p`
   color: rgb(188, 188, 188);
-`;
+`
 
 export const SummarySection = styled.div<AnimationType>(
   ({ isVisible }) => css`
@@ -102,17 +102,17 @@ export const SummarySection = styled.div<AnimationType>(
     opacity: 0;
     transform: translateY(50px);
     animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.65s;
-  `
-);
+  `,
+)
 
-export const SummaryHeader = styled(TechnologiesHeader)``;
+export const SummaryHeader = styled(TechnologiesHeader)``
 
 export const ProjectLinks = styled.div`
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-bottom: 30px;
-`;
+`
 
 export const Link = styled.a<AnimationType>(
   ({ isVisible }) => css`
@@ -137,5 +137,5 @@ export const Link = styled.a<AnimationType>(
     &:last-child {
       animation: ${isVisible ? moveUp : ''} 1.2s ease-out forwards 0.7s;
     }
-  `
-);
+  `,
+)

@@ -1,3 +1,3 @@
 export type OptionTypes = {
-  index: number;
-};
+  index: number
+}

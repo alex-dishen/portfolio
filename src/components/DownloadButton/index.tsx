@@ -1,10 +1,10 @@
-import { DownloadButtonProps } from 'components/DownloadButton/types';
+import { DownloadButtonProps } from 'src/components/DownloadButton/types'
 import {
   DownloadButtonWrapper,
   Info,
   Platform,
   Text,
-} from 'components/DownloadButton/styles';
+} from 'src/components/DownloadButton/styles'
 
 const DownloadButton = ({
   icon,
@@ -20,6 +20,6 @@ const DownloadButton = ({
       <Platform>{platform}</Platform>
     </Info>
   </DownloadButtonWrapper>
-);
+)
 
-export default DownloadButton;
+export default DownloadButton

@@ -1,4 +1,7 @@
-import { linkOptions } from 'pages/Contact/constants';
+'use client'
+
+import Image from 'next/image'
+import { linkOptions } from './constants'
 import {
   StyledContact,
   Intro,
@@ -9,8 +12,7 @@ import {
   Name,
   ContactsWrapper,
   Option,
-} from 'pages/Contact/styles';
-import meInRedShirt from 'assets/images/black-shirt.webp';
+} from './styles'
 
 const Contact = () => (
   <StyledContact>
@@ -26,7 +28,13 @@ const Contact = () => (
     </Intro>
     <Card>
       <ImageHolder>
-        <img src={meInRedShirt} alt="Oleksandr in black shirt" />
+        <Image
+          src="/black-shirt.webp"
+          width={100}
+          height={100}
+          alt="Oleksandr in black shirt"
+          unoptimized
+        />
       </ImageHolder>
       <Name>
         <p>Oleksandr Didyshen</p>
@@ -41,6 +49,6 @@ const Contact = () => (
       </ContactsWrapper>
     </Card>
   </StyledContact>
-);
+)
 
-export default Contact;
+export default Contact

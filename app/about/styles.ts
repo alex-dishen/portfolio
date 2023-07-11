@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { AnimationType } from 'pages/About/types';
-import { showElement, moveUp } from 'pages/About/animations';
+import styled, { css } from 'styled-components'
+import { showElement, moveUp } from './animations'
+import { AnimationType } from './types'
 
 export const StyledAbout = styled.div`
   display: flex;
@@ -19,7 +19,19 @@ export const StyledAbout = styled.div`
   @media (max-width: 600px) {
     margin: 20px 0 100px 0;
   }
-`;
+
+  img {
+    height: 350px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    filter: brightness(1.4);
+
+    opacity: 0;
+    transform: translateY(90px) scale(0.7) skewY(8deg);
+    animation: ${showElement} 0.7s ease-out forwards 0.3s;
+  }
+`
 
 export const Header = styled.h1`
   text-align: center;
@@ -29,19 +41,7 @@ export const Header = styled.h1`
   opacity: 0;
   transform: translateY(50px) scale(0.6) skewY(3deg);
   animation: ${showElement} 0.8s ease-out forwards 0.1s;
-`;
-
-export const Image = styled.img`
-  height: 350px;
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  filter: brightness(1.4);
-
-  opacity: 0;
-  transform: translateY(90px) scale(0.7) skewY(8deg);
-  animation: ${showElement} 0.7s ease-out forwards 0.3s;
-`;
+`
 
 export const Greeting = styled.h3`
   text-align: center;
@@ -52,7 +52,7 @@ export const Greeting = styled.h3`
   opacity: 0;
   transform: translateY(50px) scale(0.8) skewY(3deg);
   animation: ${showElement} 0.6s ease-out forwards 0.6s;
-`;
+`
 
 export const AboutMe = styled.div`
   opacity: 0;
@@ -65,7 +65,7 @@ export const AboutMe = styled.div`
     font-size: 18px;
     line-height: 29px;
   }
-`;
+`
 
 export const Specifics = styled.section`
   display: flex;
@@ -83,7 +83,7 @@ export const Specifics = styled.section`
       font-size: 16px;
     }
   }
-`;
+`
 
 export const Projects = styled.div<AnimationType>(
   ({ isVisible }) => css`
@@ -99,19 +99,19 @@ export const Projects = styled.div<AnimationType>(
       color: rgb(110, 110, 110);
       font-size: 16px;
     }
-  `
-);
+  `,
+)
 
 export const Experience = styled(Projects)<AnimationType>(
   ({ isVisible }) => css`
     animation: ${isVisible ? moveUp : ''} 0.8s ease-out forwards 0.6s;
-  `
-);
+  `,
+)
 
 export const Number = styled.div`
   font-size: 60px;
   font-weight: 300;
-`;
+`
 
 export const SkillsHeader = styled.h2<AnimationType>(
   ({ isVisible }) => css`
@@ -121,14 +121,14 @@ export const SkillsHeader = styled.h2<AnimationType>(
     opacity: 0;
     transform: translateY(50px);
     animation: ${isVisible ? moveUp : ''} 0.8s ease-out forwards 0.3s;
-  `
-);
+  `,
+)
 
 export const SkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 30px;
-`;
+`
 
 export const Skills = styled.div<AnimationType>(
   ({ isVisible }) => css`
@@ -156,5 +156,5 @@ export const Skills = styled.div<AnimationType>(
       height: 40px;
       width: 40px;
     }
-  `
-);
+  `,
+)

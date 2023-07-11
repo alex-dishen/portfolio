@@ -1,4 +1,8 @@
-import { options } from 'pages/Home/constants';
+'use client'
+
+import Image from 'next/image'
+import { options } from './constants'
+import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
   StyledHome,
   Welcome,
@@ -12,9 +16,7 @@ import {
   ArrowContainer,
   Text,
   StyledLink,
-} from 'pages/Home/styles';
-import meInBlueShirt from 'assets/images/black-shirt.webp';
-import { ReactComponent as RightArrow } from 'assets/icons/arrow-right.svg';
+} from './styles'
 
 const Home = () => (
   <StyledHome>
@@ -22,7 +24,13 @@ const Home = () => (
       <TopGreeting>
         <Greeting>Hey, I'm</Greeting>
         <ImageHolder>
-          <img src={meInBlueShirt} alt="Oleksandr in black shirt" />
+          <Image
+            src="/black-shirt.webp"
+            alt="Oleksandr in black shirt"
+            width={100}
+            height={100}
+            unoptimized
+          />
         </ImageHolder>
         <Name>Oleksandr</Name>
       </TopGreeting>
@@ -31,7 +39,7 @@ const Home = () => (
     <NavigationSection>
       {options.map(({ page, variant, text }, index) => (
         <Option
-          to={page}
+          href={page}
           key={page}
           index={index}
           target={page.includes('http') ? '_blank' : ''}
@@ -47,9 +55,9 @@ const Home = () => (
       ))}
     </NavigationSection>
     <Text>
-      Never Mind -- <StyledLink to="/contact">Just Say Hi</StyledLink>
+      Never Mind -- <StyledLink href="/contact">Just Say Hi</StyledLink>
     </Text>
   </StyledHome>
-);
+)
 
-export default Home;
+export default Home
