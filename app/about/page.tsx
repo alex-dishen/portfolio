@@ -24,11 +24,11 @@ const About = () => {
     <StyledAbout>
       <Header>Meet Oleksandr</Header>
       <Image
+        unoptimized
         src="/red-shirt.webp"
         alt="Oleksandr in red shirt"
         height={350}
         width={600}
-        quality={100}
       />
       <Greeting>Greetings and welcome to my personal website!</Greeting>
       <AboutMe>

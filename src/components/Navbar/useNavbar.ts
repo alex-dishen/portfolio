@@ -1,5 +1,6 @@
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { Paths } from 'src/constants'
 import { getGlowingColor } from 'src/components/Navbar/helpers'
 
 const useNavbar = () => {
@@ -9,7 +10,7 @@ const useNavbar = () => {
   const pathName = usePathname()
 
   const getAnimationDelay = () =>
-    setAnimationDelay(pathName === '/' ? 3.4 : 0.9)
+    setAnimationDelay(pathName === Paths.HOME ? 3.4 : 0.9)
 
   const getIsMobile = () => setIsMobile(window.innerWidth < 1050 ? true : false)
 

@@ -38,7 +38,6 @@ export const StyledLink = styled(Link)`
   height: 100%;
   width: 100%;
   border-radius: 12px;
-  /* padding: 10px; */
   background-color: black;
 `
 
@@ -55,8 +54,6 @@ export const LinkHolder = styled.div<ImageHolderTypes>(
     overflow: hidden;
 
     svg {
-      /* height: 100%; */
-      /* width: 100%; */
       height: 26px;
       width: 26px;
       transition: 0.4s;

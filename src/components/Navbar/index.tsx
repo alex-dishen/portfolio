@@ -15,11 +15,12 @@ const Navbar = () => {
   return (
     <>
       <StyledNavbar delay={animationDelay} isMobile={isMobile}>
-        {pages.map(({ path, filledPicture, plainPicture }) => (
+        {pages.map(({ path, filledPicture, plainPicture, ariaLabel }) => (
           <LinkHolder key={path} glowingColor={glowingColor}>
             <StyledLink
               href={path}
               target={path.includes('http') ? '_blank' : ''}
+              aria-label={ariaLabel}
             >
               {pathName === path ? filledPicture : plainPicture}
             </StyledLink>

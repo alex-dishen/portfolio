@@ -2,7 +2,11 @@
 node_modules
 
 # production
-/dist
+/out
+
+.next
+tsconfig.tsbuildinfo
+.eslintcache
 
 .next
 tsconfig.tsbuildinfo

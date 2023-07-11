@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { ImageLoaderProps } from 'next/image'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -18,6 +18,16 @@ import {
   StyledLink,
 } from './styles'
 
+const imageLoader = ({
+  src,
+  width,
+  quality,
+}: {
+  src: string
+  width: number
+  quality?: number
+}) => `${src}?w=${width}&q=${quality}`
+
 const Home = () => (
   <StyledHome>
     <Welcome>
@@ -29,7 +39,8 @@ const Home = () => (
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            unoptimized
+            quality={100}
+            loader={imageLoader}
           />
         </ImageHolder>
         <Name>Oleksandr</Name>
