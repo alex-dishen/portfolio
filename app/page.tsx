@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { Paths } from 'src/constants'
-import { imageLoader } from 'src/helpers'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -31,7 +30,8 @@ const Home = () => (
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            loader={imageLoader}
+            priority
+            unoptimized
           />
         </ImageHolder>
         <Name>Oleksandr</Name>
