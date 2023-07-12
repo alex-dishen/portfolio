@@ -1,9 +1,5 @@
 const nextConfig = {
   trailingSlash: true,
-  output: 'export',
-  image: {
-    loader: 'custom',
-  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(rule =>
       rule.test?.test?.('.svg'),
