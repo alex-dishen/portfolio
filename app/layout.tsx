@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Portfolio, Front-End Developer, Full-Stack Developer, React, Next.js, TypeScript, Node.js, Express, PostgreSQL',
   openGraph: {
     title: 'Oleksandr Didyshen',
-    images: ['../images/home-page.png'],
+    images: ['/home-page.png'],
   },
 }
 

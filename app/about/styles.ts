@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { showElement, moveUp } from './animations'
-import { AnimationType } from './types'
+import type { AnimationType } from 'src/types'
+import { showElement, moveUp } from 'src/constants/animations'
 
 export const StyledAbout = styled.div`
   display: flex;

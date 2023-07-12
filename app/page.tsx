@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Paths } from 'src/constants'
+import { imageLoader } from 'src/helpers'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -28,10 +29,9 @@ const Home = () => (
           <Image
             src="/black-shirt.webp"
             alt="Oleksandr in black shirt"
-            priority
             width={100}
             height={100}
-            unoptimized
+            loader={imageLoader}
           />
         </ImageHolder>
         <Name>Oleksandr</Name>

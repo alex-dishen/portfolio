@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
-import { OptionTypes } from './types'
+import type { OptionTypes } from 'src/types'
 import {
   styledHomeAnimation,
   greetingAnimation,
   imageAnimation,
   nameAnimation,
-  showElement,
-} from './animations'
+  showOpacity,
+} from 'src/constants/animations'
 
 export const StyledHome = styled.main`
   position: relative;
@@ -132,7 +132,7 @@ export const Name = styled(Greeting)`
 export const Position = styled(Greeting)`
   z-index: 1;
   transform: translateY(0px) translateX(0px) scale(1);
-  animation: ${showElement} 1.4s ease-out forwards 2.1s;
+  animation: ${showOpacity} 1.4s ease-out forwards 2.1s;
 `
 
 export const NavigationSection = styled.div`
@@ -158,7 +158,7 @@ export const Option = styled(Link)<OptionTypes>(
 
     opacity: 0;
     transition: 0.3s;
-    animation: ${showElement} 0.7s ease-out forwards ${2.5 + (index * 3) / 10}s;
+    animation: ${showOpacity} 0.7s ease-out forwards ${2.5 + (index * 3) / 10}s;
 
     &:hover {
       color: white;
@@ -210,7 +210,7 @@ export const Text = styled.div`
   display: flex;
   font-size: 13px;
   opacity: 0;
-  animation: ${showElement} 0.5s ease-out forwards 3.45s;
+  animation: ${showOpacity} 0.5s ease-out forwards 3.45s;
 
   a {
     position: relative;

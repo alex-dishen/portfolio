@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
-import {
+import type {
   ImageHolderTypes,
   StyledNavbarTypes,
 } from 'src/components/Navbar/types'

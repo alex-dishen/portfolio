@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { DotsWrapperTypes } from 'src/components/Dots/types'
+import type { DotsWrapperTypes } from 'src/components/Dots/types'
 import { moveUp } from 'src/components/Dots/animations'
 
 export const DotsWrapper = styled.div<DotsWrapperTypes>(

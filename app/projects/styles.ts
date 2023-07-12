@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { AnimationType } from './types'
-import { moveUp } from './animations'
+import type { AnimationType } from 'src/types'
+import { moveUp } from 'src/constants/animations'
 
 export const StyledProjects = styled.main`
   width: min(850px, 90vw);

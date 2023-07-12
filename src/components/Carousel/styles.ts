@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { CarouselWrapperTypes } from 'src/components/Carousel/types'
+import type { CarouselWrapperTypes } from 'src/components/Carousel/types'
 import { moveUp } from 'src/components/Carousel/animations'
 
 export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
