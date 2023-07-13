@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { TextTypes } from 'src/components/Summary/types'
+import type { TextTypes } from 'src/components/Summary/types'
 
 export const Text = styled.p<TextTypes>(
   ({ isShowSummary }) => css`

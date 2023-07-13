@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { topToBottom, scale, showElement } from './animations'
+import { topToBottom, scale, showElement } from 'src/constants/animations'
 
 export const StyledContact = styled.div`
   flex: 1;

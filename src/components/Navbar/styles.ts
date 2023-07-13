@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
-import {
+import type {
   ImageHolderTypes,
   StyledNavbarTypes,
 } from 'src/components/Navbar/types'
@@ -56,7 +56,6 @@ export const LinkHolder = styled.div<ImageHolderTypes>(
     svg {
       height: 26px;
       width: 26px;
-      transition: 0.4s;
     }
 
     &:hover {

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { moveUp } from 'app/projects/animations'
-import { DownloadButtonWrapperT } from 'src/components/DownloadButton/types'
+import { moveUp } from 'src/constants/animations'
+import type { DownloadButtonWrapperT } from 'src/components/DownloadButton/types'
 
 export const DownloadButtonWrapper = styled.a<DownloadButtonWrapperT>(
   ({ isVisible }) => css`

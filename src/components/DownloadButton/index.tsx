@@ -1,4 +1,4 @@
-import { DownloadButtonProps } from 'src/components/DownloadButton/types'
+import type { DownloadButtonProps } from 'src/components/DownloadButton/types'
 import {
   DownloadButtonWrapper,
   Info,

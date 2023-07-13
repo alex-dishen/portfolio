@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Swipi from 'swipi'
 import ChevronLeft from 'src/assets/icons/chevron-left.svg'
 import ChevronRight from 'src/assets/icons/chevron-right.svg'
-import { CarouselProps } from 'src/components/Carousel/types'
+import type { CarouselProps } from 'src/components/Carousel/types'
 import { CarouselWrapper, ImageHolder } from 'src/components/Carousel/styles'
 
 const Carousel = ({ pictures, id, isVisible, name }: CarouselProps) => (

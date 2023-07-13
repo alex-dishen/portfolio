@@ -1,6 +1,7 @@
 'use client'
 
-import Image, { ImageLoaderProps } from 'next/image'
+import Image from 'next/image'
+import { Paths } from 'src/constants'
 import { options } from './constants'
 import RightArrow from 'src/assets/icons/arrow-right.svg'
 import {
@@ -18,16 +19,6 @@ import {
   StyledLink,
 } from './styles'
 
-const imageLoader = ({
-  src,
-  width,
-  quality,
-}: {
-  src: string
-  width: number
-  quality?: number
-}) => `${src}?w=${width}&q=${quality}`
-
 const Home = () => (
   <StyledHome>
     <Welcome>
@@ -39,8 +30,8 @@ const Home = () => (
             alt="Oleksandr in black shirt"
             width={100}
             height={100}
-            quality={100}
-            loader={imageLoader}
+            priority
+            unoptimized
           />
         </ImageHolder>
         <Name>Oleksandr</Name>
@@ -66,7 +57,7 @@ const Home = () => (
       ))}
     </NavigationSection>
     <Text>
-      Never Mind -- <StyledLink href="/contact">Just Say Hi</StyledLink>
+      Never Mind - <StyledLink href={Paths.CONTACT}>Just Say Hi</StyledLink>
     </Text>
   </StyledHome>
 )
