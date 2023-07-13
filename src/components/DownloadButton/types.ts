@@ -1,13 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 export type DownloadButtonProps = {
-  icon: ReactNode;
-  text: string;
-  platform: string;
-  href: string;
-  isVisible: boolean;
-};
+  icon: ReactNode
+  text: string
+  platform: string
+  href: string
+  isVisible: boolean
+}
 
 export type DownloadButtonWrapperT = {
-  isVisible: boolean;
-};
+  isVisible: boolean
+}

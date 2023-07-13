@@ -1,8 +1,8 @@
 export type ImageHolderTypes = {
-  glowingColor: string;
-};
+  glowingColor: string
+}
 
 export type StyledNavbarTypes = {
-  delay: number;
-  isMobile: boolean;
-};
+  delay: number
+  isMobile: boolean
+}

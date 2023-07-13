@@ -1,7 +1,7 @@
 export type DotsWrapperTypes = {
-  isVisible: boolean;
-};
+  isVisible: boolean
+}
 
 export type DotsProps = {
-  isVisible: boolean;
-};
+  isVisible: boolean
+}

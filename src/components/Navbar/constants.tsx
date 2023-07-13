@@ -1,33 +1,44 @@
-import { ReactComponent as Bolt } from 'assets/icons/bolt.svg';
-import { ReactComponent as FBolt } from 'assets/icons/bolt-filled.svg';
-import { ReactComponent as Pen } from 'assets/icons/pen.svg';
-import { ReactComponent as Explore } from 'assets/icons/explore.svg';
-import { ReactComponent as FExplore } from 'assets/icons/explore-filled.svg';
-import { ReactComponent as Person } from 'assets/icons/person.svg';
-import { ReactComponent as FPerson } from 'assets/icons/person-filled.svg';
-import { ReactComponent as Mail } from 'assets/icons/mail.svg';
-import { ReactComponent as FMail } from 'assets/icons/mail-filled.svg';
+import { Paths } from 'src/constants'
+import Bolt from 'src/assets/icons/bolt.svg'
+import FBolt from 'src/assets/icons/bolt-filled.svg'
+import Pen from 'src/assets/icons/pen.svg'
+import Explore from 'src/assets/icons/explore.svg'
+import FExplore from 'src/assets/icons/explore-filled.svg'
+import Person from 'src/assets/icons/person.svg'
+import FPerson from 'src/assets/icons/person-filled.svg'
+import Mail from 'src/assets/icons/mail.svg'
+import FMail from 'src/assets/icons/mail-filled.svg'
 
 export const pages = [
   {
-    path: '/',
+    path: Paths.HOME,
+    ariaLabel: 'Home',
     filledPicture: <FExplore />,
     plainPicture: <Explore />,
   },
   {
-    path: '/projects',
+    path: Paths.PROJECTS,
+    ariaLabel: 'Projects',
     filledPicture: <FBolt />,
     plainPicture: <Bolt />,
   },
   {
-    path: 'https://medium.com/@oleksandrdidyshen',
+    path: Paths.BLOG,
+    ariaLabel: 'Blog',
     filledPicture: <Pen />,
     plainPicture: <Pen />,
   },
   {
-    path: '/about',
+    path: Paths.ABOUT,
+    ariaLabel: 'About',
     filledPicture: <FPerson />,
     plainPicture: <Person />,
   },
-  { path: '/contact', filledPicture: <FMail />, plainPicture: <Mail /> },
-];
+  {
+    path: Paths.CONTACT,
+    ariaLabel: 'Contact information',
+
+    filledPicture: <FMail />,
+    plainPicture: <Mail />,
+  },
+]
