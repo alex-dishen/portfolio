@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { CarouselWrapperTypes } from 'components/Carousel/types';
-import { moveUp } from 'components/Carousel/animations';
+import styled, { css } from 'styled-components'
+import type { CarouselWrapperTypes } from 'src/components/Carousel/types'
+import { moveUp } from 'src/components/Carousel/animations'
 
 export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
   ({ isVisible }) => css`
@@ -54,18 +54,17 @@ export const CarouselWrapper = styled.div<CarouselWrapperTypes>(
         border-radius: 10px;
       }
     }
-  `
-);
+  `,
+)
 
 export const ImageHolder = styled.div`
   position: relative;
   display: flex;
   height: 100%;
   width: 100%;
-`;
 
-export const Image = styled.img`
-  height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-`;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+`

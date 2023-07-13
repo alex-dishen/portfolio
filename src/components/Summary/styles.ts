@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { TextTypes } from 'components/Summary/types';
+import styled, { css } from 'styled-components'
+import type { TextTypes } from 'src/components/Summary/types'
 
 export const Text = styled.p<TextTypes>(
   ({ isShowSummary }) => css`
@@ -7,8 +7,8 @@ export const Text = styled.p<TextTypes>(
     margin: 7px 0 0 0;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
-  `
-);
+  `,
+)
 
 export const SVGHolder = styled.div`
   display: flex;
@@ -20,4 +20,4 @@ export const SVGHolder = styled.div`
     width: 25px;
     fill: white;
   }
-`;
+`

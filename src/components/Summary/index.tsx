@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { SummaryProps } from 'components/Summary/types';
-import { Text, SVGHolder } from 'components/Summary/styles';
-import { ReactComponent as ChevronUp } from 'assets/icons/chevron-up.svg';
-import { ReactComponent as ChevronDown } from 'assets/icons/chevron-down.svg';
+import { useState } from 'react'
+import type { SummaryProps } from 'src/components/Summary/types'
+import { Text, SVGHolder } from 'src/components/Summary/styles'
+import ChevronUp from 'src/assets/icons/chevron-up.svg'
+import ChevronDown from 'src/assets/icons/chevron-down.svg'
 
 const Summary = ({ summary }: SummaryProps) => {
-  const [isShowSummary, setIsShowSummary] = useState(false);
+  const [isShowSummary, setIsShowSummary] = useState(false)
 
   return (
     <>
@@ -14,7 +14,7 @@ const Summary = ({ summary }: SummaryProps) => {
         {isShowSummary ? <ChevronUp /> : <ChevronDown />}
       </SVGHolder>
     </>
-  );
-};
+  )
+}
 
-export default Summary;
+export default Summary

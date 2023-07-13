@@ -1,32 +1,35 @@
-import useNavbar from 'components/Navbar/useNavbar';
-import { pages } from 'components/Navbar/constants';
+'use client'
+
+import useNavbar from 'src/components/Navbar/useNavbar'
+import { pages } from 'src/components/Navbar/constants'
 import {
   StyledNavbar,
   StyledLink,
   LinkHolder,
   Overflow,
-} from 'components/Navbar/styles';
+} from 'src/components/Navbar/styles'
 
 const Navbar = () => {
-  const { animationDelay, isMobile, glowingColor, location } = useNavbar();
+  const { animationDelay, isMobile, glowingColor, pathName } = useNavbar()
 
   return (
     <>
       <StyledNavbar delay={animationDelay} isMobile={isMobile}>
-        {pages.map(({ path, filledPicture, plainPicture }) => (
+        {pages.map(({ path, filledPicture, plainPicture, ariaLabel }) => (
           <LinkHolder key={path} glowingColor={glowingColor}>
             <StyledLink
-              to={path}
+              href={path}
               target={path.includes('http') ? '_blank' : ''}
+              aria-label={ariaLabel}
             >
-              {location.pathname === path ? filledPicture : plainPicture}
+              {pathName === path ? filledPicture : plainPicture}
             </StyledLink>
           </LinkHolder>
         ))}
       </StyledNavbar>
       <Overflow />
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
