@@ -31,6 +31,7 @@ const Home = () => (
             width={100}
             height={100}
             priority
+            unoptimized
           />
         </ImageHolder>
         <Name>Oleksandr</Name>
@@ -56,7 +57,7 @@ const Home = () => (
       ))}
     </NavigationSection>
     <Text>
-      Never Mind -- <StyledLink href={Paths.CONTACT}>Just Say Hi</StyledLink>
+      Never Mind - <StyledLink href={Paths.CONTACT}>Just Say Hi</StyledLink>
     </Text>
   </StyledHome>
 )

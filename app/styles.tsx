@@ -228,6 +228,7 @@ export const Text = styled.div`
 
 export const StyledLink = styled(Link)`
   position: relative;
+  margin-left: 2px;
   cursor: pointer;
   transition: text-shadow 0.5s;
 

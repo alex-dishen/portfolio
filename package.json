@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "start": "next start",
+    "start": "serve out",
     "build": "next build",
     "lint": "eslint --cache ./src ./app",
     "lint:format": "prettier --write --loglevel warn \"./**/*.{js,jsx,ts,tsx,css,md,json}\"",
@@ -38,6 +38,7 @@
     "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.2.0",
     "styled-components": "^6.0.3",
     "swipi": "^1.1.8",
     "typescript": "^4.9.5"

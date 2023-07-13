@@ -56,7 +56,6 @@ export const LinkHolder = styled.div<ImageHolderTypes>(
     svg {
       height: 26px;
       width: 26px;
-      transition: 0.4s;
     }
 
     &:hover {

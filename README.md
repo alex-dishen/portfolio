@@ -4,7 +4,7 @@
 
 ## Demo
 
-🔥 [Live Demo](https://github.com/alex-dishen/portfolio)
+🔥 [Live Demo](https://alex-dishen.web.app)
 
 ## Built with
 
